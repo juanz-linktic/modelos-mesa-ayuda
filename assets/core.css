@@ -347,6 +347,7 @@ h2{
 .flabel.t-red{color:#8a2323; font-weight:700}
 .flabel.t-amber{color:var(--amber); font-weight:700}
 .flabel.t-violet{color:#6b32ad; font-weight:700}
+.flabel.t-green{color:#2e7a26; font-weight:700}
 
 /* ---------- aristas ---------- */
 .fedge{transition:opacity .3s var(--ease), stroke-width .2s var(--ease)}
