@@ -19,7 +19,7 @@ window.CORE_DECKS = [
     file: 'p/docum.html',
     title: 'Modelo de atención Zendesk — DOCUM',
     client: 'DOCUM · Mesa de Ayuda N2',
-    summary: 'Flujo por niveles con cierre en el nivel de resolución, validación de Calidad, cola interna en Azure DevOps y capa transversal de IA.',
+    summary: 'Autogestión con IA antes de la asignación, cierre en el nivel de resolución, validación de Calidad y cola interna en Azure DevOps.',
     tag: 'Uso interno',
     tone: 'violet',
     updated: '2026-08'

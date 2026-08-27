@@ -160,6 +160,99 @@
     if (slides[next]) { e.preventDefault(); slides[next].scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 
+  /* ---------- diagrama interactivo ---------- */
+  function setupFlow(flow) {
+    var box = flow.querySelector('.flowbox');
+    var marked = Array.prototype.slice.call(flow.querySelectorAll('[data-routes]'));
+    var routeChips = Array.prototype.slice.call(flow.querySelectorAll('[data-route]'));
+    var layerChips = Array.prototype.slice.call(flow.querySelectorAll('[data-layer-toggle]'));
+    var nodes = Array.prototype.slice.call(flow.querySelectorAll('.fnode[data-node]'));
+    var details = Array.prototype.slice.call(flow.querySelectorAll('.fdetail'));
+    var route = 'all';
+
+    function routesOf(el) { return (el.getAttribute('data-routes') || '').split(/\s+/); }
+
+    function applyRoute() {
+      marked.forEach(function (el) {
+        var inRoute = route === 'all' || routesOf(el).indexOf(route) !== -1;
+        el.classList.toggle('is-dim', !inRoute);
+        var live = inRoute && route !== 'all' && el.classList.contains('fedge');
+        el.classList.toggle('is-live', live);
+      });
+      routeChips.forEach(function (c) {
+        c.setAttribute('aria-pressed', c.getAttribute('data-route') === route ? 'true' : 'false');
+      });
+      // si el nodo abierto quedó fuera de la ruta, se vuelve a la introducción
+      var open = flow.querySelector('.fnode.is-active');
+      if (open && open.classList.contains('is-dim')) showDetail('intro');
+    }
+
+    function showDetail(id) {
+      var found = false;
+      details.forEach(function (d) {
+        var match = d.getAttribute('data-detail') === id;
+        d.hidden = !match;
+        if (match) found = true;
+      });
+      if (!found) details.forEach(function (d) { d.hidden = d.getAttribute('data-detail') !== 'intro'; });
+      nodes.forEach(function (n) {
+        n.classList.toggle('is-active', n.getAttribute('data-node') === id);
+        n.setAttribute('aria-pressed', n.getAttribute('data-node') === id ? 'true' : 'false');
+      });
+    }
+
+    routeChips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        route = c.getAttribute('data-route');
+        applyRoute();
+      });
+    });
+
+    layerChips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        var layer = c.getAttribute('data-layer-toggle');
+        var off = c.classList.toggle('is-off');
+        c.setAttribute('aria-pressed', off ? 'false' : 'true');
+        flow.querySelectorAll('[data-layer~="' + layer + '"]').forEach(function (el) {
+          el.style.opacity = off ? '0' : '';
+          el.style.pointerEvents = off ? 'none' : '';
+        });
+      });
+    });
+
+    nodes.forEach(function (n) {
+      n.setAttribute('aria-pressed', 'false');
+      n.addEventListener('click', function () {
+        var id = n.getAttribute('data-node');
+        showDetail(n.classList.contains('is-active') ? 'intro' : id);
+      });
+    });
+
+    if (box) {
+      box.addEventListener('click', function (e) {
+        if (e.target === box) showDetail('intro');
+      });
+    }
+
+    showDetail('intro');
+    applyRoute();
+  }
+  document.querySelectorAll('.flow').forEach(setupFlow);
+
+  /* ---------- pestañas ---------- */
+  document.querySelectorAll('[data-tabs]').forEach(function (host) {
+    var tabs = Array.prototype.slice.call(host.querySelectorAll('[data-tab]'));
+    var panels = Array.prototype.slice.call(host.querySelectorAll('[data-panel]'));
+    function select(id) {
+      tabs.forEach(function (t) { t.setAttribute('aria-selected', t.getAttribute('data-tab') === id ? 'true' : 'false'); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== id; });
+    }
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { select(t.getAttribute('data-tab')); });
+    });
+    if (tabs.length) select(tabs[0].getAttribute('data-tab'));
+  });
+
   /* ---------- botón imprimir ---------- */
   document.querySelectorAll('[data-print]').forEach(function (b) {
     b.addEventListener('click', function () { window.print(); });

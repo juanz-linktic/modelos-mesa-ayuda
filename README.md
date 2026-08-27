@@ -41,10 +41,42 @@ mostrar y cada presentación lleva un selector para saltar a otra sin volver atr
 
 No hace falta tocar nada más: el índice y el selector superior se arman solos.
 
+## Diagramas interactivos
+
+El core trae un componente de flujo (`.flow`) donde los nodos son HTML y las
+conexiones van en una capa SVG con el mismo sistema de coordenadas: una rejilla
+de **1400 unidades de ancho**. Todo escala junto con el contenedor.
+
+```html
+<div class="flow">
+  <div class="flow-controls">…botones data-route / data-layer-toggle…</div>
+  <div class="flow-stage"><div class="diagram-scroll">
+    <div class="flowbox">
+      <svg class="flow-edges" viewBox="0 0 1400 620">…paths .fedge…</svg>
+      <button class="fnode n-blue" data-node="n1" data-routes="all n1"
+              style="--x:410;--y:300;--w:150;--h:100">…</button>
+    </div>
+  </div></div>
+  <div class="flow-detail">…bloques .fdetail[data-detail]…</div>
+</div>
+```
+
+- `--x/--y/--w/--h` son unidades de la rejilla (no píxeles ni porcentajes).
+- `data-routes="all n1 n2"` declara a qué rutas pertenece cada nodo, etiqueta o
+  arista; los botones `data-route` atenúan lo que no pertenece a la ruta elegida
+  y animan sus conexiones.
+- `data-node="x"` en un `.fnode` lo enlaza con el bloque `.fdetail[data-detail="x"]`
+  del panel inferior. Siempre debe existir un `data-detail="intro"`.
+- `data-layer="azure"` + un botón `data-layer-toggle="azure"` permiten ocultar
+  una capa completa (por ejemplo, para mostrar la vista que percibe el cliente).
+- Colores de nodo: `n-blue`, `n-red`, `n-amber`, `n-green`, `n-violet`, `n-gray`.
+- También hay un componente de pestañas: contenedor `[data-tabs]` con botones
+  `[data-tab="id"]` y paneles `[data-panel="id"]`.
+
 ## Convenciones
 
-- **Diagramas:** SVG inline dentro de `.figure > .diagram-scroll`. Escalan sin
-  pérdida, se editan como texto y en móvil se desplazan en horizontal.
+- **Diagramas estáticos:** SVG inline dentro de `.figure > .diagram-scroll`.
+  Escalan sin pérdida, se editan como texto y en móvil se desplazan en horizontal.
 - **Paleta:** variables CSS en `:root` de `assets/core.css`
   (`--violet`, `--blue`, `--teal`, `--amber`, `--red`, `--steel`).
 - **Tonos disponibles** para tarjetas y filas: `tone-violet`, `tone-blue`,

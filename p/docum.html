@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Modelo de atención Zendesk — DOCUM | LinkTIC</title>
-<meta name="description" content="Modelo de atención DOCUM: flujo por niveles con cierre en el nivel de resolución, validación de Calidad, cola interna en Azure DevOps y capa transversal de IA de uso interno."/>
+<meta name="description" content="Modelo de atención DOCUM: autogestión con IA antes de la asignación, flujo por niveles con cierre en el nivel de resolución, validación de Calidad y cola interna en Azure DevOps."/>
 <meta name="theme-color" content="#ffffff"/>
 <meta property="og:title" content="Modelo de atención Zendesk — DOCUM"/>
-<meta property="og:description" content="Cierre en el nivel de resolución, Calidad como punto único de validación y una capa de IA interna."/>
+<meta property="og:description" content="Cierre en el nivel de resolución, Calidad como punto único de validación y autogestión con IA antes del analista."/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -32,188 +32,276 @@
   <div class="inner">
     <span class="eyebrow reveal">Documento interno</span>
     <h1 class="reveal">Modelo de atención<br/><span class="accent">Zendesk — DOCUM</span></h1>
-    <p class="lede reveal">Flujo por niveles con cierre en el nivel de resolución, validación de Calidad, cola interna en Azure DevOps y capa transversal de IA.</p>
+    <p class="lede reveal">Autogestión con IA antes de la asignación, flujo por niveles con cierre en el nivel de resolución, validación de Calidad y cola interna en Azure DevOps.</p>
     <div class="rule reveal"></div>
-    <p class="sub reveal">Zendesk como plataforma única de registro · Calidad como punto único de validación · IA de uso interno</p>
+    <p class="sub reveal">Zendesk como plataforma única de registro · Calidad como punto único de validación · dos canales de entrada</p>
     <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Nivel 2</span><i></i><span>Uso interno</span></div>
   </div>
 </section>
 
-<!-- 2 · FLUJO -->
+<!-- 2 · FLUJO INTERACTIVO -->
 <section class="slide slide--wide" id="flujo" data-nav="Flujo">
   <div class="inner">
     <div class="section-head">
       <h2 class="reveal">El flujo completo, de extremo a extremo</h2>
-      <p class="sub reveal">Del canal de ingreso al cierre validado, con la cola interna de Azure DevOps y la capa de IA marcadas como lo que son: mecánica interna, no entregable al cliente.</p>
+      <p class="sub reveal">Filtre por ruta de resolución y haga clic en cualquier bloque para ver qué hace, qué recibe y qué entrega.</p>
     </div>
-    <div class="figure reveal">
-      <div class="diagram-scroll">
-<svg viewBox="0 0 1400 890" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', Arial, Helvetica, sans-serif" role="img" aria-label="Diagrama del modelo de atención Zendesk para DOCUM" class="diagram" preserveAspectRatio="xMidYMid meet">
-<defs>
-  <marker id="dk" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#1f3a5f"/></marker>
-  <marker id="bl" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#1f5fa8"/></marker>
-  <marker id="rd" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#b02525"/></marker>
-  <marker id="or" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#e08a1e"/></marker>
-  <marker id="gr" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#4a8f3c"/></marker>
-</defs>
 
-<rect x="0" y="0" width="1400" height="890" fill="#ffffff"/>
+    <div class="flow reveal">
 
-<!-- encabezado -->
-<text x="50" y="34" font-size="21" font-weight="700" fill="#1e2a63">Modelo de atención Zendesk — DOCUM</text>
-<text x="50" y="56" font-size="11.5" fill="#5a6b82">Flujo por niveles con cierre en el nivel de resolución, validación de Calidad, cola interna Azure DevOps y capa transversal de IA · Uso interno LinkTIC</text>
-<path d="M50,72 H1350" stroke="#dfe5ef" stroke-width="1"/>
-
-<!-- Azure DevOps -->
-<rect x="400" y="88" width="620" height="220" rx="8" fill="#fdeeee" stroke="#b02525" stroke-width="2"/>
-<rect x="845" y="76" width="190" height="26" rx="4" fill="#b02525"/>
-<text x="940" y="93.5" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">Azure DevOps — N3 interno</text>
-
-<rect x="435" y="128" width="170" height="56" rx="4" fill="#ffffff" stroke="#b02525" stroke-width="1.4"/>
-<text x="520" y="161" font-size="13.5" font-weight="700" fill="#1c1c2e" text-anchor="middle">N3 Desarrollo</text>
-<rect x="625" y="128" width="170" height="56" rx="4" fill="#ffffff" stroke="#b02525" stroke-width="1.4"/>
-<text x="710" y="161" font-size="13.5" font-weight="700" fill="#1c1c2e" text-anchor="middle">N3 QA</text>
-<rect x="815" y="128" width="170" height="56" rx="4" fill="#ffffff" stroke="#b02525" stroke-width="1.4"/>
-<text x="900" y="161" font-size="13.5" font-weight="700" fill="#1c1c2e" text-anchor="middle">N3 DATA</text>
-<rect x="625" y="205" width="170" height="56" rx="4" fill="#ffffff" stroke="#b02525" stroke-width="1.4"/>
-<text x="710" y="238" font-size="13.5" font-weight="700" fill="#1c1c2e" text-anchor="middle">N3 Funcional</text>
-<text x="710" y="290" font-size="10.5" font-style="italic" fill="#a34141" text-anchor="middle">Cola interna de trabajo — no visible para el usuario final. La trazabilidad ante el cliente permanece en Zendesk.</text>
-
-<!-- banda Zendesk -->
-<rect x="50" y="326" width="1300" height="24" rx="3" fill="#5b8c22"/>
-<text x="66" y="342.5" font-size="12" font-weight="700" fill="#ffffff">Zendesk — plataforma única de registro, trazabilidad, categorización y control de ANS</text>
-
-<!-- enlace N3 ↔ Azure -->
-<path d="M710,383 V312" stroke="#b02525" stroke-width="2" fill="none" marker-end="url(#rd)"/>
-<text x="726" y="323" font-size="10" font-weight="700" fill="#8a2323">Gestión y seguimiento en Azure DevOps</text>
-
-<!-- canales -->
-<rect x="55" y="383" width="132" height="80" rx="6" fill="#fbfcfe" stroke="#c9d2df" stroke-width="1.4"/>
-<rect x="55" y="383" width="132" height="22" rx="6" fill="#8a95a5"/>
-<rect x="55" y="397" width="132" height="8" fill="#8a95a5"/>
-<text x="121" y="399" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">Canales</text>
-<text x="68" y="422" font-size="9.5" fill="#4a5568">• Widget</text>
-<text x="68" y="438" font-size="9.5" fill="#4a5568">• Portal autoservicio</text>
-<text x="68" y="454" font-size="9.5" fill="#4a5568">• Correo / formulario</text>
-<path d="M190,423 H236" stroke="#1f3a5f" stroke-width="2.4" fill="none" marker-end="url(#dk)"/>
-
-<!-- N1 -->
-<rect x="242" y="383" width="128" height="80" rx="6" fill="#eef4fc" stroke="#1f5fa8" stroke-width="2"/>
-<text x="306" y="411" font-size="13" font-weight="700" fill="#14213d" text-anchor="middle">N1 DOCUM</text>
-<text x="306" y="428" font-size="8.6" fill="#4a5568" text-anchor="middle">Recepción, tipificación</text>
-<text x="306" y="441" font-size="8.6" fill="#4a5568" text-anchor="middle">y atención en</text>
-<text x="306" y="454" font-size="8.6" fill="#4a5568" text-anchor="middle">primer contacto</text>
-<path d="M375,423 H432" stroke="#1f3a5f" stroke-width="2.4" fill="none" marker-end="url(#dk)"/>
-<text x="403" y="369" font-size="8.6" fill="#5a6b82" text-anchor="middle">Escalamiento</text>
-<text x="403" y="380" font-size="8.6" fill="#5a6b82" text-anchor="middle">control de rol N2</text>
-
-<!-- N2 -->
-<rect x="438" y="383" width="128" height="80" rx="6" fill="#eef4fc" stroke="#1f5fa8" stroke-width="2"/>
-<text x="502" y="411" font-size="13" font-weight="700" fill="#14213d" text-anchor="middle">N2 Soporte</text>
-<text x="502" y="428" font-size="8.6" fill="#4a5568" text-anchor="middle">Diagnóstico, base de</text>
-<text x="502" y="441" font-size="8.6" fill="#4a5568" text-anchor="middle">datos y traspaso de</text>
-<text x="502" y="454" font-size="8.6" fill="#4a5568" text-anchor="middle">conocimiento</text>
-<path d="M571,423 H628" stroke="#1f3a5f" stroke-width="2.4" fill="none" marker-end="url(#dk)"/>
-<text x="600" y="360" font-size="8.4" fill="#5a6b82" text-anchor="middle">Requerimientos</text>
-<text x="600" y="371" font-size="8.4" fill="#5a6b82" text-anchor="middle">Incidencias</text>
-<text x="600" y="382" font-size="8.4" fill="#5a6b82" text-anchor="middle">Data / fuerza mayor</text>
-
-<!-- N3 funcional -->
-<rect x="634" y="383" width="152" height="80" rx="6" fill="#eef4fc" stroke="#1f5fa8" stroke-width="2"/>
-<text x="710" y="409" font-size="13" font-weight="700" fill="#14213d" text-anchor="middle">N3 Funcional</text>
-<text x="710" y="426" font-size="8.6" fill="#4a5568" text-anchor="middle">Interfaz Zendesk ↔ Azure</text>
-<text x="710" y="439" font-size="8.6" fill="#4a5568" text-anchor="middle">Único rol que traduce el</text>
-<text x="710" y="452" font-size="8.6" fill="#4a5568" text-anchor="middle">caso al equipo interno</text>
-<path d="M791,423 H854" stroke="#1f3a5f" stroke-width="2.4" fill="none" marker-end="url(#dk)"/>
-<text x="822" y="369" font-size="8.6" fill="#5a6b82" text-anchor="middle">Solución</text>
-<text x="822" y="380" font-size="8.6" fill="#5a6b82" text-anchor="middle">de N3</text>
-
-<!-- calidad -->
-<rect x="860" y="383" width="134" height="80" rx="6" fill="#fff8ee" stroke="#e08a1e" stroke-width="2"/>
-<text x="927" y="411" font-size="12.5" font-weight="700" fill="#14213d" text-anchor="middle">Equipo Calidad</text>
-<text x="927" y="428" font-size="8.6" fill="#4a5568" text-anchor="middle">Punto único de</text>
-<text x="927" y="441" font-size="8.6" fill="#4a5568" text-anchor="middle">validación de cierre</text>
-<text x="927" y="454" font-size="8.6" fill="#4a5568" text-anchor="middle">para todos los niveles</text>
-<path d="M999,423 H1078" stroke="#1f3a5f" stroke-width="2.4" fill="none" marker-end="url(#dk)"/>
-<text x="1040" y="369" font-size="8.6" fill="#5a6b82" text-anchor="middle">Cierre</text>
-<text x="1040" y="380" font-size="8.6" fill="#5a6b82" text-anchor="middle">validado</text>
-
-<!-- salida -->
-<ellipse cx="1160" cy="423" rx="78" ry="41" fill="#eef8ee" stroke="#4a8f3c" stroke-width="1.8"/>
-<text x="1160" y="419" font-size="12.5" font-weight="700" fill="#1c4a1c" text-anchor="middle">Notificación al</text>
-<text x="1160" y="437" font-size="12.5" font-weight="700" fill="#1c4a1c" text-anchor="middle">usuario final</text>
-
-<!-- cierres en el nivel de resolución -->
-<path d="M502,463 V505 H898 V468" stroke="#1f5fa8" stroke-width="1.8" fill="none" marker-end="url(#bl)"/>
-<text x="700" y="500" font-size="9.5" font-weight="700" fill="#1f5fa8" text-anchor="middle">Resuelto en N2 — sin escalamiento a N3</text>
-<path d="M306,463 V545 H940 V468" stroke="#1f5fa8" stroke-width="1.8" fill="none" marker-end="url(#bl)"/>
-<text x="618" y="540" font-size="9.5" font-weight="700" fill="#1f5fa8" text-anchor="middle">Resuelto en primer contacto (N1) — cierre en línea</text>
-
-<!-- conocimiento -->
-<path d="M978,463 V605 H824" stroke="#e08a1e" stroke-width="1.6" fill="none" stroke-dasharray="5,4" marker-end="url(#or)"/>
-<path d="M512,605 H258 V468" stroke="#e08a1e" stroke-width="1.6" fill="none" stroke-dasharray="5,4" marker-end="url(#or)"/>
-<text x="385" y="600" font-size="9.5" font-weight="700" fill="#c9821a" text-anchor="middle">Habilita resolución en primer contacto</text>
-<rect x="520" y="583" width="300" height="46" rx="6" fill="#fff6e8" stroke="#e08a1e" stroke-width="1.6"/>
-<text x="670" y="603" font-size="11.5" font-weight="700" fill="#1c1c2e" text-anchor="middle">Base de conocimiento y gestión de problemas</text>
-<text x="670" y="619" font-size="9" fill="#8a7255" text-anchor="middle">Hallazgos de Calidad · causas raíz · artículos KB · reproceso</text>
-
-<!-- capa de IA -->
-<rect x="85" y="655" width="1260" height="136" rx="8" fill="#faf7ff" stroke="#7b3fbf" stroke-width="1.6" stroke-dasharray="6,4"/>
-<text x="105" y="681" font-size="12" font-weight="700" fill="#5b2d91">Capa transversal de IA — uso interno, no expuesta al cliente ni a los entregables contractuales</text>
-
-<rect x="105" y="692" width="300" height="86" rx="5" fill="#ffffff" stroke="#ddd0f0" stroke-width="1.2"/>
-<rect x="105" y="692" width="300" height="20" rx="5" fill="#8b5cc4"/>
-<rect x="105" y="705" width="300" height="7" fill="#8b5cc4"/>
-<text x="255" y="706" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">IA en el contacto (N1)</text>
-<text x="117" y="729" font-size="9" fill="#4a5568">• Clasificación y categorización sugerida</text>
-<text x="117" y="746" font-size="9" fill="#4a5568">• Sugerencia de artículos de conocimiento</text>
-<text x="117" y="763" font-size="9" fill="#4a5568">• Autoservicio asistido en el widget</text>
-
-<rect x="417" y="692" width="300" height="86" rx="5" fill="#ffffff" stroke="#ddd0f0" stroke-width="1.2"/>
-<rect x="417" y="692" width="300" height="20" rx="5" fill="#8b5cc4"/>
-<rect x="417" y="705" width="300" height="7" fill="#8b5cc4"/>
-<text x="567" y="706" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">IA en diagnóstico (N2)</text>
-<text x="429" y="729" font-size="9" fill="#4a5568">• Resumen del caso antes de escalar</text>
-<text x="429" y="746" font-size="9" fill="#4a5568">• Detección de duplicados y reaperturas</text>
-<text x="429" y="763" font-size="9" fill="#4a5568">• Borrador de respuesta al usuario</text>
-
-<rect x="729" y="692" width="300" height="86" rx="5" fill="#ffffff" stroke="#ddd0f0" stroke-width="1.2"/>
-<rect x="729" y="692" width="300" height="20" rx="5" fill="#8b5cc4"/>
-<rect x="729" y="705" width="300" height="7" fill="#8b5cc4"/>
-<text x="879" y="706" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">IA en validación de Calidad</text>
-<text x="741" y="729" font-size="9" fill="#4a5568">• Revisión ampliada de cierres de N1, N2 y N3</text>
-<text x="741" y="746" font-size="9" fill="#4a5568">• Alertas de desviación de ANS y tipificación</text>
-<text x="741" y="763" font-size="9" fill="#4a5568">• Verificación de tono y completitud</text>
-
-<rect x="1041" y="692" width="300" height="86" rx="5" fill="#ffffff" stroke="#ddd0f0" stroke-width="1.2"/>
-<rect x="1041" y="692" width="300" height="20" rx="5" fill="#8b5cc4"/>
-<rect x="1041" y="705" width="300" height="7" fill="#8b5cc4"/>
-<text x="1191" y="706" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle">IA en gestión del conocimiento</text>
-<text x="1053" y="729" font-size="9" fill="#4a5568">• Artículos KB a partir de casos resueltos</text>
-<text x="1053" y="746" font-size="9" fill="#4a5568">• Identificación de incidentes recurrentes</text>
-<text x="1053" y="763" font-size="9" fill="#4a5568">• Insumo para gestión de problemas</text>
-
-<!-- convenciones -->
-<rect x="85" y="806" width="11" height="11" rx="2" fill="#5b8c22"/>
-<text x="103" y="815.5" font-size="9.5" fill="#5a6b82">Zendesk — registro y trazabilidad</text>
-<rect x="279" y="806" width="11" height="11" rx="2" fill="#1f5fa8"/>
-<text x="297" y="815.5" font-size="9.5" fill="#5a6b82">Cierre en el nivel de resolución</text>
-<rect x="466" y="806" width="11" height="11" rx="2" fill="#b02525"/>
-<text x="484" y="815.5" font-size="9.5" fill="#5a6b82">Azure DevOps — N3 interno</text>
-<rect x="625" y="806" width="11" height="11" rx="2" fill="#e08a1e"/>
-<text x="643" y="815.5" font-size="9.5" fill="#5a6b82">Calidad, conocimiento y mejora continua</text>
-<rect x="844" y="806" width="11" height="11" rx="2" fill="#7b3fbf"/>
-<text x="862" y="815.5" font-size="9.5" fill="#5a6b82">Capa de IA (interna)</text>
-<rect x="980" y="806" width="11" height="11" rx="2" fill="#4a8f3c"/>
-<text x="998" y="815.5" font-size="9.5" fill="#5a6b82">Salida al usuario final</text>
-
-<path d="M50,840 H1350" stroke="#e6ebf3" stroke-width="1"/>
-<text x="50" y="860" font-size="9.5" fill="#7b8aa3">Documento interno — LinkTIC · Mesa de Ayuda N2. La atención se rige por los ANS pactados contractualmente. La capa de IA y la cola Azure N3 no forman parte del material dirigido al cliente.</text>
-</svg>
+      <div class="flow-controls">
+        <span class="ctl-label">Ruta</span>
+        <button class="fchip" type="button" data-route="all" aria-pressed="true"><i></i>Flujo completo</button>
+        <button class="fchip t-blue" type="button" data-route="n1" aria-pressed="false"><i></i>Cierre en N1</button>
+        <button class="fchip t-blue" type="button" data-route="n2" aria-pressed="false"><i></i>Cierre en N2</button>
+        <button class="fchip t-red" type="button" data-route="n3" aria-pressed="false"><i></i>Solución desde N3</button>
+        <button class="fchip t-violet" type="button" data-route="ia" aria-pressed="false"><i></i>Dónde actúa la IA</button>
+        <span class="ctl-sep"></span>
+        <button class="fchip" type="button" data-layer-toggle="azure" aria-pressed="true">Cola interna Azure</button>
       </div>
+
+      <div class="flow-stage">
+        <div class="diagram-scroll">
+          <div class="flowbox" role="group" aria-label="Diagrama del modelo de atención DOCUM">
+
+            <!-- conexiones -->
+            <svg class="flow-edges" viewBox="0 0 1400 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <marker id="mDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
+                <marker id="mBl" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
+                <marker id="mRd" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b02525"/></marker>
+                <marker id="mAm" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e08a1e"/></marker>
+                <marker id="mVi" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7b3fbf"/></marker>
+              </defs>
+
+              <path class="fedge" data-routes="all n1 n2 n3" d="M180,350 H214" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M370,350 H404" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n2 n3" d="M560,350 H590" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n3" d="M756,350 H788" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n3" d="M964,350 H996" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M1162,350 H1194" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+
+              <path class="fedge" data-layer="azure" data-routes="all n3" d="M900,300 V182" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
+              <path class="fedge" data-layer="azure" data-routes="all n2 n3" d="M950,176 V254 H676 V294" fill="none" stroke="#b02525" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#mRd)"/>
+
+              <path class="fedge" data-routes="all ia" d="M295,400 V434" fill="none" stroke="#7b3fbf" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#mVi)"/>
+              <path class="fedge" data-routes="all n1 n2 n3 ia" d="M1180,284 L1122,296" fill="none" stroke="#7b3fbf" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#mVi)"/>
+
+              <path class="fedge" data-routes="all n1" d="M485,400 V480 H1058 V404" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#mBl)"/>
+              <path class="fedge" data-routes="all n2" d="M676,400 V440 H1102 V404" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#mBl)"/>
+
+              <path class="fedge" data-routes="all n1 n2" d="M1140,400 V570 H906" fill="none" stroke="#e08a1e" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all n1" d="M554,570 H450 V404" fill="none" stroke="#e08a1e" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#mAm)"/>
+            </svg>
+
+            <!-- Azure DevOps -->
+            <div class="fgroup" data-layer="azure" data-routes="all n2 n3" style="--x:500;--y:14;--w:550;--h:162">
+              <span class="fgroup-tag">Azure DevOps — N3 interno</span>
+              <div class="fgroup-body">
+                <button class="fnode n-red is-center" type="button" data-node="n3dev" data-routes="all n3"><b>N3 Desarrollo</b></button>
+                <button class="fnode n-red is-center" type="button" data-node="n3qa" data-routes="all n3"><b>N3 QA</b></button>
+                <button class="fnode n-red is-center" type="button" data-node="n3data" data-routes="all n2 n3"><b>N3 DATA</b></button>
+              </div>
+              <p class="fgroup-note">Cola interna de trabajo — no visible para el usuario final. La trazabilidad ante el cliente permanece en Zendesk.</p>
+            </div>
+
+            <!-- banda Zendesk -->
+            <div class="fband" data-routes="all n1 n2 n3 ia" style="--x:30;--y:200;--w:1340;--h:28">Zendesk — plataforma única de registro, trazabilidad, categorización y control de ANS</div>
+
+            <!-- IA de calidad -->
+            <button class="fnode n-violet is-center" type="button" data-node="ia-cal" data-routes="all n1 n2 n3 ia" style="--x:1080;--y:226;--w:200;--h:58">
+              <em>IA de apoyo</em><b style="font-size:calc(11.5 * var(--u))">Revisión asistida de Calidad</b>
+            </button>
+
+            <!-- fila principal -->
+            <button class="fnode n-gray" type="button" data-node="canales" data-routes="all n1 n2 n3" style="--x:30;--y:300;--w:150;--h:100">
+              <b>Canales</b><span>Widget<br/>Portal de autoservicio</span>
+            </button>
+
+            <button class="fnode n-violet" type="button" data-node="ia-auto" data-routes="all n1 n2 n3 ia" style="--x:220;--y:300;--w:150;--h:100">
+              <em>IA</em><b style="font-size:calc(13.5 * var(--u))">Autogestión</b><span>Antes de asignar el caso a un analista</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="n1" data-routes="all n1 n2 n3" style="--x:410;--y:300;--w:150;--h:100">
+              <b>N1 DOCUM</b><span>Recepción, tipificación y atención en primer contacto</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="n2" data-routes="all n2 n3" style="--x:596;--y:300;--w:160;--h:100">
+              <b>N2 Soporte</b><span>Diagnóstico, base de datos y ajustes en BD</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="n3f" data-routes="all n3" style="--x:794;--y:300;--w:170;--h:100">
+              <b>N3 Funcional</b><span>Interfaz Zendesk ↔ Azure. Único rol que traduce el caso al equipo interno</span>
+            </button>
+
+            <button class="fnode n-amber" type="button" data-node="calidad" data-routes="all n1 n2 n3 ia" style="--x:1002;--y:300;--w:160;--h:100">
+              <b>Equipo Calidad</b><span>Punto único de validación de cierre para todos los niveles</span>
+            </button>
+
+            <button class="fnode n-green n-pill is-center" type="button" data-node="notif" data-routes="all n1 n2 n3" style="--x:1200;--y:300;--w:168;--h:100">
+              <b>Notificación al usuario final</b>
+            </button>
+
+            <!-- salida de autogestión -->
+            <div class="fbox n-green is-center" data-routes="all ia" style="--x:205;--y:434;--w:180;--h:46">
+              <span style="color:#1c4a1c;font-weight:600">Resuelto en autogestión — sin asignación</span>
+            </div>
+
+            <!-- base de conocimiento -->
+            <button class="fnode n-amber is-center" type="button" data-node="kb" data-routes="all n1 n2" style="--x:560;--y:540;--w:346;--h:62">
+              <b style="font-size:calc(12.5 * var(--u))">Base de conocimiento y gestión de problemas</b>
+              <span>Hallazgos de Calidad · causas raíz · artículos publicados</span>
+            </button>
+
+            <!-- etiquetas -->
+            <p class="flabel" data-routes="all n1 n2 n3" style="--x:197;--y:258;--w:120">Ingreso del caso</p>
+            <p class="flabel t-violet" data-routes="all n1 n2 n3" style="--x:387;--y:250;--w:140">Sin resolver → se asigna a un analista</p>
+            <p class="flabel" data-routes="all n2 n3" style="--x:575;--y:250;--w:140">Escalamiento con control de rol N2</p>
+            <p class="flabel t-red" data-layer="azure" data-routes="all n2 n3" style="--x:760;--y:258;--w:190">Data construye el rol de N2 en BD y explica las casuísticas</p>
+            <p class="flabel t-red" data-layer="azure" data-routes="all n3" style="--x:995;--y:228;--w:150">Gestión y seguimiento en Azure DevOps</p>
+            <p class="flabel t-blue" data-routes="all n1" style="--x:770;--y:484;--w:300">Resuelto en primer contacto (N1) — cierre en línea</p>
+            <p class="flabel t-blue" data-routes="all n2" style="--x:880;--y:444;--w:280">Resuelto en N2 — sin escalamiento a N3</p>
+            <p class="flabel t-amber" data-routes="all n1" style="--x:330;--y:566;--w:210">Habilita resolución en primer contacto</p>
+            <p class="flabel" data-routes="all n1 n2 n3" style="--x:1178;--y:406;--w:120">Cierre validado</p>
+
+          </div>
+        </div>
+      </div>
+
+      <p class="scroll-hint">Deslice horizontalmente para ver el diagrama completo →</p>
+
+      <!-- panel de detalle -->
+      <div class="flow-detail">
+        <div class="fdetail" data-detail="intro">
+          <span class="kicker">Cómo leer el diagrama</span>
+          <h3>Un caso, cuatro salidas posibles</h3>
+          <p>Todo caso entra por widget o portal, pasa primero por autogestión con IA y, si no se resuelve, se asigna a un analista. Se cierra en el nivel donde se resuelve —N1, N2 o N3— y siempre pasa por Calidad antes de notificar al usuario final.</p>
+          <div class="fdetail-cols">
+            <div><h4>Filtre por ruta</h4><p>Los botones de arriba aíslan cada camino de resolución y encienden las conexiones que lo componen.</p></div>
+            <div><h4>Explore cada bloque</h4><p>Haga clic en cualquier caja del diagrama para ver su alcance, qué recibe y qué entrega.</p></div>
+            <div><h4>Vista cliente</h4><p>Apague «Cola interna Azure» para ver el modelo tal como lo percibe el usuario final: todo ocurre en Zendesk.</p></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="canales" hidden>
+          <span class="kicker">Entrada</span>
+          <h3>Canales de ingreso</h3>
+          <p>Solo dos canales: el widget embebido y el portal de autoservicio. <b>No hay canal de correo</b>, de modo que ningún caso entra sin tipificación ni por fuera de Zendesk.</p>
+          <div class="fdetail-cols">
+            <div><h4>Canales habilitados</h4><ul><li>Widget</li><li>Portal de autoservicio</li></ul></div>
+            <div><h4>Por qué importa</h4><ul><li>Todo caso nace registrado y categorizado</li><li>El ANS se cuenta desde el ingreso real</li><li>Sin bandejas paralelas ni casos «de palabra»</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="ia-auto" hidden>
+          <span class="kicker">Capa de IA · uso interno</span>
+          <h3>Autogestión con IA</h3>
+          <p>Actúa <b>antes de que el caso se asigne a un analista</b>. Intenta resolver la solicitud con el conocimiento publicado; si no lo consigue, el caso pasa a N1 ya estructurado. Es el único punto del flujo donde la IA atiende de cara al usuario.</p>
+          <div class="fdetail-cols">
+            <div><h4>Qué hace</h4><ul><li>Responde con el conocimiento disponible en widget y portal</li><li>Estructura y tipifica el caso antes de asignarlo</li><li>Evita asignar a un analista lo que se resuelve solo</li></ul></div>
+            <div><h4>Qué no hace</h4><ul><li>No interviene en el diagnóstico de N2</li><li>No decide escalamientos</li><li>No forma parte de los entregables contractuales</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n1" hidden>
+          <span class="kicker">Nivel 1</span>
+          <h3>N1 DOCUM — recepción, tipificación y primer contacto</h3>
+          <p>Recibe lo que la autogestión no resolvió. Tipifica, categoriza y atiende en primer contacto todo lo que la base de conocimiento habilita. Cuando cierra aquí, el caso pasa directo a validación de Calidad.</p>
+          <div class="fdetail-cols">
+            <div><h4>Recibe</h4><ul><li>Casos no resueltos en autogestión</li><li>Artículos y procedimientos de la base de conocimiento</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>Cierre en línea validado por Calidad</li><li>Escalamiento tipificado a N2</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n2" hidden>
+          <span class="kicker">Nivel 2</span>
+          <h3>N2 Soporte — diagnóstico, base de datos y ajustes en BD</h3>
+          <p>Recibe el escalamiento bajo control del rol N2. Diagnostica, consulta y <b>realiza ajustes directamente en base de datos</b>. Quien le entrega el conocimiento para hacerlo es <b>N3 DATA</b>: construye el rol de N2 en la base de datos y explica cómo resolver cada casuística.</p>
+          <div class="fdetail-cols">
+            <div><h4>Recibe</h4><ul><li>Escalamiento de N1 con control de rol N2</li><li>De N3 DATA: el rol en BD y la explicación de las casuísticas</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>Cierre en N2 sin escalar a N3</li><li>Casos que requieren al equipo interno, hacia N3 Funcional</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n3f" hidden>
+          <span class="kicker">Nivel 3 · Zendesk</span>
+          <h3>N3 Funcional — único puente entre Zendesk y Azure DevOps</h3>
+          <p>Traduce el caso al equipo interno y gestiona su seguimiento en Azure DevOps. Un solo rol concentra la interfaz: el cliente nunca ve la cola interna y la trazabilidad permanece en Zendesk.</p>
+          <div class="fdetail-cols">
+            <div><h4>Qué escala a Azure</h4><ul><li>Requerimientos</li><li>Incidencias que exigen al equipo interno</li><li>Casos de data</li><li>Fuerza mayor</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>Solución del equipo interno traducida al caso</li><li>Estado y seguimiento visibles en Zendesk</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n3dev" hidden>
+          <span class="kicker">Azure DevOps · interno</span>
+          <h3>N3 Desarrollo</h3>
+          <p>Atiende lo que exige cambio en el producto. Trabaja en la cola interna de Azure DevOps; el usuario final no la ve y el estado del caso se refleja en Zendesk a través de N3 Funcional.</p>
+        </div>
+
+        <div class="fdetail" data-detail="n3qa" hidden>
+          <span class="kicker">Azure DevOps · interno</span>
+          <h3>N3 QA</h3>
+          <p>Verifica la solución del equipo interno antes de devolverla al flujo. Es control técnico dentro de la cola interna, distinto de la validación de cierre que hace el Equipo Calidad sobre el caso del cliente.</p>
+        </div>
+
+        <div class="fdetail" data-detail="n3data" hidden>
+          <span class="kicker">Azure DevOps · interno</span>
+          <h3>N3 DATA — origen del conocimiento de N2</h3>
+          <p>Además de atender los casos de data, <b>construye el rol de N2 en la base de datos y le explica cómo resolver las casuísticas</b>. Es el traspaso de conocimiento que le permite a N2 hacer ajustes en BD sin escalar a N3.</p>
+          <div class="fdetail-cols">
+            <div><h4>Entrega a N2</h4><ul><li>Rol y permisos de N2 en base de datos</li><li>Procedimientos por casuística</li><li>Acompañamiento hasta que N2 resuelve solo</li></ul></div>
+            <div><h4>Efecto en el flujo</h4><ul><li>Menos escalamientos a N3</li><li>Casos que antes eran de Data se cierran en N2</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="calidad" hidden>
+          <span class="kicker">Control</span>
+          <h3>Equipo Calidad — punto único de validación de cierre</h3>
+          <p>Todo cierre pasa por Calidad, venga de N1, N2 o N3. Verifica solución, tipificación y ANS antes de notificar; si no cumple, el caso vuelve al nivel que lo trabajó. Sus hallazgos alimentan la base de conocimiento y la gestión de problemas.</p>
+          <div class="fdetail-cols">
+            <div><h4>Valida</h4><ul><li>Que la solución responda a lo solicitado</li><li>Tipificación y categorización</li><li>Cumplimiento de ANS</li><li>Tono y completitud de la respuesta</li></ul></div>
+            <div><h4>Produce</h4><ul><li>Autorización para notificar</li><li>Reproceso cuando algo falla</li><li>Hallazgos para la base de conocimiento</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="ia-cal" hidden>
+          <span class="kicker">Capa de IA · uso interno</span>
+          <h3>IA de apoyo a Calidad</h3>
+          <p>Es una IA <b>independiente</b> de la de autogestión y trabaja solo hacia adentro: amplía la muestra que Calidad puede revisar y le señala dónde mirar. La decisión de cierre siempre es del analista de Calidad.</p>
+          <div class="fdetail-cols">
+            <div><h4>Apoya en</h4><ul><li>Revisión ampliada de cierres de N1, N2 y N3</li><li>Alertas de desviación de ANS y de tipificación</li><li>Verificación de tono y completitud</li></ul></div>
+            <div><h4>Límites</h4><ul><li>No cierra ni aprueba casos</li><li>No se expone al cliente</li><li>No forma parte de los entregables contractuales</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="kb" hidden>
+          <span class="kicker">Mejora continua</span>
+          <h3>Base de conocimiento y gestión de problemas</h3>
+          <p>Se alimenta de los hallazgos de Calidad y de las causas raíz identificadas. Cada artículo publicado empuja la resolución un nivel hacia arriba: lo que hoy resuelve N2, mañana lo resuelve N1 y después la autogestión.</p>
+          <div class="fdetail-cols">
+            <div><h4>Se alimenta de</h4><ul><li>Hallazgos y reprocesos de Calidad</li><li>Causas raíz de incidentes recurrentes</li></ul></div>
+            <div><h4>Habilita</h4><ul><li>Resolución en primer contacto en N1</li><li>Respuestas de la autogestión con IA</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="notif" hidden>
+          <span class="kicker">Salida</span>
+          <h3>Notificación al usuario final</h3>
+          <p>Última etapa del flujo y la única que el usuario percibe además del canal de ingreso. Solo ocurre después de que Calidad validó el cierre, sin importar en qué nivel se resolvió el caso.</p>
+        </div>
+      </div>
+
+      <ul class="flegend">
+        <li><i style="background:#5b8c22"></i>Zendesk — registro y trazabilidad</li>
+        <li><i style="background:#1f5fa8"></i>Cierre en el nivel de resolución</li>
+        <li><i style="background:#b02525"></i>Azure DevOps — N3 interno</li>
+        <li><i style="background:#e08a1e"></i>Calidad, conocimiento y mejora continua</li>
+        <li><i style="background:#7b3fbf"></i>Capa de IA (interna)</li>
+        <li><i style="background:#4a8f3c"></i>Salida al usuario final</li>
+      </ul>
+      <p class="figcap">Zendesk es la plataforma única de registro; Azure DevOps es una cola interna de trabajo que el usuario final no ve.</p>
     </div>
-    <p class="scroll-hint">Deslice horizontalmente para ver el diagrama completo →</p>
-    <p class="figcap">Zendesk es la plataforma única de registro; Azure DevOps es una cola interna de trabajo que el usuario final no ve.</p>
   </div>
 </section>
 
@@ -226,24 +314,31 @@
     </div>
     <ul class="rows">
       <li class="row reveal">
+        <span class="row-ico tone-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M3 12h3M18 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg></span>
+        <div class="row-body">
+          <h3>Autogestión con IA — antes de la asignación</h3>
+          <p>El caso entra por widget o portal y la IA intenta resolverlo con el conocimiento publicado. Solo lo que no se resuelve llega a un analista, y llega ya estructurado.</p>
+        </div>
+      </li>
+      <li class="row reveal">
         <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
         <div class="row-body">
           <h3>N1 DOCUM — recepción, tipificación y primer contacto</h3>
-          <p>Recibe por widget, portal de autoservicio y correo/formulario. Tipifica, categoriza y resuelve en línea lo que la base de conocimiento habilita. Si cierra aquí, el caso pasa directo a validación de Calidad.</p>
+          <p>Tipifica, categoriza y resuelve en línea lo que la base de conocimiento habilita. Si cierra aquí, el caso pasa directo a validación de Calidad.</p>
         </div>
       </li>
       <li class="row reveal">
         <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
         <div class="row-body">
-          <h3>N2 Soporte — diagnóstico, base de datos y traspaso de conocimiento</h3>
-          <p>Recibe el escalamiento bajo control del rol N2. Diagnostica, consulta base de datos y devuelve conocimiento a N1 para que el caso siguiente se resuelva en el primer contacto. Cierra sin escalar a N3 cuando el caso lo permite.</p>
+          <h3>N2 Soporte — diagnóstico, base de datos y ajustes en BD</h3>
+          <p>Recibe el escalamiento bajo control del rol N2, diagnostica y ejecuta ajustes directamente en base de datos. El conocimiento para hacerlo se lo entrega N3 DATA, que construye el rol de N2 en BD y le explica cómo resolver cada casuística.</p>
         </div>
       </li>
       <li class="row reveal">
         <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l-6-6 6-6"/><path d="M15 6l6 6-6 6"/></svg></span>
         <div class="row-body">
           <h3>N3 Funcional — único puente entre Zendesk y Azure DevOps</h3>
-          <p>Traduce el caso al equipo interno (Desarrollo, QA, DATA) y gestiona su seguimiento en Azure DevOps. Un solo rol concentra la interfaz: el cliente nunca ve la cola interna y la trazabilidad permanece en Zendesk.</p>
+          <p>Traduce el caso al equipo interno (Desarrollo, QA, DATA) y gestiona su seguimiento en Azure DevOps. El cliente nunca ve la cola interna y la trazabilidad permanece en Zendesk.</p>
         </div>
       </li>
       <li class="row reveal">
@@ -257,37 +352,37 @@
   </div>
 </section>
 
-<!-- 4 · CIERRE POR NIVEL -->
+<!-- 4 · CIERRES -->
 <section class="slide" id="cierres" data-nav="Cierres">
   <div class="inner">
     <div class="section-head">
       <h2 class="reveal">Cierre en el nivel de resolución</h2>
-      <p class="sub reveal">Tres rutas posibles, una sola validación. Ningún caso avanza al usuario final sin pasar por Calidad.</p>
+      <p class="sub reveal">Cuatro salidas posibles, una sola validación. Ningún caso atendido por un analista llega al usuario final sin pasar por Calidad.</p>
     </div>
     <div class="grid">
+      <article class="card reveal tone-violet">
+        <span class="kicker">Salida 0</span>
+        <h3>Resuelto en autogestión</h3>
+        <p>La IA responde con el conocimiento publicado y el caso no llega a asignarse a ningún analista.</p>
+        <ul><li>Sin consumo de capacidad</li><li>Depende de una KB viva</li><li>Widget y portal</li></ul>
+      </article>
       <article class="card reveal tone-blue">
         <span class="kicker">Ruta 1</span>
         <h3>Cierre en línea (N1)</h3>
-        <p>El caso se resuelve en el primer contacto con apoyo de la base de conocimiento y pasa directo a Calidad.</p>
-        <ul><li>Sin escalamiento</li><li>Menor tiempo de respuesta</li><li>Depende de una KB viva</li></ul>
+        <p>Se resuelve en el primer contacto con apoyo de la base de conocimiento y pasa directo a Calidad.</p>
+        <ul><li>Sin escalamiento</li><li>Menor tiempo de respuesta</li><li>Alimenta la KB</li></ul>
       </article>
       <article class="card reveal tone-blue">
         <span class="kicker">Ruta 2</span>
         <h3>Cierre en N2</h3>
-        <p>Diagnóstico y solución en soporte, sin escalamiento a N3, con traspaso de conocimiento hacia N1.</p>
-        <ul><li>Control de rol N2</li><li>Consulta a base de datos</li><li>Alimenta la KB</li></ul>
+        <p>Diagnóstico y ajuste en base de datos, sin escalamiento a N3, gracias al rol y las casuísticas que entregó Data.</p>
+        <ul><li>Control de rol N2</li><li>Ajustes directos en BD</li><li>Conocimiento provisto por N3 DATA</li></ul>
       </article>
       <article class="card reveal tone-red">
         <span class="kicker">Ruta 3</span>
         <h3>Solución desde N3</h3>
         <p>Requerimientos, incidencias, data o fuerza mayor que exigen al equipo interno vía Azure DevOps.</p>
         <ul><li>Desarrollo · QA · DATA</li><li>Cola interna, no visible</li><li>Seguimiento desde N3 Funcional</li></ul>
-      </article>
-      <article class="card reveal tone-amber">
-        <span class="kicker">Salida común</span>
-        <h3>Validación de Calidad</h3>
-        <p>Punto único de control antes de notificar. Si la solución no cumple, el caso regresa al nivel que lo trabajó.</p>
-        <ul><li>Revisión de tipificación y ANS</li><li>Genera hallazgos y reproceso</li><li>Habilita la notificación final</li></ul>
       </article>
     </div>
   </div>
@@ -297,40 +392,38 @@
 <section class="slide" id="ia" data-nav="Capa de IA">
   <div class="inner">
     <div class="section-head">
-      <h2 class="reveal">Capa transversal de IA</h2>
-      <p class="sub reveal">De uso interno: acelera el trabajo del equipo, no se expone al cliente ni forma parte de los entregables contractuales.</p>
+      <h2 class="reveal">Dónde actúa la IA — y dónde no</h2>
+      <p class="sub reveal">Dos usos, independientes entre sí. Ambos de uso interno: ninguno forma parte de los entregables contractuales.</p>
     </div>
-    <div class="grid">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
       <article class="card reveal tone-violet">
-        <h3>IA en el contacto (N1)</h3>
+        <span class="kicker">Uso 1</span>
+        <h3>Autogestión — antes de la asignación</h3>
+        <p>Único punto donde la IA atiende de cara al usuario. Trabaja en widget y portal, y solo hasta que el caso se asigna a un analista.</p>
         <ul>
-          <li>Clasificación y categorización sugerida</li>
-          <li>Sugerencia de artículos de conocimiento</li>
-          <li>Autoservicio asistido en el widget</li>
+          <li>Responde con el conocimiento publicado</li>
+          <li>Estructura y tipifica el caso antes de asignarlo</li>
+          <li>Evita ocupar a un analista con lo que se resuelve solo</li>
         </ul>
       </article>
       <article class="card reveal tone-violet">
-        <h3>IA en diagnóstico (N2)</h3>
-        <ul>
-          <li>Resumen del caso antes de escalar</li>
-          <li>Detección de duplicados y reaperturas</li>
-          <li>Borrador de respuesta al usuario</li>
-        </ul>
-      </article>
-      <article class="card reveal tone-violet">
-        <h3>IA en validación de Calidad</h3>
+        <span class="kicker">Uso 2</span>
+        <h3>Apoyo a Calidad</h3>
+        <p>IA independiente de la anterior, orientada hacia adentro: amplía la muestra que Calidad puede revisar y le señala dónde mirar.</p>
         <ul>
           <li>Revisión ampliada de cierres de N1, N2 y N3</li>
-          <li>Alertas de desviación de ANS y tipificación</li>
+          <li>Alertas de desviación de ANS y de tipificación</li>
           <li>Verificación de tono y completitud</li>
         </ul>
       </article>
-      <article class="card reveal tone-violet">
-        <h3>IA en gestión del conocimiento</h3>
+      <article class="card reveal tone-steel">
+        <span class="kicker">Fuera de alcance</span>
+        <h3>Dónde no interviene</h3>
+        <p>Delimitarlo es parte del modelo: el criterio técnico y la decisión de cierre siguen siendo del equipo.</p>
         <ul>
-          <li>Artículos KB a partir de casos resueltos</li>
-          <li>Identificación de incidentes recurrentes</li>
-          <li>Insumo para gestión de problemas</li>
+          <li>No participa en el diagnóstico de N2</li>
+          <li>No decide escalamientos ni cierra casos</li>
+          <li>No se expone al cliente ni a los entregables contractuales</li>
         </ul>
       </article>
     </div>
@@ -342,10 +435,11 @@
   <div class="inner">
     <span class="eyebrow reveal">Cierre</span>
     <h2 class="reveal">Un modelo que se sostiene en el conocimiento</h2>
-    <p class="lede reveal">Cada caso validado por Calidad deja un hallazgo; cada hallazgo alimenta la base de conocimiento; cada artículo empuja la resolución un nivel hacia arriba, hasta el primer contacto.</p>
+    <p class="lede reveal">Data habilita a N2, Calidad convierte cada hallazgo en conocimiento y ese conocimiento empuja la resolución hacia arriba: de N3 a N2, de N2 a N1 y de N1 a la autogestión.</p>
     <div class="close-grid">
       <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Zendesk como fuente única</b><br/>de registro, trazabilidad y ANS</span></div>
       <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Calidad como punto único</b><br/>de validación para todos los niveles</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Data habilita a N2</b><br/>rol en BD y casuísticas explicadas</span></div>
       <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Cola interna aislada</b><br/>Azure DevOps no se expone al usuario</span></div>
     </div>
     <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Nivel 2</span><i></i><span>DOCUM · documento interno</span></div>
