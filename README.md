@@ -12,7 +12,7 @@ mostrar y cada presentación lleva un selector para saltar a otra sin volver atr
 | `assets/decks.js` | **Catálogo.** Una entrada por presentación; alimenta el índice y el selector superior. |
 | `assets/core.css` | Estilos compartidos (paleta, slides, tarjetas, diagramas, impresión). |
 | `assets/core.js` | Comportamiento compartido: selector, índice lateral, revelado al hacer scroll, progreso, teclado, botón PDF. |
-| `p/cpe.html` | Modelo de Atención al Cliente — CPE (Computadores Para Educar). |
+| `p/cpe.html` | Modelo de atención — Operación interna (CPE). Documento de trabajo, no distribuir al cliente. |
 | `p/docum.html` | Modelo de atención Zendesk — DOCUM (uso interno). |
 | `vercel.json` | Despliegue: URLs limpias, atajos `/cpe` y `/docum`, cabeceras de seguridad. |
 
