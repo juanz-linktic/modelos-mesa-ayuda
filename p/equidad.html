@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Modelo de atención — La Equidad | LinkTIC</title>
+<meta name="description" content="Modelo de atención de la Mesa de Ayuda de LinkTIC para La Equidad: radicación por el analista N1 de La Equidad, entrada directa a Nivel 2, soporte externo gestionado por N2 y trazabilidad en el portal."/>
+<meta name="theme-color" content="#ffffff"/>
+<meta property="og:title" content="Modelo de atención — La Equidad"/>
+<meta property="og:description" content="Entrada directa a Nivel 2, sin triage intermedio, con trazabilidad y estado del caso en el portal."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/core.css"/>
+</head>
+<body data-base="../" data-deck="equidad">
+<div class="wrap">
+
+<header class="topbar">
+  <div class="brand"><i></i> LinkTIC <span>· Mesa de Ayuda</span></div>
+  <div class="spacer"></div>
+  <div class="picker" id="picker"></div>
+  <button class="tbtn" data-print type="button">Descargar PDF</button>
+  <div class="progress" id="progress"></div>
+</header>
+
+<nav class="sidenav" id="sidenav" aria-label="Secciones"></nav>
+
+<!-- 1 · PORTADA -->
+<section class="slide" id="portada" data-nav="Portada">
+  <div class="inner">
+    <span class="eyebrow reveal">Modelo de servicio</span>
+    <h1 class="reveal">Modelo de atención<br/><span class="accent">La Equidad</span></h1>
+    <p class="lede reveal">Radicación por el analista N1 de La Equidad, entrada directa a Nivel 2 sin triage intermedio y soporte externo gestionado por la Mesa.</p>
+    <div class="rule reveal"></div>
+    <p class="sub reveal">Un solo punto de gestión · trazabilidad y estado del caso en el portal · comunicación interna con el funcionario</p>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>La Equidad</span></div>
+  </div>
+</section>
+
+<!-- 2 · FLUJO INTERACTIVO -->
+<section class="slide slide--wide" id="flujo" data-nav="Flujo">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">El flujo, de la solicitud al retorno al funcionario</h2>
+      <p class="sub reveal">Filtre por etapa y haga clic en cualquier bloque para ver qué hace, qué recibe y qué entrega.</p>
+    </div>
+
+    <div class="flow reveal">
+
+      <div class="flow-controls">
+        <span class="ctl-label">Etapa</span>
+        <button class="fchip" type="button" data-route="all" aria-pressed="true"><i></i>Flujo completo</button>
+        <button class="fchip t-blue" type="button" data-route="in" aria-pressed="false"><i></i>Ingreso y radicación</button>
+        <button class="fchip t-blue" type="button" data-route="nov" aria-pressed="false"><i></i>Gestión y novedades</button>
+        <button class="fchip t-amber" type="button" data-route="ext" aria-pressed="false"><i></i>Soporte externo</button>
+      </div>
+
+      <div class="flow-stage">
+        <div class="diagram-scroll">
+          <div class="flowbox" style="aspect-ratio:1400/600" role="group" aria-label="Diagrama del modelo de atención de La Equidad">
+
+            <svg class="flow-edges" viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <marker id="mDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
+                <marker id="mBl" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
+                <marker id="mAm" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e08a1e"/></marker>
+                <marker id="mGr" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4a8f3c"/></marker>
+                <marker id="mSt" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8a95a5"/></marker>
+              </defs>
+
+              <path class="fedge" data-routes="all in" d="M230,335 H304" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all in" d="M520,335 H594" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all in" d="M770,335 H844" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all ext" d="M1050,335 H1124" fill="none" stroke="#e08a1e" stroke-width="2.2" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all ext" d="M1220,230 V274" fill="none" stroke="#8a95a5" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#mSt)"/>
+
+              <path class="fedge" data-routes="all ext" d="M1245,390 V430 H960 V394" fill="none" stroke="#e08a1e" stroke-width="2" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all nov" d="M910,390 V490 H370 V394" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#mBl)"/>
+              <path class="fedge" data-routes="all nov" d="M330,390 V550 H130 V394" fill="none" stroke="#4a8f3c" stroke-width="2" marker-end="url(#mGr)"/>
+            </svg>
+
+            <div class="fbox n-gray" data-routes="all ext" style="--x:1080;--y:110;--w:280;--h:120">
+              <em>Sin Nivel 3</em>
+              <span>Cuando el caso excede a N2 no hay escalamiento interno: se gestiona con el soporte externo y N2 conserva el control del caso.</span>
+            </div>
+
+            <button class="fnode n-green" type="button" data-node="funcionario" data-routes="all in nov" style="--x:40;--y:280;--w:190;--h:110">
+              <em>La Equidad</em><b>Funcionario</b><span>Plantea la solicitud por correo a su analista N1</span>
+            </button>
+
+            <button class="fnode n-green" type="button" data-node="n1" data-routes="all in nov" style="--x:310;--y:280;--w:210;--h:110">
+              <em>La Equidad</em><b>Analista N1</b><span>Recibe por correo, radica en el portal y devuelve las novedades al funcionario</span>
+            </button>
+
+            <button class="fnode n-gray" type="button" data-node="portal" data-routes="all in" style="--x:600;--y:280;--w:170;--h:110">
+              <b>Portal</b><span>Único canal de registro, trazabilidad y estado</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="n2" data-routes="all in nov ext" style="--x:850;--y:280;--w:200;--h:110">
+              <em>LinkTIC</em><b>N2 Soporte</b><span>Gestiona el caso y registra cada novedad en el ticket</span>
+            </button>
+
+            <button class="fnode n-amber" type="button" data-node="externo" data-routes="all ext" style="--x:1130;--y:280;--w:230;--h:110">
+              <b>Soporte externo</b><span>Interviene cuando el caso excede el alcance de N2</span>
+            </button>
+
+            <p class="flabel" data-routes="all in" style="--x:267;--y:246;--w:110">Correo</p>
+            <p class="flabel" data-routes="all in" style="--x:557;--y:240;--w:130">Radica la solicitud</p>
+            <p class="flabel t-blue" data-routes="all in" style="--x:807;--y:240;--w:140">Cae directo a N2 — sin triage intermedio</p>
+            <p class="flabel t-amber" data-routes="all ext" style="--x:1087;--y:240;--w:130">Cuando excede a N2</p>
+            <p class="flabel t-amber" data-routes="all ext" style="--x:1100;--y:436;--w:210">Datos de quién solventará el problema</p>
+            <p class="flabel t-blue" data-routes="all nov" style="--x:640;--y:496;--w:280">Novedades registradas en el ticket</p>
+            <p class="flabel t-green" data-routes="all nov" style="--x:520;--y:556;--w:260">Socialización interna por correo</p>
+
+          </div>
+        </div>
+      </div>
+
+      <p class="scroll-hint">Deslice horizontalmente para ver el diagrama completo →</p>
+
+      <div class="flow-detail">
+        <div class="fdetail" data-detail="intro">
+          <span class="kicker">Cómo leer el diagrama</span>
+          <h3>Una sola gestión, sin niveles intermedios</h3>
+          <p>El funcionario plantea la solicitud por correo a su analista N1 de La Equidad, que la radica en el portal. Desde ahí el caso cae directo a Nivel 2, que lo gestiona de principio a fin: registra las novedades en el ticket y, cuando el caso lo exige, lo lleva al soporte externo sin soltar el control. Las novedades vuelven al funcionario por el mismo camino, socializadas internamente por su analista N1.</p>
+          <div class="fdetail-cols">
+            <div><h4>Filtre por etapa</h4><p>Los botones de arriba aíslan el ingreso, la gestión con novedades y la ruta de soporte externo.</p></div>
+            <div><h4>Explore cada bloque</h4><p>Haga clic en cualquier caja para ver su alcance, qué recibe y qué entrega.</p></div>
+            <div><h4>Lo distintivo</h4><p>No hay Nivel 3 y no hay triage intermedio: la solicitud radicada entra directamente a quien la va a resolver.</p></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="funcionario" hidden>
+          <span class="kicker">La Equidad</span>
+          <h3>Funcionario — quien plantea la necesidad</h3>
+          <p>Su punto de contacto es el analista N1 de La Equidad, por correo. No radica directamente en el portal ni necesita conocerlo: recibe la respuesta y las novedades por el mismo canal por el que preguntó.</p>
+          <div class="fdetail-cols">
+            <div><h4>Entrega</h4><ul><li>La solicitud o la novedad por correo</li><li>El contexto del caso</li></ul></div>
+            <div><h4>Recibe</h4><ul><li>Novedades socializadas por su analista N1</li><li>Los datos de quién solventará el problema cuando interviene el soporte externo</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n1" hidden>
+          <span class="kicker">La Equidad</span>
+          <h3>Analista N1 — puerta de entrada y puente de comunicación</h3>
+          <p>Pertenece a La Equidad. Recibe la solicitud del funcionario por correo, la radica en el portal y hace el camino de vuelta: toma las novedades que N2 registró en el ticket y las socializa internamente con el funcionario.</p>
+          <div class="fdetail-cols">
+            <div><h4>Qué hace</h4><ul><li>Recibe la solicitud por correo</li><li>Radica el caso en el portal</li><li>Socializa las novedades con el funcionario</li></ul></div>
+            <div><h4>Por qué importa</h4><ul><li>El funcionario conserva un único interlocutor conocido</li><li>Todo caso queda registrado en el portal, no en una cadena de correos</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="portal" hidden>
+          <span class="kicker">Registro</span>
+          <h3>Portal — único canal de radicación</h3>
+          <p>Todo caso entra por aquí. Es lo que convierte una conversación de correo en un caso con número, fecha, responsable y estado consultable en cualquier momento, sin tener que preguntar por él.</p>
+          <div class="fdetail-cols">
+            <div><h4>Qué aporta</h4><ul><li>Trazabilidad completa de cada movimiento</li><li>Estado del caso siempre visible</li><li>Histórico consultable</li></ul></div>
+            <div><h4>Quién lo usa</h4><ul><li>El analista N1 de La Equidad para radicar y consultar</li><li>N2 para gestionar y registrar novedades</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n2" hidden>
+          <span class="kicker">LinkTIC · Nivel 2</span>
+          <h3>N2 Soporte — donde se gestiona el caso</h3>
+          <p>Recibe el caso directamente desde el portal, sin clasificación previa ni reasignaciones. Lo gestiona de principio a fin y deja cada avance registrado como novedad en el ticket. Cuando el caso excede su alcance, lo lleva al soporte externo y sigue respondiendo por él.</p>
+          <div class="fdetail-cols">
+            <div><h4>Recibe</h4><ul><li>El caso radicado en el portal, sin triage intermedio</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>La gestión y la solución del caso</li><li>Novedades registradas en el ticket</li><li>Los datos de quién solventará el problema cuando interviene el soporte externo</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="externo" hidden>
+          <span class="kicker">Fuera de la Mesa</span>
+          <h3>Soporte externo — en lugar de un Nivel 3</h3>
+          <p>Este modelo no tiene Nivel 3. Cuando el caso excede el alcance de N2, se gestiona con el soporte externo correspondiente; N2 no traspasa el caso, lo acompaña: mantiene el ticket abierto y le entrega al funcionario los datos de quién va a solventar el problema.</p>
+          <div class="fdetail-cols">
+            <div><h4>Cómo opera</h4><ul><li>N2 gestiona la interlocución con el proveedor externo</li><li>El ticket permanece abierto y trazable en el portal</li></ul></div>
+            <div><h4>Qué recibe el funcionario</h4><ul><li>Quién atenderá el caso</li><li>Los datos de contacto para el seguimiento</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="flegend">
+        <li><i style="background:#4a8f3c"></i>La Equidad — funcionario y analista N1</li>
+        <li><i style="background:#8a95a5"></i>Portal — registro y trazabilidad</li>
+        <li><i style="background:#1f5fa8"></i>LinkTIC — Nivel 2</li>
+        <li><i style="background:#e08a1e"></i>Soporte externo</li>
+      </ul>
+      <p class="figcap">El caso radicado entra directamente a Nivel 2: no hay clasificación intermedia ni Nivel 3.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · DIFERENCIAS -->
+<section class="slide" id="diferencias" data-nav="Diferencias">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Qué hace distinto a este modelo</h2>
+      <p class="sub reveal">Cuatro decisiones que definen la operación de La Equidad y la separan de un esquema de mesa por niveles.</p>
+    </div>
+    <ul class="rows">
+      <li class="row reveal">
+        <span class="row-ico tone-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <div class="row-body">
+          <h3>El funcionario entra por correo — y sigue hablando por correo</h3>
+          <p>No se le pide cambiar de herramienta ni aprender el portal. Plantea su solicitud a un analista N1 de La Equidad, que es quien conoce el contexto del negocio, y por ese mismo canal recibe las novedades.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-steel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg></span>
+        <div class="row-body">
+          <h3>La radicación en el portal es obligatoria — ahí nace la trazabilidad</h3>
+          <p>El analista N1 carga la solicitud en el portal. Ese paso convierte un correo en un caso con número, responsable, estado e histórico: lo que permite después consultar en qué va sin tener que preguntarlo.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h13"/><path d="M13 6l6 6-6 6"/></svg></span>
+        <div class="row-body">
+          <h3>Cae directo a Nivel 2 — sin triage intermedio</h3>
+          <p>La solicitud radicada llega a quien la va a resolver. No hay una capa previa de clasificación ni reasignaciones entre agentes: se elimina de raíz el tiempo que se pierde entre el registro y el inicio real de la gestión.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6z"/><path d="M12 8v4M12 15h.01"/></svg></span>
+        <div class="row-body">
+          <h3>No hay Nivel 3: hay soporte externo, y lo gestiona N2</h3>
+          <p>Cuando el caso excede el alcance de la Mesa, N2 no lo traspasa ni lo cierra: gestiona la interlocución con el soporte externo, mantiene el ticket abierto y le entrega al funcionario los datos de quién va a solventar el problema.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · PORTAL -->
+<section class="slide" id="portal" data-nav="Portal">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">El portal: traza, estado e interfaz</h2>
+      <p class="sub reveal">Es la pieza que sostiene el modelo. Sin radicación no hay caso; con radicación, todo lo demás se vuelve consultable.</p>
+    </div>
+
+    <div class="tabs reveal" data-tabs>
+      <div class="tablist" role="tablist">
+        <button class="tab" type="button" role="tab" data-tab="traza">Trazabilidad</button>
+        <button class="tab" type="button" role="tab" data-tab="estado">Estado del caso</button>
+        <button class="tab" type="button" role="tab" data-tab="ui">Interfaz</button>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" data-panel="traza">
+        <h3>Cada movimiento queda registrado</h3>
+        <p>El caso deja de vivir en una cadena de correos y pasa a tener una historia: quién lo radicó, cuándo entró a gestión, qué novedad se registró, quién la registró y cuándo se resolvió. Nada depende de que alguien recuerde haberlo dicho.</p>
+        <ol class="steps">
+          <li class="is-on"><span class="bar"></span><b>Radicado</b><span>El analista N1 carga la solicitud en el portal.</span></li>
+          <li class="is-on"><span class="bar"></span><b>En gestión en N2</b><span>El caso llega directo, sin clasificación intermedia.</span></li>
+          <li class="is-on"><span class="bar"></span><b>Novedades</b><span>Cada avance queda registrado en el ticket con fecha y autor.</span></li>
+          <li class="is-end"><span class="bar"></span><b>Resuelto</b><span>Con el histórico completo disponible para consulta.</span></li>
+        </ol>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" data-panel="estado" hidden>
+        <h3>Saber en qué va, sin preguntar</h3>
+        <p>El estado es la respuesta anticipada a la pregunta que hoy se hace por correo o por teléfono. Cada caso muestra en qué punto está y quién lo tiene, de forma que el seguimiento no consuma tiempo de nadie.</p>
+        <ul class="states">
+          <li><span class="badge-state s-steel">Radicado</span><div><b>Registrado en el portal</b><p>El caso ya existe con número y responsable asignado.</p></div></li>
+          <li><span class="badge-state s-blue">En gestión</span><div><b>Nivel 2 trabajando el caso</b><p>Sin pasos intermedios entre la radicación y el inicio de la gestión.</p></div></li>
+          <li><span class="badge-state s-amber">Soporte externo</span><div><b>Escalado fuera de la Mesa, con N2 al frente</b><p>Se informan los datos de quién solventará el problema; el ticket sigue abierto.</p></div></li>
+          <li><span class="badge-state s-teal">Resuelto</span><div><b>Solución entregada y socializada</b><p>El analista N1 comunica el cierre al funcionario y el histórico queda disponible.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" data-panel="ui" hidden>
+        <h3>Una interfaz que no hay que aprender</h3>
+        <p>El portal lo usa el analista N1 todos los días: cada campo de más es tiempo perdido multiplicado por cada solicitud. La prioridad es que radicar y consultar tomen segundos, no minutos.</p>
+        <div class="fdetail-cols">
+          <div>
+            <h4>Al radicar</h4>
+            <ul>
+              <li>Lo mínimo indispensable en pantalla</li>
+              <li>Lenguaje del negocio, no de la herramienta</li>
+              <li>Adjuntar el correo original sin retranscribirlo</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Al consultar</h4>
+            <ul>
+              <li>Estado visible sin abrir el caso</li>
+              <li>Última novedad a la vista</li>
+              <li>Todos los casos de La Equidad en una sola vista</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Al hacer seguimiento</h4>
+            <ul>
+              <li>Histórico en orden cronológico</li>
+              <li>Quién hizo cada movimiento y cuándo</li>
+              <li>Listo para copiar al correo del funcionario</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · CIERRE -->
+<section class="slide" id="cierre" data-nav="Cierre">
+  <div class="inner">
+    <span class="eyebrow reveal">Cierre</span>
+    <h2 class="reveal">Un modelo corto, con todo registrado</h2>
+    <p class="lede reveal">Menos manos en el camino significa menos tiempo perdido; el portal se encarga de que esa simplicidad no cueste visibilidad.</p>
+    <div class="close-grid">
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Un interlocutor para el funcionario</b><br/>su analista N1, por correo</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Entrada directa a Nivel 2</b><br/>sin triage ni reasignaciones</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>N2 responde por el caso</b><br/>incluso ante el soporte externo</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Traza y estado en el portal</b><br/>en una interfaz simple</span></div>
+    </div>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>La Equidad</span></div>
+  </div>
+</section>
+
+</div>
+<script src="../assets/decks.js"></script>
+<script src="../assets/core.js"></script>
+</body>
+</html>

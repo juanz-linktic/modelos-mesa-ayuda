@@ -4,7 +4,8 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/cpe", "destination": "/p/cpe" },
-    { "source": "/docum", "destination": "/p/docum" }
+    { "source": "/docum", "destination": "/p/docum" },
+    { "source": "/equidad", "destination": "/p/equidad" }
   ],
   "headers": [
     {

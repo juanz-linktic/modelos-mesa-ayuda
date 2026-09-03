@@ -23,5 +23,15 @@ window.CORE_DECKS = [
     tag: 'Uso interno',
     tone: 'violet',
     updated: '2026-08'
+  },
+  {
+    id: 'equidad',
+    file: 'p/equidad.html',
+    title: 'Modelo de atención — La Equidad',
+    client: 'La Equidad',
+    summary: 'Radicación por el analista N1 de La Equidad, entrada directa a Nivel 2 sin triage, soporte externo gestionado por N2 y trazabilidad en el portal.',
+    tag: 'Cliente',
+    tone: 'blue',
+    updated: '2026-09'
   }
 ];
