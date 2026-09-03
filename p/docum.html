@@ -65,9 +65,9 @@
 
       <div class="flow-stage">
         <div class="diagram-scroll">
-          <div class="flowbox" style="aspect-ratio:1400/1140" role="group" aria-label="Diagrama del modelo de atención DOCUM">
+          <div class="flowbox" style="aspect-ratio:1400/1090" role="group" aria-label="Diagrama del modelo de atención DOCUM">
 
-            <svg class="flow-edges" viewBox="0 0 1400 1140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <svg class="flow-edges" viewBox="0 0 1400 1090" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
               <defs>
                 <marker id="mDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
                 <marker id="mBl" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
@@ -92,13 +92,11 @@
               <path class="fedge" data-routes="all n1" d="M474,570 H270 V404" fill="none" stroke="#e08a1e" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#mAm)"/>
 
               <!-- ciclo de conocimiento y gestión de problemas -->
-              <path class="fedge" data-routes="all prob" d="M1240,750 V585 H886" fill="none" stroke="#4a8f3c" stroke-width="2.2" marker-end="url(#mGr)"/>
-              <path class="fedge" data-routes="all prac prob" d="M790,606 V994" fill="none" stroke="#e08a1e" stroke-width="2.2" marker-end="url(#mAm)"/>
-              <path class="fedge" data-routes="all prob" d="M260,805 H324" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
-              <path class="fedge" data-routes="all prob" d="M750,805 H814" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
-              <path class="fedge" data-routes="all prob" d="M1060,805 H1114" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
-              <path class="fedge" data-routes="all prac" d="M260,1050 H594" fill="none" stroke="#e08a1e" stroke-width="2.2" marker-end="url(#mAm)"/>
-              <path class="fedge" data-routes="all prac prob" d="M740,1000 V960 H150 V864" fill="none" stroke="#e08a1e" stroke-width="2.2" stroke-dasharray="6,4" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all prob" d="M280,775 H334" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
+              <path class="fedge" data-routes="all prob" d="M780,775 H834" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
+              <path class="fedge" data-routes="all prob" d="M960,720 V670 H800 V606" fill="none" stroke="#4a8f3c" stroke-width="2.2" marker-end="url(#mGr)"/>
+              <path class="fedge" data-routes="all prac prob" d="M830,606 V944" fill="none" stroke="#e08a1e" stroke-width="2.2" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all prac" d="M320,1000 H694" fill="none" stroke="#e08a1e" stroke-width="2.2" marker-end="url(#mAm)"/>
             </svg>
 
             <!-- Azure DevOps -->
@@ -143,37 +141,38 @@
               <span>Hallazgos de Calidad · causas raíz · refuerzo a los niveles</span>
             </button>
 
-            <!-- ciclo de conocimiento y gestión de problemas -->
-            <button class="fnode n-blue" type="button" data-node="k-niveles" data-routes="all prac prob" style="--x:40;--y:750;--w:220;--h:110">
-              <b>Niveles N1 · N2 · N3</b><span>Detectan problemas recurrentes detrás de los tickets</span>
+            <!-- carril A · gestión de problemas -->
+            <button class="fnode n-blue" type="button" data-node="k-origen" data-routes="all prob" style="--x:40;--y:720;--w:240;--h:110">
+              <em>Paso 1</em><b>Problema identificado</b><span>N1 o N2 detectan la casuística que está generando los tickets</span>
             </button>
 
-            <div class="fgroup g-red" data-routes="all prob" style="--x:330;--y:750;--w:420;--h:190">
+            <div class="fgroup g-red" data-routes="all prob" style="--x:340;--y:700;--w:440;--h:190">
               <span class="fgroup-tag">Cada 15 días</span>
-              <p class="fgroup-title">Sesión de gestión de problemas</p>
+              <p class="fgroup-title">Se socializa con N3 y Gerencia</p>
               <div class="fgroup-body">
                 <div class="fbox n-plain is-center"><span style="font-weight:600">DATA</span></div>
                 <div class="fbox n-plain is-center"><span style="font-weight:600">Desarrollo</span></div>
                 <div class="fbox n-plain is-center"><span style="font-weight:600">Requerimientos</span></div>
                 <div class="fbox n-plain is-center"><span style="font-weight:600">Gerencias</span></div>
               </div>
-              <p class="fgroup-note">Busca solventar de raíz los problemas que generan incidencias.</p>
+              <p class="fgroup-note">Busca solventar de raíz la casuística que genera los tickets.</p>
             </div>
 
-            <button class="fnode n-red" type="button" data-node="k-car" data-routes="all prob" style="--x:820;--y:750;--w:240;--h:110">
-              <b>CAR — causa raíz</b><span>Se identifica qué origina los tickets recurrentes</span>
+            <button class="fnode n-green" type="button" data-node="k-solucion" data-routes="all prob" style="--x:840;--y:720;--w:240;--h:110">
+              <em>Paso 3</em><b>Solución de raíz</b><span>Se define, se ejecuta y se cierra la casuística</span>
             </button>
 
-            <button class="fnode n-green" type="button" data-node="k-solucion" data-routes="all prob" style="--x:1120;--y:750;--w:240;--h:110">
-              <b>Solución de raíz</b><span>Se define, se ejecuta y se cierra el problema</span>
-            </button>
+            <div class="fbox n-gray" data-routes="all prob" style="--x:1120;--y:720;--w:240;--h:110">
+              <em>En paralelo</em><span>El ticket sigue su curso normal por el flujo de atención mientras el problema se resuelve de raíz.</span>
+            </div>
 
-            <button class="fnode n-amber" type="button" data-node="k-refuerzo" data-routes="all prac prob" style="--x:600;--y:1000;--w:280;--h:100">
-              <b style="font-size:calc(13.5 * var(--u))">Acompañamiento y refuerzo</b><span>Al analista del nivel donde se detectó la desviación</span>
-            </button>
-
-            <button class="fnode n-amber" type="button" data-node="k-calidad" data-routes="all prac" style="--x:40;--y:1000;--w:220;--h:100">
+            <!-- carril B · calidad -->
+            <button class="fnode n-amber" type="button" data-node="k-calidad" data-routes="all prac" style="--x:40;--y:950;--w:280;--h:100">
               <b style="font-size:calc(13.5 * var(--u))">Hallazgos de Calidad</b><span>Malas prácticas identificadas por nivel</span>
+            </button>
+
+            <button class="fnode n-amber" type="button" data-node="k-refuerzo" data-routes="all prac prob" style="--x:700;--y:950;--w:300;--h:100">
+              <b style="font-size:calc(13.5 * var(--u))">Acompañamiento y refuerzo</b><span>Al analista del nivel donde se detectó la desviación</span>
             </button>
 
             <p class="flabel" data-routes="all n1 n2 n3" style="--x:212;--y:258;--w:110">Ingreso del caso</p>
@@ -188,13 +187,11 @@
             <p class="flabel" data-routes="all n1 n2 n3" style="--x:1142;--y:406;--w:120">Cierre validado</p>
 
             <p class="flabel t-amber" data-routes="all n1 n2 prac" style="--x:985;--y:520;--w:180">Hallazgos y reprocesos de Calidad</p>
-            <p class="flabel t-green" data-routes="all prob" style="--x:1130;--y:600;--w:200">Solución publicada en la base de conocimiento</p>
-            <p class="flabel t-amber" data-routes="all prac prob" style="--x:882;--y:640;--w:180">Conocimiento y refuerzo publicados</p>
-            <p class="flabel t-red" data-routes="all prob" style="--x:292;--y:716;--w:150">Abren el flujo de gestión de problemas</p>
-            <p class="flabel t-red" data-routes="all prob" style="--x:782;--y:720;--w:120">Análisis conjunto</p>
-            <p class="flabel t-red" data-routes="all prob" style="--x:1090;--y:720;--w:120">Se define y se aplica</p>
-            <p class="flabel t-amber" data-routes="all prac" style="--x:427;--y:1016;--w:300">Malas prácticas detectadas en un nivel</p>
-            <p class="flabel t-amber" data-routes="all prac prob" style="--x:445;--y:966;--w:300">Refuerzo y conocimiento aplicados al nivel</p>
+            <p class="flabel t-green" data-routes="all prob" style="--x:1090;--y:634;--w:210">Solución publicada en la base de conocimiento</p>
+            <p class="flabel t-amber" data-routes="all prac prob" style="--x:925;--y:878;--w:170">Conocimiento y refuerzo publicados</p>
+            <p class="flabel t-red" data-routes="all prob" style="--x:307;--y:674;--w:150">Paso 2 — se socializa</p>
+            <p class="flabel t-red" data-routes="all prob" style="--x:807;--y:684;--w:130">Análisis conjunto</p>
+            <p class="flabel t-amber" data-routes="all prac" style="--x:507;--y:966;--w:300">Malas prácticas detectadas en un nivel</p>
 
           </div>
         </div>
@@ -206,7 +203,7 @@
         <div class="fdetail" data-detail="intro">
           <span class="kicker">Cómo leer el diagrama</span>
           <h3>Un caso, tres salidas posibles — y un ciclo que las reduce</h3>
-          <p>Todo caso entra por widget o portal y se cierra en el nivel donde se resuelve —N1, N2 o N3—, pero siempre pasa por Calidad antes de notificar al usuario final. Debajo, colgando de la base de conocimiento, corre el ciclo de mejora: los hallazgos de Calidad refuerzan al nivel y los problemas detectados van a la sesión quincenal que ataca la causa raíz.</p>
+          <p>Todo caso entra por widget o portal y se cierra en el nivel donde se resuelve —N1, N2 o N3—, pero siempre pasa por Calidad antes de notificar al usuario final. Debajo, colgando de la base de conocimiento, corren dos carriles en paralelo: el problema que N1 o N2 identifican y se socializa con N3 y Gerencia, y el refuerzo al nivel que nace de los hallazgos de Calidad.</p>
           <div class="fdetail-cols">
             <div><h4>Filtre por ruta</h4><p>Los botones de arriba aíslan cada camino de resolución y encienden las conexiones que lo componen.</p></div>
             <div><h4>Ciclo de mejora</h4><p>Los filtros «Malas prácticas» y «Problema → causa raíz» aíslan la parte inferior del diagrama.</p></div>
@@ -302,30 +299,24 @@
           <p>Última etapa del flujo y la única que el usuario percibe además del canal de ingreso. Solo ocurre después de que Calidad validó el cierre, sin importar en qué nivel se resolvió el caso.</p>
         </div>
 
-        <div class="fdetail" data-detail="k-niveles" hidden>
-          <span class="kicker">Ciclo de mejora · origen</span>
-          <h3>Los niveles detectan el problema</h3>
-          <p>Quien atiende los tickets es quien primero ve el patrón: la misma falla que vuelve, el mismo reclamo con distinto nombre. Cualquier nivel —N1, N2 o N3— puede abrir el flujo de gestión de problemas cuando identifica que detrás de varios tickets hay una sola causa.</p>
+        <div class="fdetail" data-detail="k-origen" hidden>
+          <span class="kicker">Gestión de problemas · paso 1</span>
+          <h3>El problema lo identifica N1 o N2</h3>
+          <p>Quien atiende es quien primero ve el patrón: la misma falla que vuelve con distinto nombre. Cuando N1 o N2 identifican que detrás de varios tickets hay una sola casuística, la reportan como problema — sin detener la atención del ticket que tienen en curso.</p>
           <div class="fdetail-cols">
-            <div><h4>Qué reporta</h4><ul><li>Incidencias que se repiten</li><li>Casos con una causa común</li><li>Reprocesos y reaperturas</li></ul></div>
-            <div><h4>A dónde va</h4><ul><li>A la sesión de gestión de problemas</li></ul></div>
-          </div>
-        </div>
-
-        <div class="fdetail" data-detail="k-car" hidden>
-          <span class="kicker">Gestión de problemas</span>
-          <h3>CAR — causa raíz</h3>
-          <p>El objetivo de la sesión no es resolver tickets uno por uno, sino encontrar qué los origina. Identificado el CAR, se define la solución de fondo y se le asigna responsable y fecha.</p>
-          <div class="fdetail-cols">
-            <div><h4>Se analiza</h4><ul><li>Volumen y recurrencia de los tickets asociados</li><li>Origen técnico, funcional o de data</li><li>Impacto en el usuario y en el ANS</li></ul></div>
-            <div><h4>Produce</h4><ul><li>Causa raíz documentada</li><li>Solución definida con responsable</li></ul></div>
+            <div><h4>Qué se reporta</h4><ul><li>La casuística que se repite</li><li>Los tickets que la evidencian</li></ul></div>
+            <div><h4>A dónde va</h4><ul><li>A la sesión con N3 y Gerencia</li></ul></div>
           </div>
         </div>
 
         <div class="fdetail" data-detail="k-solucion" hidden>
-          <span class="kicker">Gestión de problemas</span>
-          <h3>Solución de raíz</h3>
-          <p>Se ejecuta la solución acordada y se cierra el problema. El resultado sube a la base de conocimiento para que el nivel sepa qué cambió y cómo atender los casos relacionados mientras se despliega. Un problema cerrado es un ticket que deja de llegar.</p>
+          <span class="kicker">Gestión de problemas · paso 3</span>
+          <h3>Solución de raíz de la casuística</h3>
+          <p>En la sesión se identifica el origen —el CAR— y se define la solución de fondo con responsable y fecha. Se ejecuta, se cierra la casuística y el resultado se publica en la base de conocimiento. Un problema cerrado es un ticket que deja de llegar.</p>
+          <div class="fdetail-cols">
+            <div><h4>Se analiza</h4><ul><li>Qué origina los tickets recurrentes</li><li>Origen técnico, funcional o de data</li><li>Impacto en el usuario y en el ANS</li></ul></div>
+            <div><h4>Produce</h4><ul><li>Causa raíz documentada</li><li>Solución con responsable y fecha</li><li>Publicación en la base de conocimiento</li></ul></div>
+          </div>
         </div>
 
         <div class="fdetail" data-detail="k-calidad" hidden>
@@ -450,8 +441,8 @@
       <li class="row reveal">
         <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.2 16.2L21 21"/><path d="M11 8v3M11 14h.01"/></svg></span>
         <div class="row-body">
-          <h3>Ciclo 2 — los niveles detectan problemas y se abre la gestión de problemas</h3>
-          <p>Desde cualquier nivel se puede reportar que detrás de varios tickets hay una sola causa. Eso abre el flujo de gestión de problemas: sesiones cada 15 días que buscan solventar de raíz los problemas que generan incidencias. Allí se busca y se da solución al CAR — la causa raíz.</p>
+          <h3>Ciclo 2 — N1 o N2 identifican el problema y se socializa con N3 y Gerencia</h3>
+          <p>Cuando N1 o N2 detectan que detrás de varios tickets hay una sola casuística, la reportan como problema. Se socializa en la sesión de cada 15 días con las áreas de N3 —DATA, Desarrollo, Requerimientos— y las Gerencias, para solventar esa casuística de raíz. Allí se busca y se da solución al CAR. Mientras tanto, el ticket sigue su curso normal por el flujo de atención: la gestión de problemas corre en paralelo, no reemplaza la atención.</p>
         </div>
       </li>
       <li class="row reveal">
