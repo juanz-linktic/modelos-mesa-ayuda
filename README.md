@@ -112,7 +112,16 @@ Cada push a `main` publica automáticamente.
 | `/p/cpe` — atajo `/cpe` | Modelo CPE |
 | `/p/docum` — atajo `/docum` | Modelo DOCUM |
 
-## Dominio
+## Repositorio y dominio
 
-En el proyecto de Vercel: *Settings → Domains* (por ejemplo
-`modelos.linktic.com` mediante un registro CNAME).
+- **Repositorio:** `github.com/juanz-linktic/modelos-mesa-ayuda`
+- **Dominio:** `modelos-mesa-ayuda.vercel.app`
+
+Para cambiar el subdominio de Vercel: *Settings → Domains* del proyecto, `Add`
+con el nuevo `<nombre>.vercel.app` y luego eliminar el anterior. Si más adelante
+se quiere un dominio propio (por ejemplo `modelos.linktic.com`), se agrega en la
+misma pantalla y se crea el registro CNAME correspondiente en el DNS de LinkTIC.
+
+> Renombrar el repositorio en GitHub no rompe el despliegue: Vercel sigue
+> conectado al mismo repositorio por id, y GitHub mantiene una redirección desde
+> el nombre anterior.
