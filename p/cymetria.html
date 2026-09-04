@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Modelo de atención — Cymetria | LinkTIC</title>
+<meta name="description" content="Modelo de atención de Cymetria: ingreso por Aranda o por llamada, acompañamiento del líder de N2 en todo caso, validación previa al cierre y formación en curso."/>
+<meta name="theme-color" content="#ffffff"/>
+<meta property="og:title" content="Modelo de atención — Cymetria"/>
+<meta property="og:description" content="Dos canales de ingreso, acompañamiento permanente del líder de N2 y validación antes del cierre."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/core.css"/>
+</head>
+<body data-base="../" data-deck="cymetria">
+<div class="wrap">
+
+<header class="topbar">
+  <div class="brand"><i></i> LinkTIC <span>· Mesa de Ayuda</span></div>
+  <div class="spacer"></div>
+  <div class="picker" id="picker"></div>
+  <button class="tbtn" data-print type="button">Descargar PDF</button>
+  <div class="progress" id="progress"></div>
+</header>
+
+<nav class="sidenav" id="sidenav" aria-label="Secciones"></nav>
+
+<!-- 1 · PORTADA -->
+<section class="slide" id="portada" data-nav="Portada">
+  <div class="inner">
+    <span class="eyebrow reveal">Documento de trabajo</span>
+    <h1 class="reveal">Modelo de atención<br/><span class="accent">Cymetria</span></h1>
+    <p class="lede reveal">Dos canales de ingreso —Aranda y llamada—, acompañamiento del líder de N2 en todo caso, validación antes del cierre y un analista en formación sobre los casos reales.</p>
+    <div class="rule reveal"></div>
+    <p class="sub reveal">Modelo por personas, no por niveles genéricos · el conocimiento se transfiere atendiendo</p>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Cymetria</span><i></i><span>Uso interno</span></div>
+  </div>
+</section>
+
+<!-- 2 · FLUJO INTERACTIVO -->
+<section class="slide slide--wide" id="flujo" data-nav="Flujo">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">El flujo, según por dónde entre el caso</h2>
+      <p class="sub reveal">Filtre por canal y haga clic en cualquier bloque para ver el rol, qué recibe y qué entrega.</p>
+    </div>
+
+    <div class="flow reveal">
+
+      <div class="flow-controls">
+        <span class="ctl-label">Ruta</span>
+        <button class="fchip" type="button" data-route="all" aria-pressed="true"><i></i>Flujo completo</button>
+        <button class="fchip t-blue" type="button" data-route="ar" aria-pressed="false"><i></i>Entra por Aranda</button>
+        <button class="fchip t-amber" type="button" data-route="ll" aria-pressed="false"><i></i>Entra por llamada</button>
+        <button class="fchip t-violet" type="button" data-route="for" aria-pressed="false"><i></i>Formación</button>
+      </div>
+
+      <div class="flow-stage">
+        <div class="diagram-scroll">
+          <div class="flowbox" style="aspect-ratio:1400/620" role="group" aria-label="Diagrama del modelo de atención de Cymetria">
+
+            <svg class="flow-edges" viewBox="0 0 1400 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <marker id="mDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
+                <marker id="mBl" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
+                <marker id="mAm" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e08a1e"/></marker>
+                <marker id="mGr" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4a8f3c"/></marker>
+                <marker id="mVi" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7b3fbf"/></marker>
+              </defs>
+
+              <path class="fedge" data-routes="all ar" d="M210,200 H274" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all ar" d="M500,205 H545 V300 H594" fill="none" stroke="#1f5fa8" stroke-width="2.2" marker-end="url(#mBl)"/>
+              <path class="fedge" data-routes="all ll" d="M210,410 H520 V330 H594" fill="none" stroke="#e08a1e" stroke-width="2.2" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all ar ll" d="M830,315 H894" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all ar ll" d="M1100,315 H1164" fill="none" stroke="#4a8f3c" stroke-width="2.2" marker-end="url(#mGr)"/>
+              <path class="fedge" data-routes="all for" d="M715,375 V464" fill="none" stroke="#7b3fbf" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#mVi)"/>
+            </svg>
+
+            <button class="fnode n-gray" type="button" data-node="aranda" data-routes="all ar" style="--x:40;--y:150;--w:170;--h:100">
+              <em>Canal</em><b>Aranda</b><span>El caso entra registrado en la herramienta</span>
+            </button>
+
+            <button class="fnode n-gray" type="button" data-node="llamada" data-routes="all ll" style="--x:40;--y:360;--w:170;--h:100">
+              <em>Canal</em><b>Llamada</b><span>El caso entra hablado, sin registro previo</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="cristian" data-routes="all ar" style="--x:280;--y:150;--w:220;--h:110">
+              <em>Webmaster</em><b>Cristian</b><span>Recibe los casos de Aranda y solicita el acompañamiento del líder de N2</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="santiago" data-routes="all ar ll for" style="--x:600;--y:255;--w:230;--h:120">
+              <em>Líder de N2</em><b>Santiago Salas</b><span>Toma el Aranda y gestiona el caso. Único punto donde convergen los dos canales</span>
+            </button>
+
+            <button class="fnode n-amber" type="button" data-node="validacion" data-routes="all ar ll" style="--x:900;--y:255;--w:200;--h:120">
+              <b>Validación antes del cierre</b><span>La solución se revisa antes de cerrar el caso</span>
+            </button>
+
+            <button class="fnode n-green n-pill is-center" type="button" data-node="cierre-caso" data-routes="all ar ll" style="--x:1170;--y:255;--w:190;--h:120">
+              <b>Cierre e información al usuario</b>
+            </button>
+
+            <button class="fnode n-violet" type="button" data-node="alejandra" data-routes="all for" style="--x:600;--y:470;--w:230;--h:110">
+              <em>N2 · en formación</em><b>Alejandra León</b><span>Aprende sobre los casos reales que atiende el líder de N2</span>
+            </button>
+
+            <p class="flabel" data-routes="all ar" style="--x:242;--y:124;--w:140">Caso ya registrado</p>
+            <p class="flabel t-blue" data-routes="all ar" style="--x:575;--y:215;--w:130">Solicita acompañamiento — en todo caso</p>
+            <p class="flabel t-amber" data-routes="all ll" style="--x:370;--y:420;--w:200">Entra directo al líder de N2</p>
+            <p class="flabel" data-routes="all ar ll" style="--x:862;--y:225;--w:110">Solución lista</p>
+            <p class="flabel t-green" data-routes="all ar ll" style="--x:1132;--y:225;--w:110">Validado</p>
+            <p class="flabel t-violet" data-routes="all for" style="--x:830;--y:405;--w:170">Acompaña y aprende de cada caso</p>
+
+          </div>
+        </div>
+      </div>
+
+      <p class="scroll-hint">Deslice horizontalmente para ver el diagrama completo →</p>
+
+      <div class="flow-detail">
+        <div class="fdetail" data-detail="intro">
+          <span class="kicker">Cómo leer el diagrama</span>
+          <h3>Dos entradas, un solo punto de gestión</h3>
+          <p>El caso entra por Aranda o por llamada, y según el canal recorre un camino distinto: los de Aranda llegan a Cristian, que solicita el acompañamiento del líder de N2; las llamadas van directo a Santiago. Ambos caminos convergen en él, que toma el Aranda y gestiona el caso hasta la validación previa al cierre. En paralelo, Alejandra aprende sobre esos mismos casos.</p>
+          <div class="fdetail-cols">
+            <div><h4>Filtre por canal</h4><p>Los botones de arriba aíslan la ruta de Aranda, la de llamada y el eje de formación.</p></div>
+            <div><h4>Explore cada rol</h4><p>Haga clic en cualquier caja para ver qué hace la persona, qué recibe y qué entrega.</p></div>
+            <div><h4>Modelo por personas</h4><p>Aquí los bloques son roles concretos, no niveles genéricos: el modelo depende de quién hace qué.</p></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="aranda" hidden>
+          <span class="kicker">Canal</span>
+          <h3>Aranda</h3>
+          <p>El caso entra ya registrado en la herramienta, con su número y su historia. Es la ruta que pasa por Cristian antes de llegar al líder de N2.</p>
+          <div class="fdetail-cols">
+            <div><h4>Ventaja</h4><ul><li>El caso nace trazable</li><li>No hay que reconstruir lo que se pidió</li></ul></div>
+            <div><h4>A dónde va</h4><ul><li>A Cristian, webmaster</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="llamada" hidden>
+          <span class="kicker">Canal</span>
+          <h3>Llamada</h3>
+          <p>El caso entra hablado y va directo al líder de N2, sin pasar por Cristian. Es la ruta más corta, pero también la que exige registrar después lo que en Aranda ya venía escrito.</p>
+          <div class="fdetail-cols">
+            <div><h4>Característica</h4><ul><li>Sin registro previo</li><li>Ruta distinta a la de Aranda</li></ul></div>
+            <div><h4>A dónde va</h4><ul><li>Directo a Santiago Salas</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="cristian" hidden>
+          <span class="kicker">Rol · Webmaster</span>
+          <h3>Cristian — recibe los casos de Aranda</h3>
+          <p>Todo caso que entra por Aranda cae en él. Su paso siguiente es siempre el mismo: solicitar el acompañamiento del líder de N2, que es quien termina tomando el Aranda.</p>
+          <div class="fdetail-cols">
+            <div><h4>Recibe</h4><ul><li>Los casos registrados en Aranda</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>La solicitud de acompañamiento al líder de N2</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="santiago" hidden>
+          <span class="kicker">Rol · Líder de N2</span>
+          <h3>Santiago Salas — donde convergen los dos canales</h3>
+          <p>Toma el Aranda y gestiona el caso, venga de Cristian o directo de una llamada. Es el punto único de gestión del modelo: todo caso pasa por él, y sobre su atención se apoya la formación de Alejandra.</p>
+          <div class="fdetail-cols">
+            <div><h4>Recibe</h4><ul><li>Los casos de Aranda, vía Cristian</li><li>Las llamadas, directamente</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>El caso gestionado y la solución</li><li>Formación práctica sobre casos reales</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="alejandra" hidden>
+          <span class="kicker">Rol · N2 en formación</span>
+          <h3>Alejandra León — aprende sobre los casos reales</h3>
+          <p>Acompaña la atención del líder de N2 y aprende de los casos que él resuelve. La transferencia de conocimiento no ocurre en una capacitación aparte: ocurre atendiendo, sobre la operación real.</p>
+          <div class="fdetail-cols">
+            <div><h4>Hoy</h4><ul><li>Acompaña y aprende de cada caso</li></ul></div>
+            <div><h4>Por definir</h4><ul><li>Desde cuándo asume casos propios</li><li>Qué tipología toma primero</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="validacion" hidden>
+          <span class="kicker">Control</span>
+          <h3>Validación antes del cierre</h3>
+          <p>Ningún caso se cierra sin que la solución sea revisada. Es el control que evita cerrar en falso y devolver el problema al usuario semanas después.</p>
+          <div class="fdetail-cols">
+            <div><h4>Valida</h4><ul><li>Que la solución responda a lo solicitado</li><li>Que el caso quede completo en Aranda</li></ul></div>
+            <div><h4>Por definir</h4><ul><li>Quién ejecuta la validación</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="cierre-caso" hidden>
+          <span class="kicker">Salida</span>
+          <h3>Cierre e información al usuario</h3>
+          <p>Con la validación aprobada, el caso se cierra en Aranda y se le comunica al usuario la solución entregada. Es el único momento del flujo que el usuario percibe además de su solicitud inicial.</p>
+        </div>
+      </div>
+
+      <ul class="flegend">
+        <li><i style="background:#8a95a5"></i>Canales de ingreso</li>
+        <li><i style="background:#1f5fa8"></i>Atención — Aranda</li>
+        <li><i style="background:#e08a1e"></i>Atención — llamada y validación</li>
+        <li><i style="background:#7b3fbf"></i>Formación</li>
+        <li><i style="background:#4a8f3c"></i>Cierre al usuario</li>
+      </ul>
+      <p class="figcap">El acompañamiento del líder de N2 no es excepcional: aplica a todo caso que entra por Aranda.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · ROLES -->
+<section class="slide" id="roles" data-nav="Roles">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Quién hace qué</h2>
+      <p class="sub reveal">Este modelo se describe por personas y no por niveles genéricos: entender el flujo es entender qué hace cada quien.</p>
+    </div>
+    <ul class="rows">
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg></span>
+        <div class="row-body">
+          <h3>Cristian — Webmaster · puerta de entrada de Aranda</h3>
+          <p>Recibe todos los casos que ingresan por Aranda. Su siguiente paso es invariable: solicitar el acompañamiento del líder de N2, que es quien toma el Aranda y gestiona el caso.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6z"/><path d="M9.2 12.2l2 2 3.6-4"/></svg></span>
+        <div class="row-body">
+          <h3>Santiago Salas — Líder de N2 · punto único de gestión</h3>
+          <p>Toma el Aranda y gestiona el caso, venga por acompañamiento solicitado por Cristian o directo por llamada. Los dos canales del modelo convergen en él, y su atención es además el material de formación del equipo.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 4-9 4-9-4z"/><path d="M6 10.5V15c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg></span>
+        <div class="row-body">
+          <h3>Alejandra León — N2 en formación</h3>
+          <p>Aprende sobre los casos reales que atiende el líder de N2. La formación no es un curso paralelo: es acompañamiento sobre la operación, con casos que sí ocurrieron y soluciones que sí se aplicaron.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <div class="row-body">
+          <h3>Validación antes del cierre</h3>
+          <p>Ningún caso se cierra sin revisión previa de la solución. Es el control que sostiene la calidad percibida por el usuario — queda por definir formalmente quién lo ejecuta.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · CANALES -->
+<section class="slide" id="canales" data-nav="Canales">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Dos canales, dos recorridos distintos</h2>
+      <p class="sub reveal">La diferencia no es solo por dónde entra el caso: es cuántas manos lo tocan antes de llegar a quien lo resuelve.</p>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+      <article class="card reveal tone-blue">
+        <span class="kicker">Canal 1</span>
+        <h3>Aranda → Cristian → Santiago</h3>
+        <p>El caso entra registrado en la herramienta y cae en Cristian, que solicita el acompañamiento del líder de N2. El acompañamiento aplica a todo caso, no solo a los complejos.</p>
+        <ul>
+          <li>El caso nace trazable en Aranda</li>
+          <li>Cristian es la puerta de entrada</li>
+          <li>Santiago toma el Aranda y gestiona</li>
+        </ul>
+      </article>
+      <article class="card reveal tone-amber">
+        <span class="kicker">Canal 2</span>
+        <h3>Llamada → Santiago</h3>
+        <p>La llamada va directo al líder de N2, sin pasar por Cristian. Es el camino más corto hacia quien resuelve, pero el registro del caso ocurre después de la conversación, no antes.</p>
+        <ul>
+          <li>Sin intermediarios</li>
+          <li>Sin registro previo del caso</li>
+          <li>Mismo punto de gestión que el canal de Aranda</li>
+        </ul>
+      </article>
+      <article class="card reveal tone-steel">
+        <span class="kicker">Lo que comparten</span>
+        <h3>Convergen en el líder de N2</h3>
+        <p>Sea cual sea el canal, el caso termina en las mismas manos y sigue el mismo cierre: gestión, validación de la solución y comunicación al usuario.</p>
+        <ul>
+          <li>Un punto único de gestión</li>
+          <li>Una sola validación antes de cerrar</li>
+          <li>Un mismo criterio de solución</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · POR DEFINIR -->
+<section class="slide" id="pendientes" data-nav="Por definir">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Puntos por definir</h2>
+      <p class="sub reveal">El modelo opera hoy así, pero hay decisiones que conviene formalizar antes de darlo por cerrado.</p>
+    </div>
+    <div class="grid">
+      <article class="card reveal tone-amber">
+        <span class="kicker">Validación</span>
+        <h3>Quién valida antes del cierre</h3>
+        <p>Está definido que hay una revisión previa al cierre, pero no quién la ejecuta. Si valida el mismo líder que resolvió, el control pierde independencia.</p>
+      </article>
+      <article class="card reveal tone-violet">
+        <span class="kicker">Formación</span>
+        <h3>Cuándo Alejandra asume casos propios</h3>
+        <p>Definir el criterio de graduación —qué tipología toma primero y con qué respaldo— convierte el acompañamiento en un plan con final, no en un estado permanente.</p>
+      </article>
+      <article class="card reveal tone-steel">
+        <span class="kicker">Concentración</span>
+        <h3>Todo pasa por una sola persona</h3>
+        <p>Que los dos canales converjan en el líder de N2 da consistencia, pero también concentra el riesgo operativo. La formación en curso es justamente lo que lo mitiga.</p>
+      </article>
+      <article class="card reveal tone-blue">
+        <span class="kicker">Registro</span>
+        <h3>Cómo se registra lo que entra por llamada</h3>
+        <p>El caso de Aranda nace trazable; el de la llamada no. Definir en qué momento se registra evita que la trazabilidad dependa de la memoria de quien atendió.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · CIERRE -->
+<section class="slide" id="cierre" data-nav="Cierre">
+  <div class="inner">
+    <span class="eyebrow reveal">Cierre</span>
+    <h2 class="reveal">Un modelo sostenido en el acompañamiento</h2>
+    <p class="lede reveal">Todo caso llega al líder de N2 y ningún caso se cierra sin revisión. Sobre esa misma atención se está formando el equipo que mañana la sostiene.</p>
+    <div class="close-grid">
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Dos canales de ingreso</b><br/>Aranda vía Cristian, llamada directa</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Acompañamiento en todo caso</b><br/>no solo en los complejos</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Validación antes de cerrar</b><br/>ningún caso se cierra sin revisión</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Formación sobre casos reales</b><br/>el conocimiento se transfiere atendiendo</span></div>
+    </div>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Cymetria</span><i></i><span>Documento de trabajo</span></div>
+  </div>
+</section>
+
+</div>
+<script src="../assets/decks.js"></script>
+<script src="../assets/core.js"></script>
+</body>
+</html>

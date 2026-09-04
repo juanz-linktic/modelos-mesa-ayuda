@@ -5,7 +5,8 @@
   "redirects": [
     { "source": "/cpe", "destination": "/p/cpe" },
     { "source": "/docum", "destination": "/p/docum" },
-    { "source": "/equidad", "destination": "/p/equidad" }
+    { "source": "/equidad", "destination": "/p/equidad" },
+    { "source": "/cymetria", "destination": "/p/cymetria" }
   ],
   "headers": [
     {

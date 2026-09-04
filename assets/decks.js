@@ -33,5 +33,15 @@ window.CORE_DECKS = [
     tag: 'Cliente',
     tone: 'blue',
     updated: '2026-09'
+  },
+  {
+    id: 'cymetria',
+    file: 'p/cymetria.html',
+    title: 'Modelo de atención — Cymetria',
+    client: 'Cymetria',
+    summary: 'Ingreso por Aranda o por llamada, acompañamiento del líder de N2 en todo caso, validación antes del cierre y formación sobre casos reales.',
+    tag: 'Documento de trabajo',
+    tone: 'steel',
+    updated: '2026-09'
   }
 ];

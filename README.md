@@ -15,6 +15,7 @@ mostrar y cada presentación lleva un selector para saltar a otra sin volver atr
 | `p/cpe.html` | Modelo de atención — Operación interna (CPE). Documento de trabajo, no distribuir al cliente. |
 | `p/docum.html` | Modelo de atención Zendesk — DOCUM (uso interno). |
 | `p/equidad.html` | Modelo de atención — La Equidad. |
+| `p/cymetria.html` | Modelo de atención — Cymetria. Documento de trabajo, contiene nombres de personas. |
 | `vercel.json` | Despliegue: URLs limpias, atajos por presentación, cabeceras de seguridad. |
 
 ## Agregar una presentación nueva
@@ -113,6 +114,7 @@ Cada push a `main` publica automáticamente.
 | `/p/cpe` — atajo `/cpe` | Modelo CPE |
 | `/p/docum` — atajo `/docum` | Modelo DOCUM |
 | `/p/equidad` — atajo `/equidad` | Modelo La Equidad |
+| `/p/cymetria` — atajo `/cymetria` | Modelo Cymetria |
 
 ## Repositorio y dominio
 
