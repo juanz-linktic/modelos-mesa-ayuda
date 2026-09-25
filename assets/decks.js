@@ -38,8 +38,8 @@ window.CORE_DECKS = [
     id: 'cymetria',
     file: 'p/cymetria.html',
     title: 'Modelo de atención — Cymetria',
-    client: 'Cymetria',
-    summary: 'Ingreso por Aranda o por llamada, acompañamiento del líder de N2 en todo caso, validación antes del cierre y formación sobre casos reales.',
+    client: 'Cymetria — sitio web de Positiva',
+    summary: 'Sitio en WordPress con Elementor. Ingreso por Aranda, definición entre Cristian y Andrés, absorción de N2 y paso a producción fuera del horario laboral.',
     tag: 'Documento de trabajo',
     tone: 'steel',
     updated: '2026-09'

@@ -64,6 +64,10 @@ de **1400 unidades de ancho**. Todo escala junto con el contenedor.
 ```
 
 - `--x/--y/--w/--h` son unidades de la rejilla (no píxeles ni porcentajes).
+- La rejilla mide **1400 unidades de ancho por defecto**. Si un diagrama necesita
+  otro ancho, hay que declararlo en los dos sitios o los nodos quedarán corridos
+  respecto a las líneas: `style="--grid:1500;aspect-ratio:1500/800"` en el
+  `.flowbox` y `viewBox="0 0 1500 800"` en el SVG.
 - `data-routes="all n1 n2"` declara a qué rutas pertenece cada nodo, etiqueta o
   arista; los botones `data-route` atenúan lo que no pertenece a la ruta elegida
   y animan sus conexiones.

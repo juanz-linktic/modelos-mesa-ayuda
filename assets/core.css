@@ -233,7 +233,10 @@ h2{
 .flowbox{
   position:relative; width:100%; aspect-ratio:1400/620;
   container-type:inline-size;
-  --u:calc(100cqw / 1400);
+  /* --grid: ancho de la rejilla en unidades; debe coincidir con el viewBox
+     del SVG de conexiones. Se sobreescribe por diagrama cuando no es 1400. */
+  --grid:1400;
+  --u:calc(100cqw / var(--grid));
 }
 .flow-edges{position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible}
 
