@@ -352,7 +352,69 @@
   </div>
 </section>
 
-<!-- 6 · POR DEFINIR -->
+<!-- 6 · ANS -->
+<section class="slide" id="ans" data-nav="ANS">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Acuerdos de nivel de servicio</h2>
+      <p class="sub reveal">Dos escalas distintas: los incidentes se miden por tiempo máximo de diagnóstico, y los requerimientos por prioridad. Cuanto más crítico el caso, más corto el compromiso.</p>
+    </div>
+
+    <div class="ans-block reveal">
+      <h3><i style="background:var(--red)"></i>Incidentes — tiempo máximo de diagnóstico</h3>
+      <p>Escala de 0 a 8 horas. El horario de prestación cambia según la severidad.</p>
+      <div class="ans-cols"><span>Tipo de caso</span><span>Tiempo máx. de diagnóstico</span><span>Horario</span></div>
+      <ul class="ans">
+        <li class="ans-row t-red">
+          <div class="ans-head"><b>Indisponibilidad</b><span>El sistema deja de funcionar en su totalidad</span></div>
+          <div class="ans-metric"><span class="ans-bar"><i style="--p:25%"></i></span><b class="ans-val">2 h</b></div>
+          <span class="badge-state s-teal">7×24×365</span>
+        </li>
+        <li class="ans-row t-amber">
+          <div class="ans-head"><b>Crítico</b><span>Degradación en el rendimiento del sistema o falla en una funcionalidad principal</span></div>
+          <div class="ans-metric"><span class="ans-bar"><i style="--p:50%"></i></span><b class="ans-val">4 h</b></div>
+          <span class="badge-state s-teal">7×24×365</span>
+        </li>
+        <li class="ans-row t-blue">
+          <div class="ans-head"><b>Estándar</b><span>Falla parcial de la funcionalidad del software, que afecta algunos usuarios</span></div>
+          <div class="ans-metric"><span class="ans-bar"><i style="--p:75%"></i></span><b class="ans-val">6 h</b></div>
+          <span class="badge-state s-steel">L–V 7:00–17:00</span>
+        </li>
+        <li class="ans-row t-steel">
+          <div class="ans-head"><b>Bajo</b><span>Problemas técnicos de rutina o cuestiones de utilización general</span></div>
+          <div class="ans-metric"><span class="ans-bar"><i style="--p:100%"></i></span><b class="ans-val">8 h</b></div>
+          <span class="badge-state s-steel">L–V 7:00–17:00</span>
+        </li>
+      </ul>
+      <p class="ans-note"><b>Tiempo de solución:</b> en los cuatro niveles es el tiempo estimado según el plan de acción. Lo que queda comprometido en horas es el diagnóstico, no la solución.</p>
+    </div>
+
+    <div class="ans-block reveal">
+      <h3><i style="background:var(--violet)"></i>Requerimientos — por prioridad</h3>
+      <p>Escala de 0 a 24 horas.</p>
+      <div class="ans-cols"><span>Prioridad</span><span>ANS</span><span></span></div>
+      <ul class="ans">
+        <li class="ans-row t-violet">
+          <div class="ans-head"><b>Alta</b></div>
+          <div class="ans-metric"><span class="ans-bar"><i style="--p:33.3%"></i></span><b class="ans-val">8 h</b></div>
+          <span></span>
+        </li>
+        <li class="ans-row t-violet">
+          <div class="ans-head"><b>Media</b></div>
+          <div class="ans-metric"><span class="ans-bar"><i style="--p:66.7%"></i></span><b class="ans-val">16 h</b></div>
+          <span></span>
+        </li>
+        <li class="ans-row t-violet">
+          <div class="ans-head"><b>Baja</b></div>
+          <div class="ans-metric"><span class="ans-bar"><i style="--p:100%"></i></span><b class="ans-val">24 h</b></div>
+          <span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · POR DEFINIR -->
 <section class="slide" id="pendientes" data-nav="Por definir">
   <div class="inner">
     <div class="section-head">

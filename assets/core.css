@@ -458,10 +458,65 @@ h2{
 }
 .states b{display:block; font-weight:600; color:var(--text)}
 .states p{margin:2px 0 0; color:var(--muted)}
+.s-red{background:rgba(176,37,37,.10); color:#8a2323}
 .s-blue{background:rgba(31,127,184,.11); color:#17688f}
 .s-amber{background:rgba(201,130,26,.13); color:#94600f}
 .s-teal{background:rgba(31,143,107,.12); color:#15795a}
 .s-steel{background:rgba(108,127,150,.13); color:#4c5d72}
+
+/* ==================================================================
+   ANS — niveles de servicio
+   ================================================================== */
+.ans-block{margin-top:26px}
+.ans-block > h3{
+  margin:0 0 4px; font-size:17px; font-weight:700; letter-spacing:-.015em;
+  display:flex; align-items:center; gap:10px;
+}
+.ans-block > h3 i{width:9px; height:9px; border-radius:50%; flex:none}
+.ans-block > p{margin:0; color:var(--muted); font-size:13.2px}
+
+.ans{list-style:none; margin:16px 0 0; padding:0; display:grid; gap:8px}
+.ans-cols{
+  display:grid; grid-template-columns:minmax(200px,1.5fr) minmax(160px,1fr) 128px;
+  gap:18px; padding:0 18px 2px;
+  font-size:10.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dim);
+}
+.ans-cols span:last-child{text-align:right}
+.ans-row{
+  display:grid; grid-template-columns:minmax(200px,1.5fr) minmax(160px,1fr) 128px;
+  gap:18px; align-items:center;
+  padding:15px 18px; background:#fff; border:1px solid var(--border-soft);
+  border-radius:12px; transition:.25s var(--ease);
+}
+.ans-row:hover{border-color:var(--border); box-shadow:0 5px 16px rgba(19,31,51,.07)}
+.ans-head b{display:block; font-size:14.5px; font-weight:700; letter-spacing:-.01em}
+.ans-head span{display:block; font-size:12.4px; color:var(--muted); margin-top:3px; line-height:1.35}
+.ans-metric{display:flex; align-items:center; gap:12px}
+.ans-bar{flex:1; height:9px; border-radius:5px; background:var(--surface-2); overflow:hidden}
+.ans-bar i{
+  display:block; height:100%; width:var(--p); border-radius:5px; background:var(--steel);
+  transform-origin:left; animation:ansgrow .7s var(--ease) both;
+}
+@keyframes ansgrow{from{transform:scaleX(0)} to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){ .ans-bar i{animation:none} }
+.ans-val{font-size:15px; font-weight:700; white-space:nowrap; min-width:42px; text-align:right}
+.ans-row .badge-state{justify-self:end; min-width:0}
+.ans-row.t-red .ans-bar i{background:var(--red)}
+.ans-row.t-amber .ans-bar i{background:#e08a1e}
+.ans-row.t-blue .ans-bar i{background:var(--blue)}
+.ans-row.t-steel .ans-bar i{background:var(--steel)}
+.ans-row.t-violet .ans-bar i{background:var(--violet)}
+.ans-note{
+  margin:12px 0 0; padding:13px 16px; border-radius:10px;
+  background:var(--surface); border:1px solid var(--border-soft);
+  font-size:12.8px; color:var(--muted);
+}
+.ans-note b{color:var(--text); font-weight:600}
+@media (max-width:760px){
+  .ans-cols{display:none}
+  .ans-row{grid-template-columns:1fr; gap:12px}
+  .ans-row .badge-state{justify-self:start}
+}
 
 /* ---------- cierre ---------- */
 .close-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-top:34px}
