@@ -475,10 +475,10 @@ h2{
 .ans-block > h3 i{width:9px; height:9px; border-radius:50%; flex:none}
 .ans-block > p{margin:0; color:var(--muted); font-size:13.2px}
 
-.ans{list-style:none; margin:16px 0 0; padding:0; display:grid; gap:8px}
+.ans{list-style:none; margin:8px 0 0; padding:0; display:grid; gap:8px}
 .ans-cols{
   display:grid; grid-template-columns:minmax(200px,1.5fr) minmax(160px,1fr) 128px;
-  gap:18px; padding:0 18px 2px;
+  gap:18px; padding:0 18px 2px; margin-top:16px;
   font-size:10.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dim);
 }
 .ans-cols span:last-child{text-align:right}
