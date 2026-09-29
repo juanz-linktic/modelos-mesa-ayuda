@@ -286,6 +286,7 @@ h2{
   border-radius:calc(20 * var(--u)); background:rgba(201,130,26,.14); color:#8a5a12;
   font-size:calc(9 * var(--u)); font-weight:700; line-height:1.25; text-align:left;
 }
+.fbadge.is-ans{background:rgba(31,143,107,.15); color:#15795a}
 
 /* estado */
 .fnode.is-active{box-shadow:0 0 0 calc(3 * var(--u)) rgba(91,75,212,.28); transform:translateY(calc(-2 * var(--u)))}
