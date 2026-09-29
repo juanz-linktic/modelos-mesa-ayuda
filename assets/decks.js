@@ -17,7 +17,7 @@ window.CORE_DECKS = [
   {
     id: 'cpe',
     file: 'p/cpe.html',
-    title: 'Modelo de atención — Operación interna',
+    title: 'Modelo de atención CPE — Operación interna',
     client: 'Computadores Para Educar (CPE)',
     summary: 'Estructura de niveles, responsables por etapa, doble validación de Calidad y gestión de problemas sobre la causa raíz.',
     tag: 'Uso interno',
