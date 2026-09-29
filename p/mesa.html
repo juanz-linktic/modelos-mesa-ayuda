@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Modelo de Gestión y Operación — Soporte Externo | LinkTIC</title>
+<meta name="description" content="Modelo general de gestión y operación de la Mesa de Ayuda de LinkTIC para soporte externo: atención de incidentes, solicitudes y problemas bajo ITIL 4, ISO/IEC 20000 e ISO 27001."/>
+<meta name="theme-color" content="#ffffff"/>
+<meta property="og:title" content="Modelo de Gestión y Operación — Soporte Externo"/>
+<meta property="og:description" content="Reducir tickets, no solo atenderlos. Punto único de contacto, resolución en el nivel más eficiente y gobierno del servicio."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/core.css"/>
+</head>
+<body data-base="../" data-deck="mesa">
+<div class="wrap">
+
+<header class="topbar">
+  <div class="brand"><i></i> LinkTIC <span>· Mesa de Ayuda</span></div>
+  <div class="spacer"></div>
+  <div class="picker" id="picker"></div>
+  <button class="tbtn" data-print type="button">Descargar PDF</button>
+  <div class="progress" id="progress"></div>
+</header>
+
+<nav class="sidenav" id="sidenav" aria-label="Secciones"></nav>
+
+<!-- 1 · PORTADA -->
+<section class="slide" id="portada" data-nav="Portada">
+  <div class="inner">
+    <span class="eyebrow reveal">Modelo general · versión 2</span>
+    <h1 class="reveal">Modelo de Gestión<br/>y Operación<br/><span class="accent">Soporte Externo</span></h1>
+    <p class="lede reveal">Atención de incidentes, solicitudes y problemas bajo un esquema centralizado, distribuido e inteligente.</p>
+    <div class="rule reveal"></div>
+    <p class="sub reveal">ITIL 4 · ISO/IEC 20000 · ISO 27001 · CMMI — aplica a todos los proyectos de soporte externo de LinkTIC</p>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Soporte Externo</span></div>
+  </div>
+</section>
+
+<!-- 2 · PROPUESTA DE VALOR -->
+<section class="slide" id="valor" data-nav="Propuesta de valor">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Reducir tickets, no solo atenderlos</h2>
+      <p class="sub reveal">El pilar del modelo es la continuidad del negocio: anticiparse mediante IA, no solo reaccionar. El resultado es un soporte que reduce incidentes, mejora la productividad del usuario final y aporta valor directo al negocio, independiente de la herramienta tecnológica utilizada.</p>
+    </div>
+    <div class="grid">
+      <article class="card reveal tone-teal">
+        <span class="kicker">Diferenciador</span>
+        <h3>Alta resolución en primer contacto</h3>
+        <p>El FCR como métrica central de la operación, no como resultado accidental.</p>
+      </article>
+      <article class="card reveal tone-blue">
+        <span class="kicker">Diferenciador</span>
+        <h3>Base de conocimiento robusta</h3>
+        <p>Soporta el autoservicio del usuario y alimenta a la IA: es la fuente de la que aprende.</p>
+      </article>
+      <article class="card reveal tone-violet">
+        <span class="kicker">Diferenciador</span>
+        <h3>Enfoque proactivo</h3>
+        <p>Anticipación mediante análisis de tendencias, no solo reacción ante el incidente.</p>
+      </article>
+      <article class="card reveal tone-amber">
+        <span class="kicker">Diferenciador</span>
+        <h3>Gobierno del servicio</h3>
+        <p>Visión estratégica y métricas de negocio, no solo conteo de tickets cerrados.</p>
+      </article>
+    </div>
+
+    <div class="rule reveal" style="max-width:100%;margin:40px 0 28px"></div>
+
+    <h3 class="reveal" style="font-size:19px;margin:0 0 6px">Las cuatro palancas del enfoque</h3>
+    <p class="sub reveal" style="margin-bottom:22px">La calidad no se mide únicamente por la resolución de tickets, sino por la percepción del usuario y el impacto en su productividad.</p>
+    <ul class="rows">
+      <li class="row reveal">
+        <span class="row-ico tone-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <div class="row-body">
+          <h3>FCR en Niveles 1 y 2</h3>
+          <p>Apoyado en base de conocimiento, automatización e IA, reduciendo tiempos de atención y escalamientos.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4"/><path d="M10 6l-6 6 6 6"/></svg></span>
+        <div class="row-body">
+          <h3>Shift-left</h3>
+          <p>Desplazar la resolución hacia los niveles de menor costo y complejidad — lo que hoy resuelve N3, mañana lo resuelve N2.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.2 16.2L21 21"/></svg></span>
+        <div class="row-body">
+          <h3>Análisis de causa raíz</h3>
+          <p>Identificar recurrencias y tendencias en lugar de solo cerrar tickets, uno por uno.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg></span>
+        <div class="row-body">
+          <h3>Mejora continua basada en datos</h3>
+          <p>Orientada a la continuidad del negocio y medida con los indicadores del servicio.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3 · MODELO OPERATIVO -->
+<section class="slide" id="operativo" data-nav="Modelo operativo">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Centralizado, distribuido e inteligente</h2>
+      <p class="sub reveal">Tres principios que definen cómo entra, cómo se resuelve y cómo se optimiza cada caso.</p>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <article class="card reveal tone-teal">
+        <span class="kicker">Centralizado · SPOC</span>
+        <h3>Un solo punto de entrada</h3>
+        <p>Todo ingresa por la Mesa de Servicio como punto único de contacto, mediante canales definidos conjuntamente con el cliente, garantizando trazabilidad, control y estandarización.</p>
+      </article>
+      <article class="card reveal tone-blue">
+        <span class="kicker">Distribuido</span>
+        <h3>Resolución en el nivel más eficiente</h3>
+        <p>Los casos se resuelven en N1, N2 o N3 según corresponda, evitando escalamientos innecesarios y promoviendo la eficiencia operativa.</p>
+      </article>
+      <article class="card reveal tone-violet">
+        <span class="kicker">Inteligente</span>
+        <h3>Automatización, analítica e IA</h3>
+        <p>Apoyan la clasificación, el diagnóstico y la resolución de casos. No reemplazan al analista: le permiten enfocarse en los casos de mayor valor y complejidad.</p>
+      </article>
+    </div>
+
+    <div class="rule reveal" style="max-width:100%;margin:40px 0 26px"></div>
+
+    <h3 class="reveal" style="font-size:19px;margin:0 0 6px">Modelo omnicanal</h3>
+    <p class="sub reveal" style="margin-bottom:20px">Independientemente del canal, todo caso queda registrado en la herramienta ITSM, que centraliza la información y asegura consistencia en la atención. Los canales habilitados por cliente se detallan en el MOS.</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+      <article class="card reveal tone-violet">
+        <h3>Chat con IA Bot</h3>
+        <p>La IA busca la respuesta más adecuada. Si resuelve, cierra el caso y envía la encuesta; si no, ofrece continuar con un analista.</p>
+      </article>
+      <article class="card reveal tone-blue">
+        <h3>Portal de autoservicio</h3>
+        <p>El usuario diligencia el formulario web con los datos e información solicitados.</p>
+      </article>
+      <article class="card reveal tone-teal">
+        <h3>WhatsApp</h3>
+        <p>Mismo flujo de datos que el chat: nombre, identificación, correo, tipo de solicitud y autorización de tratamiento de datos.</p>
+      </article>
+      <article class="card reveal tone-steel">
+        <h3>Correo electrónico</h3>
+        <p>El usuario envía su solicitud o reporte al correo habilitado para el servicio.</p>
+      </article>
+      <article class="card reveal tone-steel">
+        <h3>Canal telefónico</h3>
+        <p>El usuario llama a la línea dispuesta; un IVR o directamente un analista registra el caso.</p>
+      </article>
+      <article class="card reveal tone-amber">
+        <h3>Eventos y reportes verbales</h3>
+        <p>Los casos originados por gestión de eventos o reportados verbalmente también deben quedar registrados.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · NIVELES Y ROLES -->
+<section class="slide" id="niveles" data-nav="Niveles y roles">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Estructura por niveles</h2>
+      <p class="sub reveal">Tres niveles con responsabilidades y alcances específicos. El escalamiento entre ellos se rige por la matriz de escalamiento vigente de cada proyecto, definida en el MOS.</p>
+    </div>
+    <ul class="rows">
+      <li class="row reveal">
+        <span class="row-ico tone-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <div class="row-body">
+          <h3>Nivel 1 — Mesa de Ayuda</h3>
+          <p>Punto Único de Contacto. Atención inicial multicanal, registro, categorización y resolución de solicitudes e incidentes estándar, escalando cuando aplique. Grupos base: Atención y Gestión; según el proyecto pueden habilitarse grupos adicionales como Líneas Especiales o Monitoreo.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6z"/><path d="M9.2 12.2l2 2 3.6-4"/></svg></span>
+        <div class="row-body">
+          <h3>Nivel 2 — Soporte Funcional Especializado</h3>
+          <p>Atiende lo que no se resuelve en N1 y requiere análisis técnico o funcional especializado, con acceso controlado a componentes internos, <b>sin intervenir el código fuente</b>. Análisis funcional profundo, corrección de errores recurrentes, configuración del sistema, validación documental y soporte a despliegues. Incluye el equipo transversal de Calidad.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/><path d="M14 4l-4 16"/></svg></span>
+        <div class="row-body">
+          <h3>Nivel 3 — Desarrollo, Data e Infraestructura</h3>
+          <p>Soporte de alta complejidad: intervención directa sobre el código fuente, la lógica de negocio o la arquitectura del sistema. Corrección de bugs, análisis de código, soluciones estructurales y análisis de causa raíz. No hace parte de la Mesa de Ayuda, pero sí del servicio integral.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="rule reveal" style="max-width:100%;margin:40px 0 26px"></div>
+
+    <h3 class="reveal" style="font-size:19px;margin:0 0 20px">Responsabilidades por rol</h3>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(290px,1fr))">
+      <article class="card reveal tone-teal">
+        <h3>Analista de Mesa de Ayuda</h3>
+        <p>Recepción, registro, clasificación y priorización de tickets. Ejecuta el diagnóstico inicial apoyado en la KBD buscando FCR, gestiona la comunicación con el usuario, valida la solución antes del cierre y, de no resolver, escala con contexto completo.</p>
+      </article>
+      <article class="card reveal tone-blue">
+        <h3>Analista Senior</h3>
+        <p>Atiende casos que requieren conocimiento especializado del negocio. Diagnósticos avanzados, configuración de parámetros, definición de soluciones y workarounds, retroalimenta la KBD y escala a N3 ante causas técnicas.</p>
+      </article>
+      <article class="card reveal tone-amber">
+        <h3>Líder de Mesa de Ayuda</h3>
+        <p>Asignado por grupo operativo. Supervisión operativa y cumplimiento de ANS, priorización de casos críticos y escalamientos jerárquicos, seguimiento de pendientes, capacidad del equipo y análisis de recurrencias.</p>
+      </article>
+      <article class="card reveal tone-violet">
+        <h3>Coordinador de Mesa de Ayuda</h3>
+        <p>Supervisión integral: cumplimiento de ANS, calidad operativa y satisfacción del cliente. Lidera los comités de servicio, gestiona la relación táctica y estratégica y coordina la mejora continua.</p>
+      </article>
+      <article class="card reveal tone-steel">
+        <h3>Gerente de Mesa de Ayuda</h3>
+        <p>Define lineamientos y estándares de operación, monitorea el desempeño, gestiona escalaciones críticas de alto impacto, coordina con otras áreas y asegura la disponibilidad de recursos.</p>
+      </article>
+      <article class="card reveal tone-red"><h3>Equipo de Nivel 3</h3>
+        <p>Fallas de aplicación, bugs y problemas complejos no solucionables en N1 o N2, análisis técnico avanzado y problemas de infraestructura o datos. Implementa correcciones a nivel de código o arquitectura y trabaja con N2 en la eliminación de causas raíz.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · FLUJO OPERATIVO DEL CASO -->
+<section class="slide slide--wide" id="flujo" data-nav="Flujo del caso">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Flujo operativo del caso</h2>
+      <p class="sub reveal">Base común sobre la que se estructuran los procedimientos de Incidentes y Solicitudes. Filtre por ruta de resolución y haga clic en cualquier bloque para ver el detalle de la fase.</p>
+    </div>
+
+    <div class="flow reveal">
+
+      <div class="flow-controls">
+        <span class="ctl-label">Ruta</span>
+        <button class="fchip" type="button" data-route="all" aria-pressed="true"><i></i>Flujo completo</button>
+        <button class="fchip t-violet" type="button" data-route="ia" aria-pressed="false"><i></i>Autoservicio con IA</button>
+        <button class="fchip t-teal" type="button" data-route="n1" aria-pressed="false"><i></i>Resuelto en N1</button>
+        <button class="fchip t-blue" type="button" data-route="n2" aria-pressed="false"><i></i>Escalado a N2</button>
+        <button class="fchip t-red" type="button" data-route="n3" aria-pressed="false"><i></i>Escalado a N3</button>
+        <span class="ctl-sep"></span>
+        <button class="fchip t-amber" type="button" data-route="esp" aria-pressed="false"><i></i>Casos en espera</button>
+      </div>
+
+      <div class="flow-stage">
+        <div class="diagram-scroll">
+          <div class="flowbox" style="--grid:1500;aspect-ratio:1500/800" role="group" aria-label="Diagrama del flujo operativo del caso">
+
+            <svg class="flow-edges" viewBox="0 0 1500 800" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <marker id="mDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
+                <marker id="mBl" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
+                <marker id="mAm" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e08a1e"/></marker>
+                <marker id="mGr" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4a8f3c"/></marker>
+                <marker id="mVi" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7b3fbf"/></marker>
+              </defs>
+
+              <path class="fedge" data-routes="all n1 n2 n3" d="M185,310 V364" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all ia" d="M330,105 H404" fill="none" stroke="#7b3fbf" stroke-width="2.2" marker-end="url(#mVi)"/>
+              <path class="fedge" data-routes="all ia" d="M700,105 H1340 V364" fill="none" stroke="#4a8f3c" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#mGr)"/>
+
+              <path class="fedge" data-routes="all n1 n2 n3" d="M240,425 H274" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M480,425 H514" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M720,425 H754" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M960,425 H994" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M1200,425 H1234" fill="none" stroke="#4a8f3c" stroke-width="2.2" marker-end="url(#mGr)"/>
+
+              <path class="fedge" data-routes="all esp" d="M860,290 V364" fill="none" stroke="#e08a1e" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M1100,364 V330 H900 V364" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#mBl)"/>
+
+              <path class="fedge" data-routes="all n1 n2 n3" d="M620,480 V584" fill="none" stroke="#1f3a5f" stroke-width="2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M860,480 V584" fill="none" stroke="#1f3a5f" stroke-width="2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M360,650 H474" fill="none" stroke="#e08a1e" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all n1 n2 n3" d="M200,584 V520 H560 V484" fill="none" stroke="#e08a1e" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#mAm)"/>
+              <path class="fedge" data-routes="all ia n1 n2 n3" d="M1340,480 V584" fill="none" stroke="#4a8f3c" stroke-width="2" marker-end="url(#mGr)"/>
+            </svg>
+
+            <div class="fgroup is-stack" data-routes="all ia n1 n2 n3" style="--x:40;--y:40;--w:290;--h:270">
+              <span class="fgroup-tag">Canales · omnicanal</span>
+              <div class="fgroup-body">
+                <button class="fnode n-violet" type="button" data-node="c-chat" data-routes="all ia"><b>Chat — IA Bot</b></button>
+                <button class="fnode n-plain" type="button" data-node="c-portal" data-routes="all n1 n2 n3"><b>Portal de autoservicio</b></button>
+                <button class="fnode n-plain" type="button" data-node="c-wa" data-routes="all n1 n2 n3"><b>WhatsApp</b></button>
+                <button class="fnode n-plain" type="button" data-node="c-mail" data-routes="all n1 n2 n3"><b>Correo electrónico</b></button>
+                <button class="fnode n-plain" type="button" data-node="c-tel" data-routes="all n1 n2 n3"><b>Canal telefónico</b></button>
+              </div>
+            </div>
+
+            <button class="fnode n-green" type="button" data-node="iabot" data-routes="all ia" style="--x:410;--y:60;--w:290;--h:90">
+              <em>Autoservicio</em><b>Resuelto por el IA Bot</b><span>Sin intervención de analista</span>
+            </button>
+
+            <button class="fnode n-amber" type="button" data-node="espera" data-routes="all esp" style="--x:790;--y:190;--w:290;--h:100">
+              <em>En espera</em><b>El ANS se detiene</b><span>Cliente, tercero o aprobación pendiente</span>
+            </button>
+
+            <button class="fnode n-gray" type="button" data-node="registro" data-routes="all n1 n2 n3" style="--x:40;--y:370;--w:200;--h:110">
+              <em>Fase 1</em><b>Registro</b><span>El sistema genera el ID y notifica la creación</span>
+            </button>
+            <button class="fnode n-violet" type="button" data-node="asignacion" data-routes="all n1 n2 n3" style="--x:280;--y:370;--w:200;--h:110">
+              <em>Fase 2</em><b>Asignación</b><span>Automática al grupo o analista competente</span>
+            </button>
+            <button class="fnode n-blue" type="button" data-node="revision" data-routes="all n1 n2 n3" style="--x:520;--y:370;--w:200;--h:110">
+              <em>Fase 3</em><b>Revisión</b><span>Análisis, diagnóstico y validación de ANS</span>
+            </button>
+            <button class="fnode n-blue" type="button" data-node="gestion" data-routes="all n1 n2 n3 esp" style="--x:760;--y:370;--w:200;--h:110">
+              <em>Fase 4</em><b>Gestión</b><span>Tareas, escalamientos y comunicación al usuario</span>
+            </button>
+            <button class="fnode n-teal" type="button" data-node="solucion" data-routes="all n1 n2 n3" style="--x:1000;--y:370;--w:200;--h:110">
+              <em>Fase 5</em><b>Solución</b><span>El usuario acepta, deniega o no responde</span>
+            </button>
+            <button class="fnode n-green" type="button" data-node="cierre-caso" data-routes="all ia n1 n2 n3" style="--x:1240;--y:370;--w:200;--h:110">
+              <em>Fase 6</em><b>Cierre</b><span>Notificación automática · sin reapertura</span>
+            </button>
+
+            <div class="fgroup g-blue" data-routes="all n1 n2 n3" style="--x:480;--y:590;--w:700;--h:180">
+              <span class="fgroup-tag">Niveles de soporte</span>
+              <div class="fgroup-body">
+                <button class="fnode n-teal" type="button" data-node="n1" data-routes="all n1"><em>Nivel 1</em><b>Mesa de Ayuda</b><span>SPOC · resolución estándar</span></button>
+                <button class="fnode n-blue" type="button" data-node="n2" data-routes="all n2"><em>Nivel 2</em><b>Funcional especializado</b><span>Sin tocar código fuente</span></button>
+                <button class="fnode n-red" type="button" data-node="n3" data-routes="all n3"><em>Nivel 3</em><b>Desarrollo · Data · Infra</b><span>Código y arquitectura</span></button>
+              </div>
+            </div>
+
+            <button class="fnode n-amber" type="button" data-node="kbd" data-routes="all n1 n2 n3" style="--x:40;--y:590;--w:320;--h:130">
+              <b>Base de conocimiento (KBD)</b><span>Se consulta en la revisión y se alimenta con cada solución. Es la fuente principal de la IA.</span>
+            </button>
+
+            <button class="fnode n-green n-pill is-center" type="button" data-node="encuesta" data-routes="all ia n1 n2 n3" style="--x:1240;--y:590;--w:200;--h:110">
+              <b>Encuesta de satisfacción</b>
+            </button>
+
+            <p class="flabel" data-routes="all n1 n2 n3" style="--x:185;--y:326;--w:180">Todo canal genera registro</p>
+            <p class="flabel t-green" data-routes="all ia" style="--x:1000;--y:76;--w:260">Cierre automático y encuesta, sin pasar por el flujo</p>
+            <p class="flabel t-amber" data-routes="all esp" style="--x:760;--y:300;--w:140">El tiempo no suma al ANS</p>
+            <p class="flabel t-blue" data-routes="all n1 n2 n3" style="--x:1000;--y:300;--w:200">El usuario deniega — vuelve a En Curso</p>
+            <p class="flabel" data-routes="all n1 n2 n3" style="--x:740;--y:524;--w:160">Atienden y escalan</p>
+            <p class="flabel t-amber" data-routes="all n1 n2 n3" style="--x:417;--y:622;--w:110">Consulta y alimenta</p>
+            <p class="flabel t-green" data-routes="all n1 n2 n3" style="--x:1217;--y:338;--w:130">Acepta la solución</p>
+
+          </div>
+        </div>
+      </div>
+
+      <p class="scroll-hint">Deslice horizontalmente para ver el diagrama completo →</p>
+
+      <div class="flow-detail">
+        <div class="fdetail" data-detail="intro">
+          <span class="kicker">Cómo leer el diagrama</span>
+          <h3>Seis fases comunes, varias rutas de resolución</h3>
+          <p>El caso entra por cualquiera de los canales y recorre seis fases: registro, asignación, revisión, gestión, solución y cierre. Lo que cambia entre un caso y otro no son las fases, sino el nivel que lo resuelve y si hubo esperas. La ruta más corta la hace el IA Bot, que resuelve sin analista y cierra automáticamente.</p>
+          <div class="fdetail-cols">
+            <div><h4>Filtre por ruta</h4><p>Los botones aíslan el autoservicio, cada nivel de resolución y los casos en espera.</p></div>
+            <div><h4>Explore cada fase</h4><p>Haga clic en cualquier bloque para ver qué ocurre, qué se valida y qué lo hace avanzar.</p></div>
+            <div><h4>No es una máquina de estados</h4><p>El modelo describe el flujo de control, no transiciones rígidas en la herramienta: cada etapa se audita por las evidencias del ticket.</p></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="c-chat" hidden>
+          <span class="kicker">Canal</span>
+          <h3>Chat con IA Bot</h3>
+          <p>El usuario indica su solicitud y la IA busca la respuesta más adecuada. Si el caso se resuelve, el sistema lo cierra automáticamente y envía la encuesta de satisfacción; si no, ofrece continuar la gestión con un analista por chat.</p>
+          <div class="fdetail-cols">
+            <div><h4>Datos previos</h4><ul><li>Nombre e identificación</li><li>Correo y tipo de solicitud</li><li>Autorización de tratamiento de datos</li></ul></div>
+            <div><h4>Regla de inactividad</h4><ul><li>Tras 3 minutos sin respuesta a la pregunta de si sigue en línea, la conversación finaliza</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="c-portal" hidden>
+          <span class="kicker">Canal</span>
+          <h3>Portal de autoservicio</h3>
+          <p>El usuario diligencia el formulario web con los datos e información solicitados y puede adjuntar documentos de soporte. El sistema genera el número de caso y notifica su creación.</p>
+        </div>
+
+        <div class="fdetail" data-detail="c-wa" hidden>
+          <span class="kicker">Canal</span>
+          <h3>WhatsApp</h3>
+          <p>Mismo flujo de datos que el chat —nombre, identificación, correo, tipo de solicitud y autorización de tratamiento de datos personales— antes de detallar el caso.</p>
+        </div>
+
+        <div class="fdetail" data-detail="c-mail" hidden>
+          <span class="kicker">Canal</span>
+          <h3>Correo electrónico</h3>
+          <p>El usuario envía su solicitud o reporte al correo habilitado para el servicio. El caso queda registrado en la herramienta igual que por cualquier otro canal.</p>
+        </div>
+
+        <div class="fdetail" data-detail="c-tel" hidden>
+          <span class="kicker">Canal</span>
+          <h3>Canal telefónico</h3>
+          <p>El usuario llama a la línea dispuesta; un IVR o directamente un analista registra el caso. Los casos reportados verbalmente al personal de la Mesa también deben quedar registrados: el principio de trazabilidad no admite excepciones de canal.</p>
+        </div>
+
+        <div class="fdetail" data-detail="iabot" hidden>
+          <span class="kicker">Autoservicio</span>
+          <h3>Resuelto por el IA Bot</h3>
+          <p>La ruta más corta del modelo: la IA responde con el conocimiento publicado, cierra el caso automáticamente y envía la encuesta de satisfacción. El caso nunca llega a ocupar a un analista.</p>
+          <div class="fdetail-cols">
+            <div><h4>De qué depende</h4><ul><li>De la calidad y cobertura de la KBD</li><li>De la correcta tipificación del caso</li></ul></div>
+            <div><h4>Qué mide</h4><ul><li>El indicador de adopción de base de conocimiento: casos resueltos sin analista sobre el total</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="registro" hidden>
+          <span class="kicker">Fase 1</span>
+          <h3>Registro</h3>
+          <p>El usuario radica por el canal acordado indicando la información obligatoria que exige el sistema, y puede anexar documentos de soporte. El sistema genera un número de caso (ID) y notifica su creación por el canal utilizado y/o correo electrónico.</p>
+          <div class="fdetail-cols">
+            <div><h4>Regla</h4><ul><li>Todo canal genera registro</li><li>Los casos verbales o por evento también se registran</li></ul></div>
+            <div><h4>Por qué importa</h4><ul><li>Una tipificación incorrecta o incompleta afecta los tiempos de ANS que la herramienta asigna automáticamente</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="asignacion" hidden>
+          <span class="kicker">Fase 2</span>
+          <h3>Asignación</h3>
+          <p>Al crearse el caso se asigna automáticamente al grupo o analista competente, según reglas predefinidas alineadas con los ANS y la información suministrada por el usuario. Es la primera interacción automática del proceso.</p>
+          <div class="fdetail-cols">
+            <div><h4>Qué la determina</h4><ul><li>Reglas predefinidas en la herramienta</li><li>La categorización del caso</li><li>Los ANS aplicables</li></ul></div>
+            <div><h4>Nota</h4><ul><li>No existe un paso explícito equivalente en los procedimientos de incidentes ni de solicitudes: es automática</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="revision" hidden>
+          <span class="kicker">Fase 3</span>
+          <h3>Revisión</h3>
+          <p>El personal asignado recibe el caso e inicia la revisión, análisis y diagnóstico —la atención primaria—. Es el momento en que se corrige lo que venga mal del registro.</p>
+          <div class="fdetail-cols">
+            <div><h4>Verifica</h4><ul><li>Que el caso esté correctamente comprendido y analizado</li><li>Que servicio, ANS y prioridad sean correctos; si no, recategoriza</li><li>Que las aprobaciones requeridas estén relacionadas</li><li>Consulta la KBD en caso de duda</li></ul></div>
+            <div><h4>Excepción</h4><ul><li>Si el caso no aplica a ANS o está fuera del alcance, se establece una fecha límite de solución tras el diagnóstico</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="gestion" hidden>
+          <span class="kicker">Fase 4</span>
+          <h3>Gestión</h3>
+          <p>Tras el diagnóstico, el personal a cargo ejecuta las tareas, actividades o escalamientos necesarios hasta la resolución, comunicando oportunamente al usuario respuestas, avances, fechas de compromiso y validaciones.</p>
+          <div class="fdetail-cols">
+            <div><h4>Escalamiento</h4><ul><li>Funcional, jerárquico o a terceros</li><li>Siempre transparente y visible en la herramienta como una etapa del ciclo</li></ul></div>
+            <div><h4>Sin respuesta del usuario</h4><ul><li>Cumplidos los tiempos de espera del MOS, el caso se da por solucionado y continúa el ciclo de aceptación, rechazo o cierre automático</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="espera" hidden>
+          <span class="kicker">Estado transversal</span>
+          <h3>En espera — el ANS se detiene</h3>
+          <p>Cuando el caso queda pendiente por el cliente, por un tercero o por una aprobación, el tiempo de ANS se detiene y no se suma al tiempo de solución con el que se mide su cumplimiento. Es lo que evita castigar al servicio por demoras que no controla.</p>
+          <div class="fdetail-cols">
+            <div><h4>Tipos de espera</h4><ul><li>Espera por cliente</li><li>Espera por tercero</li><li>En aprobación</li></ul></div>
+            <div><h4>Alcance</h4><ul><li>Incluye el escalamiento a terceros</li><li>Los tiempos máximos de espera por canal se definen en el MOS</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="solucion" hidden>
+          <span class="kicker">Fase 5</span>
+          <h3>Solución</h3>
+          <p>El personal asignado cambia el caso a etapa Solucionado registrando la descripción de la solución o respuesta. A partir de ahí la decisión es del usuario.</p>
+          <div class="fdetail-cols">
+            <div><h4>Tres salidas</h4><ul><li><b>Acepta:</b> el caso pasa a Cerrado</li><li><b>Deniega:</b> el caso vuelve a En Curso</li><li><b>No responde:</b> cierre automático a los 3 días hábiles</li></ul></div>
+            <div><h4>Límite del rechazo</h4><ul><li>El usuario solo puede rechazar cuando la respuesta no corresponde al alcance del registro inicial</li><li>El motivo debe quedar justificado</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="cierre-caso" hidden>
+          <span class="kicker">Fase 6</span>
+          <h3>Cierre del caso</h3>
+          <p>Al cerrarse, la herramienta notifica automáticamente al usuario por correo. Un caso cerrado no admite gestión adicional ni reapertura, dado que el usuario tuvo la oportunidad de rechazar la solución en su momento.</p>
+          <div class="fdetail-cols">
+            <div><h4>Si el usuario no quedó conforme</h4><ul><li>Debe informarlo a la Mesa de Ayuda por el canal del MOS</li><li>El Líder o Coordinador evalúa la observación</li><li>De proceder, se crea un caso nuevo</li></ul></div>
+            <div><h4>Cierre automático</h4><ul><li>A los 3 días hábiles sin respuesta del usuario tras la solución</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="encuesta" hidden>
+          <span class="kicker">Después del cierre</span>
+          <h3>Encuesta de satisfacción</h3>
+          <p>Al cerrarse el caso, el sistema puede enviar al usuario un enlace para calificar el servicio recibido —general y específico— y registrar observaciones de mejora. Es la fuente del indicador CSAT y una entrada del ciclo de mejora continua.</p>
+        </div>
+
+        <div class="fdetail" data-detail="n1" hidden>
+          <span class="kicker">Nivel 1</span>
+          <h3>Mesa de Ayuda — punto único de contacto</h3>
+          <p>Atención inicial multicanal, registro, categorización y resolución de solicitudes e incidentes estándar. Es donde se mide el FCR: cuanto más resuelva N1, menor el costo y el tiempo del servicio.</p>
+          <div class="fdetail-cols">
+            <div><h4>Grupos base</h4><ul><li>Atención</li><li>Gestión</li></ul></div>
+            <div><h4>Grupos opcionales</h4><ul><li>Líneas Especiales</li><li>Monitoreo</li><li>Según el proyecto, definidos en el MOS</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n2" hidden>
+          <span class="kicker">Nivel 2</span>
+          <h3>Soporte Funcional Especializado</h3>
+          <p>Atiende lo que no se resuelve en N1 y requiere análisis técnico o funcional especializado, con acceso controlado a componentes internos del sistema y validaciones avanzadas, <b>sin intervención sobre el código fuente</b> ni modificaciones estructurales del software.</p>
+          <div class="fdetail-cols">
+            <div><h4>Funciones</h4><ul><li>Análisis funcional profundo y diagnóstico avanzado</li><li>Corrección de errores recurrentes</li><li>Configuración del sistema</li><li>Validación de procesos documentales</li><li>Gestión técnica y soporte a despliegues</li></ul></div>
+            <div><h4>Incluye</h4><ul><li>El equipo transversal de Calidad, a cargo de un Líder de Mesa de Ayuda</li><li>Atención VIP cuando el proyecto la habilita</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n3" hidden>
+          <span class="kicker">Nivel 3</span>
+          <h3>Desarrollo, Data e Infraestructura</h3>
+          <p>Soporte especializado de alta complejidad: intervención directa sobre el código fuente, la lógica de negocio o la arquitectura del sistema. No hace parte de la Mesa de Ayuda, pero sí del servicio integral.</p>
+          <div class="fdetail-cols">
+            <div><h4>Alcance</h4><ul><li>Corrección de bugs y análisis de código</li><li>Soluciones estructurales</li><li>Análisis de causa raíz</li><li>Problemas de infraestructura o datos</li></ul></div>
+            <div><h4>Relación con N2</h4><ul><li>Trabajan juntos en la eliminación de causas raíz</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="kbd" hidden>
+          <span class="kicker">Transversal</span>
+          <h3>Base de conocimiento (KBD)</h3>
+          <p>Actualizada y accesible para todos los niveles, con soluciones documentadas, procedimientos de diagnóstico, workarounds conocidos y preguntas frecuentes. Su actualización es responsabilidad de los analistas y líderes del servicio.</p>
+          <div class="fdetail-cols">
+            <div><h4>Por qué es crítica</h4><ul><li>La IA la usa como fuente principal para sugerir soluciones, clasificar incidentes y responder consultas frecuentes</li><li>Sostiene el autoservicio y el FCR</li></ul></div>
+            <div><h4>Ciclo</h4><ul><li>Se consulta en la revisión</li><li>Se alimenta con cada solución brindada</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="flegend">
+        <li><i style="background:#8a95a5"></i>Canales y registro</li>
+        <li><i style="background:#7b3fbf"></i>Automatización e IA</li>
+        <li><i style="background:#1f5fa8"></i>Fases de atención</li>
+        <li><i style="background:#e08a1e"></i>Conocimiento y esperas</li>
+        <li><i style="background:#4a8f3c"></i>Solución y cierre</li>
+      </ul>
+      <p class="figcap">Las fases del flujo operativo son la base común de los procedimientos de Gestión de Incidentes y Gestión de Solicitudes de Servicio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · PROCESOS -->
+<section class="slide" id="procesos" data-nav="Procesos">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Los tres procesos del servicio</h2>
+      <p class="sub reveal">Incidentes y solicitudes comparten las fases del flujo operativo; problemas sigue una lógica propia de investigación de causa raíz.</p>
+    </div>
+
+    <div class="tabs reveal" data-tabs>
+      <div class="tablist" role="tablist">
+        <button class="tab" type="button" role="tab" data-tab="inc">Gestión de Incidentes</button>
+        <button class="tab" type="button" role="tab" data-tab="sol">Solicitudes de Servicio</button>
+        <button class="tab" type="button" role="tab" data-tab="pro">Gestión de Problemas</button>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" data-panel="inc">
+        <h3>Restaurar la operación normal en el menor tiempo posible</h3>
+        <p>Minimizando el impacto en el negocio del cliente, bajo un modelo estructurado y controlado, soportado por la herramienta ITSM y operado por la Mesa de Servicio como punto único de contacto.</p>
+        <div class="fdetail-cols">
+          <div>
+            <h4>Actividades</h4>
+            <ul>
+              <li>Identificación y detección</li>
+              <li>Registro</li>
+              <li>Clasificación y priorización</li>
+              <li>Diagnóstico inicial</li>
+              <li>Escalamiento y gestión de resolución</li>
+              <li>Recuperación y resolución</li>
+              <li>Validación con el usuario</li>
+              <li>Cierre</li>
+              <li>Mejora continua</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Incidentes mayores</h4>
+            <p>Se activa ante una afectación crítica o masiva del servicio: escalamiento inmediato y activación de un equipo de respuesta prioritaria, con comunicación directa al cliente y seguimiento continuo hasta la restauración. Posteriormente se realiza análisis post-incidente para identificar la causa raíz y definir acciones de mejora.</p>
+            <h4 style="margin-top:16px">Incidentes recurrentes</h4>
+            <p>Se trasladan formalmente a Gestión de Problemas para su análisis de causa raíz y solución definitiva.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" data-panel="sol" hidden>
+        <h3>Gestionar las solicitudes conforme al catálogo y a los ANS</h3>
+        <p>De forma eficiente y controlada, asegurando su cumplimiento conforme al catálogo de servicios y los ANS establecidos, generando valor al usuario y contribuyendo a la continuidad operativa del negocio.</p>
+        <div class="fdetail-cols">
+          <div>
+            <h4>Actividades</h4>
+            <ul>
+              <li>Recepción y registro</li>
+              <li>Validación de tipificación en el catálogo y requisitos o aprobaciones necesarias</li>
+              <li>Clasificación y priorización</li>
+              <li>Gestión de aprobaciones</li>
+              <li>Ejecución y cumplimiento</li>
+              <li>Seguimiento y comunicación</li>
+              <li>Confirmación de entrega</li>
+              <li>Cierre</li>
+              <li>Mejora continua</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Aprobaciones</h4>
+            <p>Cuando el servicio lo requiere, las aprobaciones se gestionan en la herramienta. Si la solución implica costos, se envía solicitud de validación al gerente respectivo indicando el centro de costo (CECO) asociado.</p>
+            <h4 style="margin-top:16px">Control dual</h4>
+            <p>En ninguna circunstancia el solicitante puede ser el mismo aprobador.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabpanel" role="tabpanel" data-panel="pro" hidden>
+        <h3>Atacar la causa, no el síntoma</h3>
+        <p>Un problema es la causa de uno o más incidentes; al registrarse generalmente no se conoce su causa, por lo que requiere investigación. El proceso identifica de forma proactiva patrones y tendencias que puedan derivar en incidentes, y gestiona la causa raíz de interrupciones recurrentes o de alto impacto.</p>
+        <div class="fdetail-cols">
+          <div>
+            <h4>Ciclo</h4>
+            <ul>
+              <li>Identificación y análisis de tendencias</li>
+              <li>Postulación en Comité de Problemas</li>
+              <li>Registro y clasificación del problema</li>
+              <li>Análisis de causa raíz (RCA)</li>
+              <li>Definición y aplicación de workarounds</li>
+              <li>Gestión y seguimiento de la solución definitiva</li>
+              <li>Validación de la solución por la Mesa de Ayuda</li>
+              <li>Cierre del problema</li>
+              <li>Mejora continua</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Workaround</h4>
+            <p>Solución temporal que permite restaurar el servicio mientras se trabaja en la causa raíz. No reemplaza la solución definitiva.</p>
+            <h4 style="margin-top:16px">Coordinación</h4>
+            <p>La solución definitiva se coordina con Gestión de Cambios cuando aplique. El KPI del proceso es la reducción de incidentes recurrentes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <thead>
+          <tr><th>Fase del modelo</th><th>Gestión de Incidentes</th><th>Gestión de Solicitudes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Registro</td><td>1. Identificación y detección · 2. Registro</td><td>1. Recepción y registro</td></tr>
+          <tr><td>Asignación</td><td colspan="2" class="muted">Asignación automática — sin paso explícito en el procedimiento</td></tr>
+          <tr><td>Revisión</td><td>3. Clasificación y priorización · 4. Diagnóstico inicial</td><td>2. Validación · 3. Clasificación y priorización</td></tr>
+          <tr><td>Gestión</td><td>5. Escalamiento y gestión de resolución</td><td>4. Gestión de aprobaciones · 5. Ejecución y cumplimiento · 6. Seguimiento y comunicación</td></tr>
+          <tr><td>Solución</td><td>6. Recuperación y resolución · 7. Validación con el usuario</td><td>7. Confirmación de entrega</td></tr>
+          <tr><td>Cierre</td><td>8. Cierre del incidente</td><td>8. Cierre</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="figcap">Gestión de Problemas no se enmarca en estas fases: sigue una lógica propia de investigación de causa raíz.</p>
+  </div>
+</section>
+
+<!-- 7 · ESTADOS -->
+<section class="slide" id="estados" data-nav="Estados">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Estados del caso</h2>
+      <p class="sub reveal">Cuatro filtros agrupan los estados posibles. Los estados de Abierto hacen parte de la medición de ANS; los de espera la detienen.</p>
+    </div>
+    <ul class="states reveal">
+      <li><span class="badge-state s-blue">Abierto</span><div><b>Nuevo</b><p>El caso se encuentra en proceso de asignación a analista de mesa o grupo específico.</p></div></li>
+      <li><span class="badge-state s-blue">Abierto</span><div><b>En Curso</b><p>El caso, luego de ser revisado, inicia el proceso de solución o respuesta.</p></div></li>
+      <li><span class="badge-state s-amber">En espera</span><div><b>Espera por tercero</b><p>A la espera de una respuesta o información por parte de un tercero.</p></div></li>
+      <li><span class="badge-state s-amber">En espera</span><div><b>Espera por cliente</b><p>A la espera de una respuesta o información por parte del usuario solicitante.</p></div></li>
+      <li><span class="badge-state s-amber">En espera</span><div><b>En Aprobación</b><p>A la espera de la aprobación o rechazo por parte de un actor del caso para poder continuar con la gestión.</p></div></li>
+      <li><span class="badge-state s-teal">Resuelto</span><div><b>Resuelto</b><p>El caso ha sido solucionado; el usuario puede aceptar o rechazar la solución brindada.</p></div></li>
+      <li><span class="badge-state s-steel">Cerrado</span><div><b>Cerrado</b><p>Estado final: el usuario aceptó la solución, o el sistema cerró automáticamente pasados 3 días hábiles sin obtener respuesta.</p></div></li>
+    </ul>
+    <p class="ans-note reveal" style="margin-top:20px"><b>Medición de ANS:</b> las etapas de Abierto —asignación, revisión y gestión— hacen parte de la medición. Durante las etapas de espera, incluido el escalamiento a terceros, el tiempo se detiene y no se suma al tiempo de solución.</p>
+  </div>
+</section>
+
+<!-- 8 · PRIORIDAD -->
+<section class="slide" id="prioridad" data-nav="Prioridad">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Prioridad y categorización</h2>
+      <p class="sub reveal">La prioridad resulta del cruce entre urgencia e impacto; la herramienta ITSM la calcula automáticamente al registrar el caso.</p>
+    </div>
+
+    <div class="pmatrix reveal">
+      <div class="pm-corner">Urgencia \ Impacto</div>
+      <div class="pm-h">Alto<span>Afecta a toda la organización o un proceso crítico</span></div>
+      <div class="pm-h">Medio<span>Afecta a varios usuarios o un área completa</span></div>
+      <div class="pm-h">Bajo<span>Afecta a un solo usuario o caso aislado</span></div>
+
+      <div class="pm-v">Alta<span>El negocio está detenido o en riesgo inmediato</span></div>
+      <div class="pm-cell p1">P1<span>Crítica</span></div>
+      <div class="pm-cell p1">P1<span>Crítica</span></div>
+      <div class="pm-cell p2">P2<span>Alta</span></div>
+
+      <div class="pm-v">Media<span>El proceso puede continuar con dificultad</span></div>
+      <div class="pm-cell p2">P2<span>Alta</span></div>
+      <div class="pm-cell p3">P3<span>Media</span></div>
+      <div class="pm-cell p4">P4<span>Baja</span></div>
+
+      <div class="pm-v">Baja<span>Existe alternativa temporal (workaround)</span></div>
+      <div class="pm-cell p3">P3<span>Media</span></div>
+      <div class="pm-cell p4">P4<span>Baja</span></div>
+      <div class="pm-cell p5">P5<span>Planificada</span></div>
+    </div>
+
+    <ul class="pm-key reveal">
+      <li><b class="p1">P1</b>Atención inmediata</li>
+      <li><b class="p2">P2</b>Atención prioritaria</li>
+      <li><b class="p3">P3</b>Atención en el tiempo establecido</li>
+      <li><b class="p4">P4</b>Atención normal</li>
+      <li><b class="p5">P5</b>Ventana de cambios o mantenimiento</li>
+    </ul>
+
+    <div class="rule reveal" style="max-width:100%;margin:38px 0 24px"></div>
+
+    <h3 class="reveal" style="font-size:19px;margin:0 0 6px">Categorización</h3>
+    <p class="sub reveal" style="margin-bottom:20px">Árbol jerárquico de tipo de solicitud, categoría, subcategoría y servicio afectado. Catálogo estructurado y cerrado, sin texto libre: listas desplegables en la herramienta, revisión periódica, alineación con la base de conocimiento y uso de IA para sugerir la categorización.</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+      <article class="card reveal tone-blue"><h3>Naturaleza</h3><p>Incidente, solicitud o consulta.</p></article>
+      <article class="card reveal tone-violet"><h3>Tipo de afectación</h3><p>Funcional, técnico, accesos, seguridad, integraciones, configuración, consulta.</p></article>
+      <article class="card reveal tone-teal"><h3>Especificación real</h3><p>Error en carga de documentos, falla en flujo de aprobación, error de login, lentitud.</p></article>
+      <article class="card reveal tone-steel"><h3>Tipo de servicio, canal y prioridad</h3><p>El servicio afectado, el canal de ingreso y la prioridad resultante completan el árbol.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · ANS E INDICADORES -->
+<section class="slide" id="indicadores" data-nav="ANS e indicadores">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">ANS e indicadores</h2>
+      <p class="sub reveal">Los ANS se definen y formalizan con el cliente durante la fase de transición o inicio del servicio. Los tiempos asociados a cada prioridad se detallan en el MOS de cada proyecto.</p>
+    </div>
+
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(290px,1fr))">
+      <article class="card reveal tone-teal">
+        <span class="kicker">Cómo se definen</span>
+        <h3>Alineados con el negocio</h3>
+        <p>Según las necesidades del negocio, la criticidad de los procesos soportados, los volúmenes de operación y las condiciones técnicas del entorno.</p>
+      </article>
+      <article class="card reveal tone-blue">
+        <span class="kicker">Marco</span>
+        <h3>Esquemas exigentes</h3>
+        <p>El modelo está estructurado para soportar esquemas exigentes de niveles de servicio, basados en ITIL 4 e ISO 20000, con capacidades de medición, monitoreo y cumplimiento.</p>
+      </article>
+      <article class="card reveal tone-amber">
+        <span class="kicker">Compromiso</span>
+        <h3>Medibles y sostenibles</h3>
+        <p>Los ANS finales resultan de una validación técnica y operativa que establece compromisos realistas, equilibrando calidad del servicio y eficiencia operativa.</p>
+      </article>
+    </div>
+
+    <div class="rule reveal" style="max-width:100%;margin:38px 0 24px"></div>
+
+    <h3 class="reveal" style="font-size:19px;margin:0 0 20px">Indicadores del servicio</h3>
+    <ul class="rows">
+      <li class="row reveal">
+        <span class="row-ico tone-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div class="row-body">
+          <h3>% Cumplimiento de ANS</h3>
+          <p>Nivel de cumplimiento de los tiempos acordados. <b>Tickets dentro de ANS / total de tickets × 100</b>.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <div class="row-body">
+          <h3>First Contact Resolution (FCR)</h3>
+          <p>Capacidad de resolver casos en el primer contacto sin escalamiento. <b>Tickets resueltos en N1 / total de tickets × 100</b>.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 18l-5.9 3 1.2-6.5L2.5 9.9 9.1 9z"/></svg></span>
+        <div class="row-body">
+          <h3>Satisfacción del cliente (CSAT)</h3>
+          <p>Nivel de satisfacción del usuario. <b>Respuestas positivas / total de encuestas × 100</b>.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 7h7M9 11h5"/></svg></span>
+        <div class="row-body">
+          <h3>Adopción de base de conocimiento</h3>
+          <p>Eficiencia y automatización del servicio. <b>Casos resueltos sin analista / total de casos × 100</b>.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 18L14 12l-4 4-6-6"/><path d="M15 18h5v-5"/></svg></span>
+        <div class="row-body">
+          <h3>Reducción de incidentes recurrentes</h3>
+          <p>Impacto real de los problemas resueltos. <b>(Incidentes antes − después) / incidentes antes × 100</b>.</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="ans-note reveal" style="margin-top:22px"><b>Dashboard de analítica:</b> consolida el cumplimiento de ANS, el estado de los tickets y su distribución por nivel y periodo. Su módulo de análisis con IA identifica fallas y cuellos de botella, detecta tendencias y genera recomendaciones priorizadas de mejora.</p>
+  </div>
+</section>
+
+<!-- 10 · GOBIERNO -->
+<section class="slide" id="gobierno" data-nav="Gobierno">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Gobierno y mejora continua</h2>
+      <p class="sub reveal">Comités periódicos donde se revisan resultados, riesgos, oportunidades de mejora y planes de acción, asegurando la alineación con los objetivos del cliente.</p>
+    </div>
+
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <thead><tr><th>Comité</th><th>Frecuencia</th><th>Alcance</th><th>Responsable</th></tr></thead>
+        <tbody>
+          <tr><td>Auditoría de Calidad</td><td>Semanal</td><td>Revisión aleatoria del 5% de los tickets para validar la calidad del diagnóstico y el cumplimiento de los pasos registrados.</td><td>Líder de Mesa de Ayuda</td></tr>
+          <tr><td>Operativo</td><td>Semanal</td><td>Seguimiento de ANS, backlog y casos críticos.</td><td>Líder / Coordinador MDA</td></tr>
+          <tr><td>Táctico</td><td>Mensual</td><td>Revisión de indicadores, tendencias y planes de acción.</td><td>Coordinador MDA</td></tr>
+          <tr><td>Problemas</td><td>Mínimo quincenal</td><td>Postulación, evaluación y seguimiento de problemas.</td><td>Coordinador MDA</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rule reveal" style="max-width:100%;margin:36px 0 24px"></div>
+
+    <h3 class="reveal" style="font-size:19px;margin:0 0 6px">Ciclo PDCA</h3>
+    <p class="sub reveal" style="margin-bottom:20px">Basado en ITIL 4, ejecutado de forma cíclica mediante las revisiones periódicas de los comités de gobierno.</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
+      <article class="card reveal tone-blue"><span class="kicker">01</span><h3>Plan</h3><p>Identificación de oportunidades a partir del monitoreo de indicadores, análisis de tendencias y retroalimentación del cliente.</p></article>
+      <article class="card reveal tone-violet"><span class="kicker">02</span><h3>Do</h3><p>Implementación de mejoras.</p></article>
+      <article class="card reveal tone-amber"><span class="kicker">03</span><h3>Check</h3><p>Medición de resultados.</p></article>
+      <article class="card reveal tone-teal"><span class="kicker">04</span><h3>Act</h3><p>Ajuste y estandarización de acciones correctivas y preventivas.</p></article>
+    </div>
+    <p class="ans-note reveal" style="margin-top:22px">Transversal al ciclo: gestión del conocimiento, lecciones aprendidas y optimización de procesos. Los incidentes recurrentes o de alto impacto se trasladan formalmente al Procedimiento de Gestión de Problemas para su análisis de causa raíz y solución definitiva.</p>
+  </div>
+</section>
+
+<!-- 11 · CIERRE -->
+<section class="slide" id="cierre" data-nav="Cierre">
+  <div class="inner">
+    <span class="eyebrow reveal">Cierre</span>
+    <h2 class="reveal">Un modelo orientado a la continuidad del negocio</h2>
+    <p class="lede reveal">Reducir tickets, no solo atenderlos. Anticiparse mediante IA, no solo reaccionar. Lo que varía entre clientes vive en el MOS; lo que es común a todos los proyectos de soporte externo vive en este modelo.</p>
+    <div class="close-grid">
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Punto único de contacto</b><br/>todo caso queda registrado y trazable</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Resolución en el nivel más eficiente</b><br/>FCR y shift-left como palancas</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Causa raíz, no solo síntoma</b><br/>gestión de problemas sobre el recurrente</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Gobierno con métricas de negocio</b><br/>comités, dashboard y mejora continua</span></div>
+    </div>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Soporte Externo</span><i></i><span>Versión 2</span></div>
+  </div>
+</section>
+
+</div>
+<script src="../assets/decks.js"></script>
+<script src="../assets/core.js"></script>
+</body>
+</html>

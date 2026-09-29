@@ -3,6 +3,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/mesa", "destination": "/p/mesa" },
     { "source": "/cpe", "destination": "/p/cpe" },
     { "source": "/docum", "destination": "/p/docum" },
     { "source": "/equidad", "destination": "/p/equidad" },

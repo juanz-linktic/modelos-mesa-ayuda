@@ -5,6 +5,16 @@
    ------------------------------------------------------------------ */
 window.CORE_DECKS = [
   {
+    id: 'mesa',
+    file: 'p/mesa.html',
+    title: 'Modelo de Gestión y Operación — Soporte Externo',
+    client: 'Modelo general · LinkTIC',
+    summary: 'Marco común a todos los proyectos de soporte externo: punto único de contacto omnicanal, resolución en el nivel más eficiente, flujo operativo del caso, ANS, gobierno y mejora continua.',
+    tag: 'Modelo general',
+    tone: 'teal',
+    updated: '2026-09'
+  },
+  {
     id: 'cpe',
     file: 'p/cpe.html',
     title: 'Modelo de atención — Operación interna',

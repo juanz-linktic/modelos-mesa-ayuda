@@ -12,6 +12,7 @@ mostrar y cada presentación lleva un selector para saltar a otra sin volver atr
 | `assets/decks.js` | **Catálogo.** Una entrada por presentación; alimenta el índice y el selector superior. |
 | `assets/core.css` | Estilos compartidos (paleta, slides, tarjetas, diagramas, impresión). |
 | `assets/core.js` | Comportamiento compartido: selector, índice lateral, revelado al hacer scroll, progreso, teclado, botón PDF. |
+| `p/mesa.html` | **Modelo general** de gestión y operación de soporte externo. Marco común a todos los proyectos. |
 | `p/cpe.html` | Modelo de atención — Operación interna (CPE). Documento de trabajo, no distribuir al cliente. |
 | `p/docum.html` | Modelo de atención Zendesk — DOCUM (uso interno). |
 | `p/equidad.html` | Modelo de atención — La Equidad. |
@@ -115,6 +116,7 @@ Cada push a `main` publica automáticamente.
 | Ruta | Contenido |
 |---|---|
 | `/` | Índice de presentaciones |
+| `/p/mesa` — atajo `/mesa` | Modelo general de soporte externo |
 | `/p/cpe` — atajo `/cpe` | Modelo CPE |
 | `/p/docum` — atajo `/docum` | Modelo DOCUM |
 | `/p/equidad` — atajo `/equidad` | Modelo La Equidad |
