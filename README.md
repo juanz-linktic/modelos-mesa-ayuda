@@ -80,6 +80,25 @@ de **1400 unidades de ancho**. Todo escala junto con el contenedor.
 - También hay un componente de pestañas: contenedor `[data-tabs]` con botones
   `[data-tab="id"]` y paneles `[data-panel="id"]`.
 
+## Marca LinkTIC
+
+Los valores de marca salen de la plantilla corporativa **GCM-DOC-002 v2** y viven
+en el core, así que aplican a todas las presentaciones sin tocar su HTML.
+
+| Elemento | Valor |
+|---|---|
+| Azul de marca | `#3F8CF5` (`--blue`) |
+| Degradado | `#02E0FF → #0096FF → #2709CD` (`--brand-grad`) |
+| Violeta | `#2709CD` (`--violet`) |
+| Texto secundario | `#516276` (`--muted`) |
+| Tipografía de títulos | Poppins (`--font-marca`) |
+| Activos | `assets/brand/`: logo a color, logo blanco, isotipo (favicon), fondo azul y fondo claro |
+
+- La sección con `id="portada"` recibe automáticamente el fondo azul y el logo blanco.
+- El índice usa el fondo claro y el logo a color.
+- Los colores semánticos de los diagramas (niveles, calidad, alertas) se mantienen
+  a propósito: codifican significado, no identidad.
+
 ## Convenciones
 
 - **Diagramas estáticos:** SVG inline dentro de `.figure > .diagram-scroll`.

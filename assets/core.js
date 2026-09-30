@@ -9,6 +9,14 @@
   var CURRENT = document.body.getAttribute('data-deck') || '';
   var DECKS = window.CORE_DECKS || [];
 
+  /* ---------- favicon de marca ---------- */
+  if (!document.querySelector('link[rel="icon"]')) {
+    var fav = document.createElement('link');
+    fav.rel = 'icon'; fav.type = 'image/png';
+    fav.href = BASE + 'assets/brand/linktic-isotipo.png';
+    document.head.appendChild(fav);
+  }
+
   /* ---------- selector de presentaciones ---------- */
   function buildPicker() {
     var host = document.getElementById('picker');
