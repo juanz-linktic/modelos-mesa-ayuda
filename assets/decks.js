@@ -2,6 +2,8 @@
    Catálogo de presentaciones.
    Para publicar un flujo nuevo: crear el HTML en /p y añadir una
    entrada aquí. El índice y el selector superior se arman solos.
+   group: 'externo' la separa de los modelos LinkTIC y la muestra
+   sin la marca (portada neutra, sin logo).
    ------------------------------------------------------------------ */
 window.CORE_DECKS = [
   {
@@ -26,6 +28,7 @@ window.CORE_DECKS = [
   },
   {
     id: 'docum',
+    group: 'externo',
     file: 'p/docum.html',
     title: 'Modelo de atención Zendesk — DOCUM',
     client: 'DOCUM · Mesa de Ayuda N2',
@@ -46,6 +49,7 @@ window.CORE_DECKS = [
   },
   {
     id: 'cymetria',
+    group: 'externo',
     file: 'p/cymetria.html',
     title: 'Modelo de atención — Cymetria',
     client: 'Cymetria — sitio web de Positiva',

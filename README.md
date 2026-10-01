@@ -96,6 +96,10 @@ en el core, así que aplican a todas las presentaciones sin tocar su HTML.
 
 - La sección con `id="portada"` recibe automáticamente el fondo azul y el logo blanco.
 - El índice usa el fondo claro y el logo a color.
+- Las presentaciones **externas** (DOCUM y Cymetria) no llevan la marca: tienen
+  `group: 'externo'` en `decks.js` y `data-brand="neutral"` en su `<body>`. Salen en
+  un grupo aparte del índice y del selector, con portada clara, sin logo y con la
+  paleta y tipografía originales.
 - Los colores semánticos de los diagramas (niveles, calidad, alertas) se mantienen
   a propósito: codifican significado, no identidad.
 

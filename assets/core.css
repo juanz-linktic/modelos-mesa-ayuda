@@ -742,3 +742,49 @@ h1 .accent{background:linear-gradient(100deg,#0096FF 0%,#2709CD 100%); -webkit-b
   #portada h1 .accent{-webkit-text-fill-color:#0096FF}
   #portada .eyebrow{color:var(--brand-azul); border-color:#d5dae2; background:#fff}
 }
+
+
+/* ==================================================================
+   PRESENTACIONES EXTERNAS — body[data-brand="neutral"]
+   Sin marca LinkTIC: paleta original, Inter en títulos, sin logo
+   y portada clara.
+   ================================================================== */
+body[data-brand="neutral"]{
+  --text:#131f33; --muted:#5a6b82; --violet:#5b4bd4; --blue:#1f7fb8;
+  --font-marca:Inter,'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --brand-grad:linear-gradient(90deg,#5b4bd4,#1f7fb8,#1f8f6b);
+}
+body[data-brand="neutral"]::before{
+  background:
+    radial-gradient(900px 480px at 12% -8%, rgba(31,143,107,.09), transparent 60%),
+    radial-gradient(760px 420px at 92% 8%, rgba(91,75,212,.06), transparent 62%);
+}
+body[data-brand="neutral"] h1{letter-spacing:-.025em; font-weight:800}
+body[data-brand="neutral"] h2{letter-spacing:-.02em; font-weight:700}
+body[data-brand="neutral"] h1 .accent{background:linear-gradient(100deg,var(--blue),var(--violet)); -webkit-background-clip:text; background-clip:text}
+body[data-brand="neutral"] .brand{font-size:13.5px; gap:10px}
+body[data-brand="neutral"] .brand i{
+  width:9px; height:9px; border-radius:50%; background:var(--teal);
+  box-shadow:0 0 0 4px rgba(31,143,107,.15);
+}
+body[data-brand="neutral"] .brand span{font-family:inherit; font-size:inherit; color:var(--muted)}
+body[data-brand="neutral"] .eyebrow{
+  color:var(--dim); border-color:var(--border); background:var(--surface); letter-spacing:.16em;
+}
+body[data-brand="neutral"] .dot.active span{background:var(--teal); box-shadow:0 0 0 4px rgba(31,143,107,.15)}
+body[data-brand="neutral"] #portada{background:transparent; color:var(--text); border-bottom:1px solid var(--border-soft)}
+body[data-brand="neutral"] #portada .inner::before{content:none}
+body[data-brand="neutral"] #portada .eyebrow{color:var(--dim); border-color:var(--border); background:var(--surface)}
+body[data-brand="neutral"] #portada h1{color:var(--text)}
+body[data-brand="neutral"] #portada h1 .accent{background:linear-gradient(100deg,var(--blue),var(--violet)); -webkit-background-clip:text; background-clip:text}
+body[data-brand="neutral"] #portada .lede,body[data-brand="neutral"] #portada .sub{color:var(--muted)}
+body[data-brand="neutral"] #portada .rule{background:linear-gradient(90deg,var(--border),transparent)}
+body[data-brand="neutral"] #portada .signoff{color:var(--dim)}
+body[data-brand="neutral"] #portada .signoff i{background:var(--border)}
+
+/* encabezados de grupo en el índice */
+.deck-group{
+  list-style:none; margin:22px 2px 4px; font-family:var(--font-marca);
+  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--dim);
+}
+.deck-group:first-child{margin-top:0}

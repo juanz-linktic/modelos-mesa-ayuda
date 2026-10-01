@@ -8,9 +8,21 @@
   var BASE = document.body.getAttribute('data-base') || '';
   var CURRENT = document.body.getAttribute('data-deck') || '';
   var DECKS = window.CORE_DECKS || [];
+  var NEUTRAL = document.body.getAttribute('data-brand') === 'neutral';
+  var GROUPS = [
+    { id: 'linktic', label: 'Modelos LinkTIC' },
+    { id: 'externo', label: 'Externos' }
+  ];
+  function groupOf(d) { return d.group || 'linktic'; }
+  function eachGroup(fn) {
+    GROUPS.forEach(function (g) {
+      var items = DECKS.filter(function (d) { return groupOf(d) === g.id; });
+      if (items.length) fn(g, items);
+    });
+  }
 
   /* ---------- favicon de marca ---------- */
-  if (!document.querySelector('link[rel="icon"]')) {
+  if (!NEUTRAL && !document.querySelector('link[rel="icon"]')) {
     var fav = document.createElement('link');
     fav.rel = 'icon'; fav.type = 'image/png';
     fav.href = BASE + 'assets/brand/linktic-isotipo.png';
@@ -37,20 +49,21 @@
     menu.className = 'picker-menu';
     menu.setAttribute('role', 'menu');
 
-    var head = document.createElement('div');
-    head.className = 'head';
-    head.textContent = 'Flujos disponibles';
-    menu.appendChild(head);
-
-    DECKS.forEach(function (d) {
-      var a = document.createElement('a');
-      a.className = 'picker-item tone-' + (d.tone || 'steel') + (d.id === CURRENT ? ' current' : '');
-      a.href = BASE + d.file;
-      a.setAttribute('role', 'menuitem');
-      a.innerHTML = '<i></i><span><b></b><em></em></span>';
-      a.querySelector('b').textContent = d.title;
-      a.querySelector('em').textContent = d.client;
-      menu.appendChild(a);
+    eachGroup(function (g, items) {
+      var head = document.createElement('div');
+      head.className = 'head';
+      head.textContent = g.label;
+      menu.appendChild(head);
+      items.forEach(function (d) {
+        var a = document.createElement('a');
+        a.className = 'picker-item tone-' + (d.tone || 'steel') + (d.id === CURRENT ? ' current' : '');
+        a.href = BASE + d.file;
+        a.setAttribute('role', 'menuitem');
+        a.innerHTML = '<i></i><span><b></b><em></em></span>';
+        a.querySelector('b').textContent = d.title;
+        a.querySelector('em').textContent = d.client;
+        menu.appendChild(a);
+      });
     });
 
     var sep = document.createElement('a');
@@ -81,7 +94,16 @@
   function buildHub() {
     var list = document.getElementById('deck-list');
     if (!list) return;
-    DECKS.forEach(function (d) {
+    eachGroup(function (g, items) {
+      var gh = document.createElement('li');
+      gh.className = 'deck-group reveal';
+      gh.textContent = g.label;
+      list.appendChild(gh);
+      items.forEach(function (d) { list.appendChild(deckItem(d)); });
+    });
+  }
+
+  function deckItem(d) {
       var a = document.createElement('a');
       a.className = 'deck reveal tone-' + (d.tone || 'steel');
       a.href = BASE + d.file;
@@ -95,8 +117,7 @@
       a.querySelector('.badge').textContent = d.tag || '';
       var li = document.createElement('li');
       li.appendChild(a);
-      list.appendChild(li);
-    });
+      return li;
   }
 
   /* ---------- navegación lateral ---------- */
