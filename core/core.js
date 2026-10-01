@@ -9,15 +9,18 @@
   var CURRENT = document.body.getAttribute('data-deck') || '';
   var DECKS = window.CORE_DECKS || [];
   var NEUTRAL = document.body.getAttribute('data-brand') === 'neutral';
+  var SITE = window.CORE_SITE || {};
   var GROUPS = [
-    { id: 'linktic', label: 'Modelos LinkTIC' },
+    { id: 'principal', label: SITE.label || 'Flujos disponibles' },
     { id: 'externo', label: 'Externos' }
   ];
-  function groupOf(d) { return d.group || 'linktic'; }
+  function groupOf(d) { return d.group || 'principal'; }
   function eachGroup(fn) {
-    GROUPS.forEach(function (g) {
-      var items = DECKS.filter(function (d) { return groupOf(d) === g.id; });
-      if (items.length) fn(g, items);
+    var used = GROUPS.filter(function (g) {
+      return DECKS.some(function (d) { return groupOf(d) === g.id; });
+    });
+    used.forEach(function (g) {
+      fn(g, DECKS.filter(function (d) { return groupOf(d) === g.id; }), used.length);
     });
   }
 
@@ -94,11 +97,20 @@
   function buildHub() {
     var list = document.getElementById('deck-list');
     if (!list) return;
-    eachGroup(function (g, items) {
-      var gh = document.createElement('li');
-      gh.className = 'deck-group reveal';
-      gh.textContent = g.label;
-      list.appendChild(gh);
+    if (!DECKS.length) {
+      var empty = document.createElement('li');
+      empty.className = 'deck-empty reveal';
+      empty.textContent = SITE.empty || 'Todavía no hay presentaciones publicadas.';
+      list.appendChild(empty);
+      return;
+    }
+    eachGroup(function (g, items, total) {
+      if (total > 1) {
+        var gh = document.createElement('li');
+        gh.className = 'deck-group reveal';
+        gh.textContent = g.label;
+        list.appendChild(gh);
+      }
       items.forEach(function (d) { list.appendChild(deckItem(d)); });
     });
   }

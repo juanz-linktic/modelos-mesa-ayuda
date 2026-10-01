@@ -1,10 +1,9 @@
 /* ------------------------------------------------------------------
-   Catálogo de presentaciones.
-   Para publicar un flujo nuevo: crear el HTML en /p y añadir una
-   entrada aquí. El índice y el selector superior se arman solos.
-   group: 'externo' la separa de los modelos LinkTIC y la muestra
-   sin la marca (portada neutra, sin logo).
+   Catálogo de presentaciones de este sitio.
+   Para publicar una nueva: crear el HTML en /p y añadir una entrada aquí.
+   El índice y el selector superior se arman solos.
    ------------------------------------------------------------------ */
+window.CORE_SITE = {"label": "Presentaciones LinkTIC"};
 window.CORE_DECKS = [
   {
     id: 'mesa',
@@ -27,17 +26,6 @@ window.CORE_DECKS = [
     updated: '2026-08'
   },
   {
-    id: 'docum',
-    group: 'externo',
-    file: 'p/docum.html',
-    title: 'Modelo de atención Zendesk — DOCUM',
-    client: 'DOCUM · Mesa de Ayuda N2',
-    summary: 'Cierre en el nivel de resolución, validación de Calidad, cola interna en Azure DevOps y gestión de problemas sobre la causa raíz.',
-    tag: 'Uso interno',
-    tone: 'violet',
-    updated: '2026-08'
-  },
-  {
     id: 'equidad',
     file: 'p/equidad.html',
     title: 'Modelo de atención — La Equidad',
@@ -45,17 +33,6 @@ window.CORE_DECKS = [
     summary: 'Radicación por el analista N1 de La Equidad, entrada directa a Nivel 2 sin triage, soporte externo gestionado por N2 y trazabilidad en el portal.',
     tag: 'Cliente',
     tone: 'blue',
-    updated: '2026-09'
-  },
-  {
-    id: 'cymetria',
-    group: 'externo',
-    file: 'p/cymetria.html',
-    title: 'Modelo de atención — Cymetria',
-    client: 'Cymetria — sitio web de Positiva',
-    summary: 'Sitio en WordPress con Elementor. Ingreso por Aranda, definición del caso por Cristian con acompañamiento de Andrés, absorción de N2 y paso a producción fuera del horario laboral.',
-    tag: 'Documento de trabajo',
-    tone: 'steel',
     updated: '2026-09'
   }
 ];

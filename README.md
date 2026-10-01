@@ -1,33 +1,54 @@
-# Presentaciones — Mesa de Ayuda LinkTIC
+# Presentaciones — Mesa de Ayuda
 
-Sitio estático (sin build, sin dependencias) que reúne los modelos de atención y
-flujos de servicio de la Mesa de Ayuda. El índice permite elegir qué presentación
-mostrar y cada presentación lleva un selector para saltar a otra sin volver atrás.
+Sitios estáticos (sin build, sin dependencias) con los modelos de atención y flujos
+de servicio de la Mesa de Ayuda, **segmentados por cliente**: cada cliente tiene su
+propio sitio, su propio dominio y solo ve sus presentaciones.
 
 ## Estructura
 
+```
+core/                 Lo compartido. Se edita SOLO aquí.
+  core.css            Estilos (paleta, slides, tarjetas, diagramas, impresión)
+  core.js             Selector, índice lateral, filtros de diagramas, PDF
+  brand/              Logos y fondos de LinkTIC
+sites/
+  linktic/            Modelo general · CPE · La Equidad  (Balu, pendiente)
+  3t/                 DOCUM
+  wimbu/              Vacío, listo para CRM Agora
+  cymetria/           Página web de Cymetria
+tools/sync_core.py    Copia el core a cada sitio
+```
+
+Cada carpeta de `sites/` es un sitio completo e independiente:
+
 | Archivo | Descripción |
 |---|---|
-| `index.html` | Índice: lista todas las presentaciones del catálogo. |
-| `assets/decks.js` | **Catálogo.** Una entrada por presentación; alimenta el índice y el selector superior. |
-| `assets/core.css` | Estilos compartidos (paleta, slides, tarjetas, diagramas, impresión). |
-| `assets/core.js` | Comportamiento compartido: selector, índice lateral, revelado al hacer scroll, progreso, teclado, botón PDF. |
-| `p/mesa.html` | **Modelo general** de gestión y operación de soporte externo. Marco común a todos los proyectos. |
-| `p/cpe.html` | Modelo de atención — Operación interna (CPE). Documento de trabajo, no distribuir al cliente. |
-| `p/docum.html` | Modelo de atención Zendesk — DOCUM (uso interno). |
-| `p/equidad.html` | Modelo de atención — La Equidad. |
-| `p/cymetria.html` | Modelo de atención — Cymetria. Documento de trabajo, contiene nombres de personas. |
-| `vercel.json` | Despliegue: URLs limpias, atajos por presentación, cabeceras de seguridad. |
+| `index.html` | Índice del sitio. |
+| `assets/decks.js` | **Catálogo del sitio.** Una entrada por presentación; alimenta el índice y el selector. Es propio de cada sitio. |
+| `assets/core.css`, `assets/core.js` | Copias del core. **No se editan a mano**: se regeneran con `tools/sync_core.py`. |
+| `assets/brand/` | Solo en `linktic`. |
+| `p/*.html` | Las presentaciones. |
+| `vercel.json` | URLs limpias, atajos de cada presentación y cabeceras de seguridad. |
+
+### Por qué el core se copia y no se referencia
+
+Vercel publica únicamente lo que está dentro de la carpeta raíz de cada proyecto, así
+que un sitio no puede apuntar a `../../core`. Por eso cada sitio lleva su copia del core,
+generada por el script. Flujo de trabajo:
+
+1. Editar `core/core.css` o `core/core.js`.
+2. Correr `py tools/sync_core.py` (Windows) o `python3 tools/sync_core.py`.
+3. Hacer commit de `core/` **y** de las copias en `sites/`.
 
 ## Agregar una presentación nueva
 
-1. **Copiar una existente** como plantilla: `cp p/docum.html p/mi-flujo.html`.
+1. **Copiar una existente** dentro del sitio del cliente: `cp sites/3t/p/docum.html sites/3t/p/mi-flujo.html`.
 2. Ajustar en el nuevo archivo:
    - `<title>` y los `<meta>` de descripción.
    - `data-deck="mi-flujo"` en el `<body>` (identificador propio; `data-base="../"` no cambia).
    - El contenido de las secciones. Cada `<section class="slide">` con atributo
      `data-nav="Etiqueta"` genera automáticamente un punto en el índice lateral.
-3. **Registrarla** en `assets/decks.js`:
+3. **Registrarla** en el catálogo de ese sitio, `sites/<sitio>/assets/decks.js`:
 
 ```js
 {
@@ -42,7 +63,10 @@ mostrar y cada presentación lleva un selector para saltar a otra sin volver atr
 }
 ```
 
-No hace falta tocar nada más: el índice y el selector superior se arman solos.
+4. Agregar su atajo en `sites/<sitio>/vercel.json` si se quiere una URL corta.
+
+El índice y el selector superior se arman solos. Un cliente nuevo es una carpeta
+nueva en `sites/` más su entrada en `SITES` de `tools/sync_core.py`.
 
 ## Diagramas interactivos
 
@@ -92,14 +116,14 @@ en el core, así que aplican a todas las presentaciones sin tocar su HTML.
 | Violeta | `#2709CD` (`--violet`) |
 | Texto secundario | `#516276` (`--muted`) |
 | Tipografía de títulos | Poppins (`--font-marca`) |
-| Activos | `assets/brand/`: logo a color, logo blanco, isotipo (favicon), fondo azul y fondo claro |
+| Activos | `core/brand/`: logo a color, logo blanco, isotipo (favicon), fondo azul y fondo claro |
 
 - La sección con `id="portada"` recibe automáticamente el fondo azul y el logo blanco.
 - El índice usa el fondo claro y el logo a color.
-- Las presentaciones **externas** (DOCUM y Cymetria) no llevan la marca: tienen
-  `group: 'externo'` en `decks.js` y `data-brand="neutral"` en su `<body>`. Salen en
-  un grupo aparte del índice y del selector, con portada clara, sin logo y con la
-  paleta y tipografía originales.
+- La marca solo se ve en el sitio `linktic`. Los sitios de 3T, Wimbu y Cymetria
+  llevan `data-brand="neutral"` en el `<body>` de todas sus páginas: portada clara,
+  sin logo y con la paleta y tipografía originales. El script de sincronización
+  tampoco les copia `brand/`.
 - Los colores semánticos de los diagramas (niveles, calidad, alertas) se mantienen
   a propósito: codifican significado, no identidad.
 
@@ -116,39 +140,33 @@ en el core, así que aplican a todas las presentaciones sin tocar su HTML.
 
 ## Desplegar en Vercel
 
-**Opción A — arrastrar y soltar**
+Un repositorio, **cuatro proyectos Vercel**, uno por sitio. Todos se crean igual:
 
-1. Entrar a https://vercel.com/new
-2. Arrastrar la carpeta completa sobre el área de carga.
+1. Vercel → *Add New… → Project* → importar este repositorio.
+2. **Root Directory:** la carpeta del sitio (`sites/linktic`, `sites/3t`, `sites/wimbu` o `sites/cymetria`).
 3. Framework Preset: **Other**. Sin build command, sin output directory.
-4. Deploy.
+4. Deploy. Cada push a `main` vuelve a publicar los cuatro.
 
-**Opción B — desde la terminal**
+| Proyecto | Root Directory | Presentaciones |
+|---|---|---|
+| LinkTIC | `sites/linktic` | `/mesa` · `/cpe` · `/equidad` |
+| 3T | `sites/3t` | `/docum` |
+| Wimbu | `sites/wimbu` | — (CRM Agora, pendiente) |
+| Cymetria | `sites/cymetria` | `/cymetria` |
 
-```bash
-vercel --prod
-```
+> El proyecto Vercel que ya existe apunta a la raíz del repo, que ya no tiene sitio.
+> Hay que entrar a *Settings → General → Root Directory* y ponerle `sites/linktic`
+> (pasa a ser el proyecto de LinkTIC), y crear los otros tres.
 
-**Opción C — desde GitHub**
-
-Importar el repositorio en Vercel (*Add New… → Project*), Framework Preset **Other**.
-Cada push a `main` publica automáticamente.
-
-### Rutas publicadas
-
-| Ruta | Contenido |
-|---|---|
-| `/` | Índice de presentaciones |
-| `/p/mesa` — atajo `/mesa` | Modelo general de soporte externo |
-| `/p/cpe` — atajo `/cpe` | Modelo CPE |
-| `/p/docum` — atajo `/docum` | Modelo DOCUM |
-| `/p/equidad` — atajo `/equidad` | Modelo La Equidad |
-| `/p/cymetria` — atajo `/cymetria` | Modelo Cymetria |
+Para que un push que solo toca un cliente no redespliegue los demás, cada proyecto
+puede usar *Settings → Git → Ignored Build Step* con
+`git diff --quiet HEAD^ HEAD -- .` (se evalúa dentro de su Root Directory).
 
 ## Repositorio y dominio
 
 - **Repositorio:** `github.com/juanz-linktic/modelos-mesa-ayuda`
-- **Dominio:** `modelos-mesa-ayuda.vercel.app`
+- **Dominios:** uno por proyecto Vercel (por ejemplo `linktic-modelos.vercel.app`,
+  `3t-modelos.vercel.app`, `wimbu-modelos.vercel.app`, `cymetria-modelos.vercel.app`).
 
 Para cambiar el subdominio de Vercel: *Settings → Domains* del proyecto, `Add`
 con el nuevo `<nombre>.vercel.app` y luego eliminar el anterior. Si más adelante
