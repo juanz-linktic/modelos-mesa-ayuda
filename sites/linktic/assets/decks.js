@@ -3,7 +3,7 @@
    Para publicar una nueva: crear el HTML en /p y añadir una entrada aquí.
    El índice y el selector superior se arman solos.
    ------------------------------------------------------------------ */
-window.CORE_SITE = {"label": "Presentaciones LinkTIC"};
+window.CORE_SITE = {"label": "Presentaciones LinkTIC", "favicon": "assets/brand/linktic-isotipo.png"};
 window.CORE_DECKS = [
   {
     id: 'mesa',

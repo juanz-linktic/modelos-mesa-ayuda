@@ -3,7 +3,7 @@
    Para publicar una nueva: crear el HTML en /p y añadir una entrada aquí.
    El índice y el selector superior se arman solos.
    ------------------------------------------------------------------ */
-window.CORE_SITE = {"label": "Presentaciones 3T"};
+window.CORE_SITE = {"label": "Presentaciones 3T", "favicon": "assets/brand-3t/tres-t-isotipo.png"};
 window.CORE_DECKS = [
   {
     id: 'docum',

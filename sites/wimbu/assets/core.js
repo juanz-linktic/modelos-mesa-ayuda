@@ -8,7 +8,6 @@
   var BASE = document.body.getAttribute('data-base') || '';
   var CURRENT = document.body.getAttribute('data-deck') || '';
   var DECKS = window.CORE_DECKS || [];
-  var NEUTRAL = document.body.getAttribute('data-brand') === 'neutral';
   var SITE = window.CORE_SITE || {};
   var GROUPS = [
     { id: 'principal', label: SITE.label || 'Flujos disponibles' },
@@ -24,16 +23,11 @@
     });
   }
 
-  /* ---------- favicon de marca ---------- */
-  var BRAND = document.body.getAttribute('data-brand') || 'linktic';
-  var FAVICONS = {
-    'linktic': 'assets/brand/linktic-isotipo.png',
-    'tres-t': 'assets/brand-3t/tres-t-isotipo.png'
-  };
-  if (FAVICONS[BRAND] && !document.querySelector('link[rel="icon"]')) {
+  /* ---------- favicon (lo declara cada sitio en CORE_SITE.favicon) ---------- */
+  if (SITE.favicon && !document.querySelector('link[rel="icon"]')) {
     var fav = document.createElement('link');
     fav.rel = 'icon'; fav.type = 'image/png';
-    fav.href = BASE + FAVICONS[BRAND];
+    fav.href = BASE + SITE.favicon;
     document.head.appendChild(fav);
   }
 

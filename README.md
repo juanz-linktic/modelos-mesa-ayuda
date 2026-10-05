@@ -40,6 +40,23 @@ generada por el script. Flujo de trabajo:
 2. Correr `py tools/sync_core.py` (Windows) o `python3 tools/sync_core.py`.
 3. Hacer commit de `core/` **y** de las copias en `sites/`.
 
+El script no copia el core tal cual: cada sitio recibe la base común más **solo el
+bloque de su marca**. En `core/core.css` lo propio de cada marca va entre marcadores:
+
+```css
+/* @brand tres-t */
+body[data-brand="tres-t"] .brand i{ ... }
+/* @end */
+```
+
+Así el código publicado para 3T no contiene ni el nombre, ni los logos, ni la
+tipografía de LinkTIC, y viceversa. Al terminar, el script revisa cada copia y
+**falla** si encuentra rastros de otra marca. Si agregas una regla de marca fuera
+de su bloque, te lo va a avisar.
+
+El favicon también es por sitio: se declara en `CORE_SITE.favicon` dentro del
+`decks.js` de cada sitio, no en el código compartido.
+
 ## Agregar una presentación nueva
 
 1. **Copiar una existente** dentro del sitio del cliente: `cp sites/3t/p/docum.html sites/3t/p/mi-flujo.html`.

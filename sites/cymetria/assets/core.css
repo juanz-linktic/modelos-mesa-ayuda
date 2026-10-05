@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /* ==================================================================
    CORE — estilos compartidos por todas las presentaciones
    ================================================================== */
@@ -9,16 +8,14 @@
   --surface-2:#eef2f8;
   --border:#dde4ee;
   --border-soft:#e6ebf3;
-  --text:#1b2433;
-  --muted:#516276;
+  --text:#131f33;
+  --muted:#5a6b82;
   --dim:#8593a7;
-  --violet:#2709CD;
-  --blue:#3F8CF5;
-  /* marca LinkTIC */
-  --brand-cyan:#02E0FF;
-  --brand-azul:#0096FF;
-  --brand-grad:linear-gradient(90deg,#02E0FF 0%,#0096FF 55%,#2709CD 100%);
-  --font-marca:Poppins,Inter,'Segoe UI',Arial,sans-serif;
+  --violet:#5b4bd4;
+  --blue:#1f7fb8;
+  /* cada marca redefine estos dos en su bloque */
+  --brand-grad:linear-gradient(90deg,#5b4bd4,#1f7fb8,#1f8f6b);
+  --font-marca:Inter,'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
   --teal:#1f8f6b;
   --amber:#c9821a;
   --red:#b02525;
@@ -36,8 +33,8 @@ body{
 body::before{
   content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
   background:
-    radial-gradient(900px 480px at 12% -8%, rgba(0,150,255,.08), transparent 60%),
-    radial-gradient(760px 420px at 92% 8%, rgba(39,9,205,.05), transparent 62%);
+    radial-gradient(900px 480px at 12% -8%, rgba(31,143,107,.09), transparent 60%),
+    radial-gradient(760px 420px at 92% 8%, rgba(91,75,212,.06), transparent 62%);
 }
 .wrap{position:relative; z-index:1}
 
@@ -678,76 +675,23 @@ h2{
   .fedge.is-live{animation:none}
 }
 
-
-/* ==================================================================
-   MARCA LINKTIC
-   Tipografía, logo y portadas. Los colores semánticos de los
-   diagramas (niveles, calidad, alertas) no se tocan aquí.
-   ================================================================== */
+/* ---------- tipografía de títulos (la define cada marca) ---------- */
 h1,h2,h3,.eyebrow,.tbtn,.fchip,.tab,.ctl-label,.kicker,.deck-body h3{font-family:var(--font-marca)}
-h1{letter-spacing:-.018em; font-weight:700}
-h2{letter-spacing:-.012em; font-weight:600}
-h1 .accent{background:linear-gradient(100deg,#0096FF 0%,#2709CD 100%); -webkit-background-clip:text; background-clip:text}
 
-/* logo en la barra superior */
-.brand{font-size:0; gap:12px}
-.brand i{
-  width:90px; height:40px; border-radius:0; box-shadow:none;
-  background:url('brand/linktic-logo.png') no-repeat left center/contain;
+/* encabezados de grupo en el índice */
+.deck-group{
+  list-style:none; margin:22px 2px 4px; font-family:var(--font-marca);
+  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--dim);
 }
-.brand span{font-size:13px; font-weight:500; color:var(--muted); font-family:var(--font-marca)}
-.progress{background:var(--brand-grad)}
-.dot.active span{background:var(--brand-azul); box-shadow:0 0 0 4px rgba(0,150,255,.16)}
-
-.eyebrow{
-  color:var(--brand-azul); border-color:rgba(0,150,255,.28);
-  background:rgba(0,150,255,.06); letter-spacing:.2em;
+.deck-group:first-child{margin-top:0}
+.deck-empty{
+  list-style:none; padding:26px 24px; border-radius:14px; border:1px dashed var(--border);
+  color:var(--muted); font-size:14px; background:var(--surface);
 }
-
-/* portada de cada presentación: fondo azul de marca */
-#portada{
-  background:#3F8CF5 url('brand/fondo-azul.jpg') right bottom/cover no-repeat;
-  border-bottom:0; color:#fff;
-}
-#portada .inner::before{
-  content:""; display:block; width:190px; height:90px; margin-bottom:30px;
-  background:url('brand/linktic-logo-blanco.png') no-repeat left center/contain;
-}
-#portada .eyebrow{color:#fff; border-color:rgba(255,255,255,.45); background:rgba(255,255,255,.12)}
-#portada h1{color:#fff}
-#portada h1 .accent{background:linear-gradient(100deg,#ffffff 0%,#c8f7ff 100%); -webkit-background-clip:text; background-clip:text}
-#portada .lede,#portada .sub{color:rgba(255,255,255,.9)}
-#portada .rule{background:linear-gradient(90deg,rgba(255,255,255,.7),transparent)}
-#portada .signoff{color:rgba(255,255,255,.82)}
-#portada .signoff i{background:rgba(255,255,255,.55)}
-
-/* índice: fondo claro texturizado y logo a color */
-.hub{background:#e6e6e6 url('brand/fondo-claro.jpg') center/cover no-repeat}
-.hub .inner::before{
-  content:""; display:block; width:200px; height:94px; margin-bottom:28px;
-  background:url('brand/linktic-logo.png') no-repeat left center/contain;
-}
-.hub .deck{background:rgba(255,255,255,.86)}
-
-@media (max-width:900px){
-  .brand i{width:72px; height:34px}
-  #portada .inner::before{width:150px; height:70px}
-}
-
-/* impresión: la portada sale en blanco con el logo a color */
-@media print{
-  #portada,.hub{background:#fff!important; color:var(--text)}
-  #portada .inner::before{background-image:url('brand/linktic-logo.png')}
-  #portada h1,#portada .lede,#portada .sub,#portada .signoff{color:var(--text)}
-  #portada h1 .accent{-webkit-text-fill-color:#0096FF}
-  #portada .eyebrow{color:var(--brand-azul); border-color:#d5dae2; background:#fff}
-}
-
 
 /* ==================================================================
-   PRESENTACIONES EXTERNAS — body[data-brand="neutral"]
-   Sin marca LinkTIC: paleta original, Inter en títulos, sin logo
-   y portada clara.
+   ESTILO NEUTRO — body[data-brand="neutral"]
+   Sin logo, paleta original, Inter en títulos y portada clara.
    ================================================================== */
 body[data-brand="neutral"]{
   --text:#131f33; --muted:#5a6b82; --violet:#5b4bd4; --blue:#1f7fb8;
@@ -781,92 +725,8 @@ body[data-brand="neutral"] #portada .lede,body[data-brand="neutral"] #portada .s
 body[data-brand="neutral"] #portada .rule{background:linear-gradient(90deg,var(--border),transparent)}
 body[data-brand="neutral"] #portada .signoff{color:var(--dim)}
 body[data-brand="neutral"] #portada .signoff i{background:var(--border)}
-
-/* encabezados de grupo en el índice */
-.deck-group{
-  list-style:none; margin:22px 2px 4px; font-family:var(--font-marca);
-  font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--dim);
-}
-.deck-group:first-child{margin-top:0}
-
-/* índice de un sitio sin marca LinkTIC */
+/* índice */
 body[data-brand="neutral"] .hub{background:transparent}
 body[data-brand="neutral"] .hub .inner::before{content:none}
 body[data-brand="neutral"] .hub .deck{background:var(--surface)}
-.deck-empty{
-  list-style:none; padding:26px 24px; border-radius:14px; border:1px dashed var(--border);
-  color:var(--muted); font-size:14px; background:var(--surface);
-}
 
-
-/* ==================================================================
-   MARCA 3T — Tres T Capital S.A.S · body[data-brand="tres-t"]
-   Tomada del Informe Mensual de Soporte SGDEA: marino, azul y rojo
-   del logo, degradado del pie de página y líneas de circuito.
-   ================================================================== */
-body[data-brand="tres-t"]{
-  --text:#212121; --muted:#5f6670; --dim:#8a909a;
-  --blue:#2B3A93; --violet:#5F2B58; --red:#A6192E;
-  --t3-marino:#1F3864; --t3-rojo:#F43A42; --t3-rosa:#D98B95;
-  --font-marca:Calibri,Carlito,'Segoe UI',Arial,sans-serif;
-  --brand-grad:linear-gradient(90deg,#1F3864 0%,#383263 25%,#5F2B58 50%,#9A1E3C 75%,#C8112F 100%);
-}
-body[data-brand="tres-t"]::before{
-  background:
-    radial-gradient(900px 480px at 10% -8%, rgba(31,56,100,.07), transparent 60%),
-    radial-gradient(760px 420px at 94% 6%, rgba(166,25,46,.05), transparent 62%);
-}
-body[data-brand="tres-t"] h1{letter-spacing:-.01em; font-weight:700}
-body[data-brand="tres-t"] h2{letter-spacing:-.005em; font-weight:700}
-body[data-brand="tres-t"] h1 .accent{background:linear-gradient(100deg,#2B3A93 0%,#A6192E 100%); -webkit-background-clip:text; background-clip:text}
-
-body[data-brand="tres-t"] .brand{font-size:0; gap:12px}
-body[data-brand="tres-t"] .brand i{
-  width:118px; height:36px; border-radius:0; box-shadow:none;
-  background:url('brand-3t/tres-t-logo.png') no-repeat left center/contain;
-}
-body[data-brand="tres-t"] .brand span{font-size:13px; font-weight:500; color:var(--muted); font-family:var(--font-marca)}
-body[data-brand="tres-t"] .progress{background:var(--brand-grad)}
-body[data-brand="tres-t"] .dot.active span{background:var(--t3-marino); box-shadow:0 0 0 4px rgba(31,56,100,.16)}
-body[data-brand="tres-t"] .eyebrow{color:var(--red); border-color:rgba(166,25,46,.28); background:rgba(166,25,46,.05); letter-spacing:.18em}
-
-/* portada al estilo del informe: blanca, circuito arriba a la derecha
-   y franja del degradado abajo */
-body[data-brand="tres-t"] #portada{
-  background:#fff url('brand-3t/tres-t-circuito.png') no-repeat right 4% top 76px/440px auto;
-  color:var(--text); border-bottom:6px solid transparent;
-  border-image:var(--brand-grad) 1;
-}
-body[data-brand="tres-t"] #portada .inner::before{
-  content:""; display:block; width:280px; height:86px; margin-bottom:30px;
-  background:url('brand-3t/tres-t-logo.png') no-repeat left center/contain;
-}
-body[data-brand="tres-t"] #portada .eyebrow{color:var(--red); border-color:rgba(166,25,46,.28); background:rgba(166,25,46,.05)}
-body[data-brand="tres-t"] #portada h1{color:var(--t3-marino)}
-body[data-brand="tres-t"] #portada h1 .accent{background:linear-gradient(100deg,#2B3A93 0%,#A6192E 100%); -webkit-background-clip:text; background-clip:text}
-body[data-brand="tres-t"] #portada .lede,body[data-brand="tres-t"] #portada .sub{color:var(--muted)}
-body[data-brand="tres-t"] #portada .rule{
-  height:4px; max-width:520px;
-  background:
-    linear-gradient(90deg,var(--t3-marino) 0,var(--t3-marino) 34%,transparent 34%),
-    linear-gradient(var(--t3-rosa),var(--t3-rosa)) 0 50%/100% 1px no-repeat;
-}
-body[data-brand="tres-t"] #portada .signoff{color:var(--dim)}
-body[data-brand="tres-t"] #portada .signoff i{background:var(--t3-rosa)}
-
-/* índice del sitio 3T */
-body[data-brand="tres-t"] .hub{background:#fff url('brand-3t/tres-t-circuito.png') no-repeat right 4% top 90px/440px auto}
-body[data-brand="tres-t"] .hub .inner::before{
-  content:""; display:block; width:280px; height:86px; margin-bottom:28px;
-  background:url('brand-3t/tres-t-logo.png') no-repeat left center/contain;
-}
-body[data-brand="tres-t"] .hub .deck{background:rgba(255,255,255,.92)}
-
-@media (max-width:900px){
-  body[data-brand="tres-t"] .brand i{width:96px; height:30px}
-  body[data-brand="tres-t"] #portada,body[data-brand="tres-t"] .hub{background-size:240px auto; background-position:right -40px top 64px}
-  body[data-brand="tres-t"] #portada .inner::before,body[data-brand="tres-t"] .hub .inner::before{width:210px; height:64px}
-}
-@media print{
-  body[data-brand="tres-t"] #portada{border-image:none; border-bottom:4px solid var(--t3-marino)}
-}
