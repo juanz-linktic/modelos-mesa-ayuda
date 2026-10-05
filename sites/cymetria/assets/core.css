@@ -675,6 +675,14 @@ h2{
   .fedge.is-live{animation:none}
 }
 
+/* ---------- pantallas muy angostas: la barra superior no debe desbordar ---------- */
+@media (max-width:520px){
+  .topbar{gap:8px}
+  .topbar .brand span,.tbtn[data-print]{display:none}
+  .picker-menu{min-width:0; width:calc(100vw - 32px)}
+  .grid,.close-grid{grid-template-columns:minmax(0,1fr)!important}
+}
+
 /* ---------- tipografía de títulos (la define cada marca) ---------- */
 h1,h2,h3,.eyebrow,.tbtn,.fchip,.tab,.ctl-label,.kicker,.deck-body h3{font-family:var(--font-marca)}
 

@@ -133,9 +133,12 @@ en el core, así que aplican a todas las presentaciones sin tocar su HTML.
 | Violeta | `#2709CD` (`--violet`) |
 | Texto secundario | `#516276` (`--muted`) |
 | Tipografía de títulos | Poppins (`--font-marca`) |
-| Activos | `core/brand/`: logo a color, logo blanco, isotipo (favicon), fondo azul y fondo claro |
+| Activos | `core/brand/`: logo a color, isotipo (favicon) y fondo claro texturizado |
 
-- La sección con `id="portada"` recibe automáticamente el fondo azul y el logo blanco.
+- La sección con `id="portada"` sigue la portada de la plantilla **GCM-DOC-002 v2**: fondo gris
+  texturizado, logo a color, título en Poppins gris pizarra `#516276`, barra cian → azul y
+  subtítulo en Poppins Light, centrados en una columna sobre la K. La misma barra va bajo
+  cada título de sección.
 - El índice usa el fondo claro y el logo a color.
 - La marca LinkTIC solo se ve en el sitio `linktic`.
 
@@ -146,7 +149,7 @@ sincronización copia a cada sitio solo su carpeta de logos.
 
 | Sitio | `data-brand` | Activos | Identidad |
 |---|---|---|---|
-| LinkTIC | *(sin atributo)* | `core/brand/` | Azul `#3F8CF5`, degradado cian → violeta, Poppins, portada azul |
+| LinkTIC | *(sin atributo)* | `core/brand/` | Pizarra `#516276`, azul `#3F8CF5`, barra cian → azul, Poppins, portada clara de la plantilla GCM-DOC-002 v2 |
 | 3T | `tres-t` | `core/brand-3t/` | Marino `#1F3864`, azul `#2B3A93`, rojo `#A6192E`, degradado marino → rojo, Calibri, portada blanca con circuito (tomada del Informe Mensual SGDEA) |
 | Cymetria | `cymetria` | `core/brand-cymetria/` | Carbón `#1C1C20`, rojo `#C43A32`, Verdana en títulos, pestaña negra con el logo y cubos de fondo (tomada del Informe de seguimiento) |
 | Wimbu | `neutral` | — | Estilo neutro, sin logo |

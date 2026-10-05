@@ -1,5 +1,5 @@
 /* @brand linktic */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /* @end */
 /* ==================================================================
    CORE — estilos compartidos por todas las presentaciones
@@ -678,6 +678,14 @@ h2{
   .fedge.is-live{animation:none}
 }
 
+/* ---------- pantallas muy angostas: la barra superior no debe desbordar ---------- */
+@media (max-width:520px){
+  .topbar{gap:8px}
+  .topbar .brand span,.tbtn[data-print]{display:none}
+  .picker-menu{min-width:0; width:calc(100vw - 32px)}
+  .grid,.close-grid{grid-template-columns:minmax(0,1fr)!important}
+}
+
 /* ---------- tipografía de títulos (la define cada marca) ---------- */
 h1,h2,h3,.eyebrow,.tbtn,.fchip,.tab,.ctl-label,.kicker,.deck-body h3{font-family:var(--font-marca)}
 
@@ -728,40 +736,58 @@ h1 .accent{background:linear-gradient(100deg,#0096FF 0%,#2709CD 100%); -webkit-b
   background:rgba(0,150,255,.06); letter-spacing:.2em;
 }
 
-/* portada de cada presentación: fondo azul de marca */
+/* portada · plantilla GCM-DOC-002 v2
+   Fondo gris texturizado; logo a color, título en Poppins gris pizarra,
+   barra cian → azul y subtítulo en Poppins Light, todo centrado en una
+   columna sobre la K geométrica (lado derecho), como en la plantilla. */
+body:not([data-brand]){--lk-pizarra:#516276; --lk-barra:linear-gradient(90deg,#02E0FF 0%,#0096FF 100%)}
 #portada{
-  background:#3F8CF5 url('brand/fondo-azul.jpg') right bottom/cover no-repeat;
-  border-bottom:0; color:#fff;
+  background:#e6e6e6 url('brand/fondo-claro.jpg') center/cover no-repeat;
+  border-bottom:0; color:var(--lk-pizarra);
 }
+#portada .inner{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,600px); column-gap:48px}
+#portada .inner > *{grid-column:2; justify-self:center; text-align:center}
 #portada .inner::before{
-  content:""; display:block; width:190px; height:90px; margin-bottom:30px;
-  background:url('brand/linktic-logo-blanco.png') no-repeat left center/contain;
+  content:""; grid-column:2; justify-self:center;
+  width:240px; height:113px; margin-bottom:34px;
+  background:url('brand/linktic-logo.png') no-repeat center/contain;
 }
-#portada .eyebrow{color:#fff; border-color:rgba(255,255,255,.45); background:rgba(255,255,255,.12)}
-#portada h1{color:#fff}
-#portada h1 .accent{background:linear-gradient(100deg,#ffffff 0%,#c8f7ff 100%); -webkit-background-clip:text; background-clip:text}
-#portada .lede,#portada .sub{color:rgba(255,255,255,.9)}
-#portada .rule{background:linear-gradient(90deg,rgba(255,255,255,.7),transparent)}
-#portada .signoff{color:rgba(255,255,255,.82)}
-#portada .signoff i{background:rgba(255,255,255,.55)}
+#portada .eyebrow{color:var(--lk-pizarra); border-color:rgba(81,98,118,.3); background:rgba(255,255,255,.55)}
+#portada h1{color:var(--lk-pizarra); font-size:clamp(32px,4.2vw,52px); font-weight:700}
+#portada h1 .accent{background:linear-gradient(100deg,#0096FF 0%,#2709CD 100%); -webkit-background-clip:text; background-clip:text}
+#portada .lede,#portada .sub{color:var(--lk-pizarra); font-family:var(--font-marca); font-weight:300}
+#portada .lede{max-width:52ch; margin-left:auto; margin-right:auto}
+#portada .rule{width:190px; max-width:190px; height:3px; border-radius:2px; margin:6px 0 26px; background:var(--lk-barra)}
+#portada .signoff{color:var(--lk-pizarra); justify-content:center}
+#portada .signoff i{background:rgba(81,98,118,.4)}
 
-/* índice: fondo claro texturizado y logo a color */
+/* títulos de sección: la barra de la plantilla bajo cada h2 */
+body:not([data-brand]) .section-head h2::after{
+  content:""; display:block; width:72px; height:3px; border-radius:2px;
+  margin-top:14px; background:var(--lk-barra);
+}
+
+/* índice: mismo fondo y tipografía que la portada */
 .hub{background:#e6e6e6 url('brand/fondo-claro.jpg') center/cover no-repeat}
 .hub .inner::before{
   content:""; display:block; width:200px; height:94px; margin-bottom:28px;
   background:url('brand/linktic-logo.png') no-repeat left center/contain;
 }
+.hub h1{color:var(--lk-pizarra)}
+.hub .lede{color:var(--lk-pizarra); font-family:var(--font-marca); font-weight:300}
+.hub .rule{width:190px; max-width:190px; height:3px; border-radius:2px; background:var(--lk-barra)}
 .hub .deck{background:rgba(255,255,255,.86)}
 
 @media (max-width:900px){
   .brand i{width:72px; height:34px}
-  #portada .inner::before{width:150px; height:70px}
+  #portada .inner{grid-template-columns:minmax(0,1fr)}
+  #portada .inner > *,#portada .inner::before{grid-column:1}
+  #portada .inner::before{width:170px; height:80px}
 }
 
 /* impresión: la portada sale en blanco con el logo a color */
 @media print{
   #portada,.hub{background:#fff!important; color:var(--text)}
-  #portada .inner::before{background-image:url('brand/linktic-logo.png')}
   #portada h1,#portada .lede,#portada .sub,#portada .signoff{color:var(--text)}
   #portada h1 .accent{-webkit-text-fill-color:#0096FF}
   #portada .eyebrow{color:var(--brand-azul); border-color:#d5dae2; background:#fff}
