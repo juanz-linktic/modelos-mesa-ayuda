@@ -760,3 +760,4 @@ body[data-brand="tres-t"] .hub .deck{background:rgba(255,255,255,.92)}
 @media print{
   body[data-brand="tres-t"] #portada{border-image:none; border-bottom:4px solid var(--t3-marino)}
 }
+

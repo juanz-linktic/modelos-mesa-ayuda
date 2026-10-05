@@ -884,3 +884,69 @@ body[data-brand="tres-t"] .hub .deck{background:rgba(255,255,255,.92)}
   body[data-brand="tres-t"] #portada{border-image:none; border-bottom:4px solid var(--t3-marino)}
 }
 /* @end */
+
+/* @brand cymetria */
+/* ==================================================================
+   MARCA CYMETRIA · body[data-brand="cymetria"]
+   Tomada del Informe de seguimiento: carbón y rojo, pestaña negra
+   inclinada con el logo, cubos de fondo y línea roja de pie.
+   ================================================================== */
+body[data-brand="cymetria"]{
+  --text:#222226; --muted:#5b5b62; --dim:#8c8c93;
+  --blue:#1F4E78; --violet:#17365D; --red:#C43A32;
+  --cy-carbon:#1C1C20; --cy-rojo:#C43A32;
+  --font-marca:Verdana,'DejaVu Sans',Geneva,Arial,sans-serif;
+  --brand-grad:linear-gradient(90deg,#1C1C20 0%,#1C1C20 62%,#C43A32 100%);
+}
+body[data-brand="cymetria"]::before{
+  background:
+    radial-gradient(900px 480px at 10% -8%, rgba(28,28,32,.05), transparent 60%),
+    radial-gradient(760px 420px at 94% 6%, rgba(196,58,50,.04), transparent 62%);
+}
+body[data-brand="cymetria"] h1{letter-spacing:-.03em; font-weight:700}
+body[data-brand="cymetria"] h2{letter-spacing:-.02em; font-weight:700}
+body[data-brand="cymetria"] h1 .accent{background:none; color:var(--cy-rojo); -webkit-text-fill-color:var(--cy-rojo)}
+
+body[data-brand="cymetria"] .brand{font-size:0; gap:12px}
+body[data-brand="cymetria"] .brand i{
+  width:124px; height:30px; border-radius:0; box-shadow:none;
+  background:url('brand-cymetria/cymetria-logo.png') no-repeat left center/contain;
+}
+body[data-brand="cymetria"] .brand span{font-size:13px; font-weight:500; color:var(--muted); font-family:var(--font-marca)}
+body[data-brand="cymetria"] .progress{background:var(--brand-grad)}
+body[data-brand="cymetria"] .dot.active span{background:var(--cy-carbon); box-shadow:0 0 0 4px rgba(28,28,32,.12)}
+body[data-brand="cymetria"] .eyebrow{color:var(--cy-rojo); border-color:rgba(28,28,32,.18); background:#fff; letter-spacing:.18em}
+
+/* portada al estilo del informe: pestaña negra con el logo arriba a la
+   izquierda, cubos de fondo y línea roja de pie */
+body[data-brand="cymetria"] #portada,body[data-brand="cymetria"] .hub{
+  position:relative;
+  background:#fff url('brand-cymetria/cymetria-cubos.png') no-repeat right -40px top 60px/520px auto;
+  color:var(--text);
+  padding-top:clamp(170px,19vw,220px);
+}
+body[data-brand="cymetria"] #portada{border-bottom:5px solid var(--cy-rojo)}
+body[data-brand="cymetria"] #portada::before,body[data-brand="cymetria"] .hub::before{
+  content:""; position:absolute; top:56px; left:0; z-index:1;
+  width:min(440px,64vw); aspect-ratio:945/221;
+  background:url('brand-cymetria/cymetria-pestana.png') no-repeat left top/contain;
+}
+body[data-brand="cymetria"] #portada .inner::before,body[data-brand="cymetria"] .hub .inner::before{content:none}
+body[data-brand="cymetria"] #portada .eyebrow{color:var(--cy-rojo); border-color:rgba(28,28,32,.18); background:#fff}
+body[data-brand="cymetria"] #portada h1{color:#2b2b30}
+body[data-brand="cymetria"] #portada h1 .accent{background:none; color:var(--cy-rojo); -webkit-text-fill-color:var(--cy-rojo)}
+body[data-brand="cymetria"] #portada .lede,body[data-brand="cymetria"] #portada .sub{color:var(--muted)}
+body[data-brand="cymetria"] #portada .rule{height:3px; max-width:120px; background:var(--cy-rojo)}
+body[data-brand="cymetria"] #portada .signoff{color:var(--dim)}
+body[data-brand="cymetria"] #portada .signoff i{background:var(--cy-rojo)}
+body[data-brand="cymetria"] .hub .deck{background:rgba(255,255,255,.94)}
+
+@media (max-width:900px){
+  body[data-brand="cymetria"] .brand i{width:104px; height:26px}
+  body[data-brand="cymetria"] #portada,body[data-brand="cymetria"] .hub{background-size:300px auto; background-position:right -60px top 70px}
+}
+@media print{
+  body[data-brand="cymetria"] #portada::before,body[data-brand="cymetria"] .hub::before{display:none}
+  body[data-brand="cymetria"] #portada,body[data-brand="cymetria"] .hub{padding-top:22px}
+}
+/* @end */

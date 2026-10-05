@@ -15,7 +15,7 @@ sites/
   linktic/            Modelo general · CPE · La Equidad  (Balu, pendiente)
   3t/                 DOCUM
   wimbu/              Vacío, listo para CRM Agora
-  cymetria/           Página web de Cymetria
+  cymetria/           Cymetria: proyecto Página web
 tools/sync_core.py    Copia el core a cada sitio
 ```
 
@@ -148,7 +148,8 @@ sincronización copia a cada sitio solo su carpeta de logos.
 |---|---|---|---|
 | LinkTIC | *(sin atributo)* | `core/brand/` | Azul `#3F8CF5`, degradado cian → violeta, Poppins, portada azul |
 | 3T | `tres-t` | `core/brand-3t/` | Marino `#1F3864`, azul `#2B3A93`, rojo `#A6192E`, degradado marino → rojo, Calibri, portada blanca con circuito (tomada del Informe Mensual SGDEA) |
-| Wimbu, Cymetria | `neutral` | — | Estilo neutro, sin logo |
+| Cymetria | `cymetria` | `core/brand-cymetria/` | Carbón `#1C1C20`, rojo `#C43A32`, Verdana en títulos, pestaña negra con el logo y cubos de fondo (tomada del Informe de seguimiento) |
+| Wimbu | `neutral` | — | Estilo neutro, sin logo |
 - Los colores semánticos de los diagramas (niveles, calidad, alertas) se mantienen
   a propósito: codifican significado, no identidad.
 
@@ -177,7 +178,7 @@ Un repositorio, **cuatro proyectos Vercel**, uno por sitio. Todos se crean igual
 | LinkTIC | `sites/linktic` | `/mesa` · `/cpe` · `/equidad` |
 | 3T | `sites/3t` | `/docum` |
 | Wimbu | `sites/wimbu` | — (CRM Agora, pendiente) |
-| Cymetria | `sites/cymetria` | `/cymetria` |
+| Cymetria | `sites/cymetria` | `/pagina-web` |
 
 > El proyecto Vercel que ya existe apunta a la raíz del repo, que ya no tiene sitio.
 > Hay que entrar a *Settings → General → Root Directory* y ponerle `sites/linktic`

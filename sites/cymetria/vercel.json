@@ -4,8 +4,8 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/cymetria",
-      "destination": "/p/cymetria"
+      "source": "/pagina-web",
+      "destination": "/p/pagina-web"
     }
   ],
   "headers": [

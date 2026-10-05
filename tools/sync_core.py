@@ -36,14 +36,15 @@ SITES = {
     'linktic':  {'marca': 'linktic', 'assets': ['brand']},
     '3t':       {'marca': 'tres-t',  'assets': ['brand-3t']},
     'wimbu':    {'marca': 'neutral', 'assets': []},
-    'cymetria': {'marca': 'neutral', 'assets': []},
+    'cymetria': {'marca': 'cymetria', 'assets': ['brand-cymetria']},
 }
-ALL_ASSETS = ['brand', 'brand-3t']
+ALL_ASSETS = ['brand', 'brand-3t', 'brand-cymetria']
 
 # Palabras que no pueden quedar en el código de un sitio que no es de esa marca.
 TRAZAS = {
     'linktic': ['linktic', 'poppins'],
     'tres-t':  ['tres-t', 'tres t capital', 'brand-3t'],
+    'cymetria': ['cymetria'],
 }
 
 BLOQUE = re.compile(r'/\* @brand ([\w-]+) \*/\n(.*?)/\* @end \*/\n?', re.S)
