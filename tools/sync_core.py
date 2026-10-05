@@ -17,24 +17,24 @@ import shutil
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CORE = os.path.join(ROOT, 'core')
 
-# brand=True copia también los logos y fondos de LinkTIC.
+# brand: carpetas de marca de core/ que se copian al sitio.
 SITES = {
-    'linktic':  {'brand': True},
-    '3t':       {'brand': False},
-    'wimbu':    {'brand': False},
-    'cymetria': {'brand': False},
+    'linktic':  {'brand': ['brand']},
+    '3t':       {'brand': ['brand-3t']},
+    'wimbu':    {'brand': []},
+    'cymetria': {'brand': []},
 }
+ALL_BRANDS = ['brand', 'brand-3t']
 
 for site, cfg in SITES.items():
     dest = os.path.join(ROOT, 'sites', site, 'assets')
     os.makedirs(dest, exist_ok=True)
     for name in ('core.css', 'core.js'):
         shutil.copyfile(os.path.join(CORE, name), os.path.join(dest, name))
-    brand_dest = os.path.join(dest, 'brand')
-    if cfg['brand']:
-        if os.path.isdir(brand_dest):
-            shutil.rmtree(brand_dest)
-        shutil.copytree(os.path.join(CORE, 'brand'), brand_dest)
-    elif os.path.isdir(brand_dest):
-        shutil.rmtree(brand_dest)
-    print('%-9s core.css, core.js%s' % (site, ' + brand/' if cfg['brand'] else ''))
+    for b in ALL_BRANDS:
+        bdest = os.path.join(dest, b)
+        if os.path.isdir(bdest):
+            shutil.rmtree(bdest)
+        if b in cfg['brand']:
+            shutil.copytree(os.path.join(CORE, b), bdest)
+    print('%-9s core.css, core.js%s' % (site, ''.join(' + %s/' % b for b in cfg['brand'])))

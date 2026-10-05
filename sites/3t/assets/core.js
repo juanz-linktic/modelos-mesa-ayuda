@@ -25,10 +25,15 @@
   }
 
   /* ---------- favicon de marca ---------- */
-  if (!NEUTRAL && !document.querySelector('link[rel="icon"]')) {
+  var BRAND = document.body.getAttribute('data-brand') || 'linktic';
+  var FAVICONS = {
+    'linktic': 'assets/brand/linktic-isotipo.png',
+    'tres-t': 'assets/brand-3t/tres-t-isotipo.png'
+  };
+  if (FAVICONS[BRAND] && !document.querySelector('link[rel="icon"]')) {
     var fav = document.createElement('link');
     fav.rel = 'icon'; fav.type = 'image/png';
-    fav.href = BASE + 'assets/brand/linktic-isotipo.png';
+    fav.href = BASE + FAVICONS[BRAND];
     document.head.appendChild(fav);
   }
 

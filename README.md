@@ -120,10 +120,18 @@ en el core, así que aplican a todas las presentaciones sin tocar su HTML.
 
 - La sección con `id="portada"` recibe automáticamente el fondo azul y el logo blanco.
 - El índice usa el fondo claro y el logo a color.
-- La marca solo se ve en el sitio `linktic`. Los sitios de 3T, Wimbu y Cymetria
-  llevan `data-brand="neutral"` en el `<body>` de todas sus páginas: portada clara,
-  sin logo y con la paleta y tipografía originales. El script de sincronización
-  tampoco les copia `brand/`.
+- La marca LinkTIC solo se ve en el sitio `linktic`.
+
+### Marca por sitio
+
+Cada página declara su marca en el `<body>` con `data-brand`, y el script de
+sincronización copia a cada sitio solo su carpeta de logos.
+
+| Sitio | `data-brand` | Activos | Identidad |
+|---|---|---|---|
+| LinkTIC | *(sin atributo)* | `core/brand/` | Azul `#3F8CF5`, degradado cian → violeta, Poppins, portada azul |
+| 3T | `tres-t` | `core/brand-3t/` | Marino `#1F3864`, azul `#2B3A93`, rojo `#A6192E`, degradado marino → rojo, Calibri, portada blanca con circuito (tomada del Informe Mensual SGDEA) |
+| Wimbu, Cymetria | `neutral` | — | Estilo neutro, sin logo |
 - Los colores semánticos de los diagramas (niveles, calidad, alertas) se mantienen
   a propósito: codifican significado, no identidad.
 
