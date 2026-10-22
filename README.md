@@ -12,7 +12,7 @@ core/                 Lo compartido. Se edita SOLO aquí.
   core.js             Selector, índice lateral, filtros de diagramas, PDF
   brand/              Logos y fondos de LinkTIC
 sites/
-  linktic/            Modelo general · CPE · La Equidad  (Balu, pendiente)
+  linktic/            Modelo general · CPE · La Equidad · Core Andina  (Balu, pendiente)
   3t/                 DOCUM
   wimbu/              Vacío, listo para CRM Agora
   cymetria/           Cymetria: proyecto Página web
@@ -178,7 +178,7 @@ Un repositorio, **cuatro proyectos Vercel**, uno por sitio. Todos se crean igual
 
 | Proyecto | Root Directory | Presentaciones |
 |---|---|---|
-| LinkTIC | `sites/linktic` | `/mesa` · `/cpe` · `/equidad` |
+| LinkTIC | `sites/linktic` | `/mesa` · `/cpe` · `/equidad` · `/core-andina` |
 | 3T | `sites/3t` | `/docum` |
 | Wimbu | `sites/wimbu` | — (CRM Agora, pendiente) |
 | Cymetria | `sites/cymetria` | `/pagina-web` |

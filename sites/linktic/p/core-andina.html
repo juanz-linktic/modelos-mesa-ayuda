@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Modelo de atención — Core Andina | LinkTIC</title>
+<meta name="description" content="Modelo de atención de la Mesa de Ayuda de LinkTIC para Core Andina: registro por portal, atención en N1, escalamiento a N3 Desarrollo con N3 QA, notas internas entre grupos y seguimiento del estado por N1."/>
+<meta name="theme-color" content="#ffffff"/>
+<meta property="og:title" content="Modelo de atención — Core Andina"/>
+<meta property="og:description" content="Portal, N1 que diligencia y escala, N3 Desarrollo y QA trabajando juntos, y N1 haciendo seguimiento al estado del ticket."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/core.css"/>
+</head>
+<body data-base="../" data-deck="core-andina">
+<div class="wrap">
+
+<header class="topbar">
+  <div class="brand"><i></i> LinkTIC <span>· Mesa de Ayuda</span></div>
+  <div class="spacer"></div>
+  <div class="picker" id="picker"></div>
+  <button class="tbtn" data-print type="button">Descargar PDF</button>
+  <div class="progress" id="progress"></div>
+</header>
+
+<nav class="sidenav" id="sidenav" aria-label="Secciones"></nav>
+
+<!-- 1 · PORTADA -->
+<section class="slide" id="portada" data-nav="Portada">
+  <div class="inner">
+    <span class="eyebrow reveal">Modelo de servicio</span>
+    <h1 class="reveal">Modelo de atención<br/><span class="accent">Core Andina</span></h1>
+    <p class="lede reveal">Registro por portal, atención y escalamiento desde N1, Desarrollo y QA trabajando juntos en N3, y un N1 que sigue el ticket hasta conocer su estado.</p>
+    <div class="rule reveal"></div>
+    <p class="sub reveal">Un solo canal de ingreso · notas internas entre grupos · seguimiento continuo desde N1</p>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Core Andina</span></div>
+  </div>
+</section>
+
+<!-- 2 · FLUJO INTERACTIVO -->
+<section class="slide slide--wide" id="flujo" data-nav="Flujo">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">El flujo, del registro al seguimiento</h2>
+      <p class="sub reveal">Filtre por tramo y haga clic en cualquier bloque para ver qué hace, qué recibe y qué entrega.</p>
+    </div>
+
+    <div class="flow reveal">
+
+      <div class="flow-controls">
+        <span class="ctl-label">Tramo</span>
+        <button class="fchip" type="button" data-route="all" aria-pressed="true"><i></i>Flujo completo</button>
+        <button class="fchip t-blue" type="button" data-route="esc" aria-pressed="false"><i></i>Registro y escalamiento</button>
+        <button class="fchip t-red" type="button" data-route="n3" aria-pressed="false"><i></i>Trabajo en N3</button>
+        <button class="fchip t-amber" type="button" data-route="cli" aria-pressed="false"><i></i>Aclaraciones con el cliente</button>
+        <button class="fchip t-teal" type="button" data-route="seg" aria-pressed="false"><i></i>Seguimiento de N1</button>
+      </div>
+
+      <div class="flow-stage">
+        <div class="diagram-scroll">
+          <div class="flowbox" style="aspect-ratio:1400/560" role="group" aria-label="Diagrama del modelo de atención de Core Andina">
+
+            <svg class="flow-edges" viewBox="0 0 1400 560" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <marker id="aDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
+                <marker id="aRd" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b02525"/></marker>
+                <marker id="aAm" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e08a1e"/></marker>
+                <marker id="aTe" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f8f6b"/></marker>
+              </defs>
+
+              <path class="fedge" data-routes="all esc" d="M210,250 H254" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#aDk)"/>
+              <path class="fedge" data-routes="all esc" d="M430,250 H474" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#aDk)"/>
+              <path class="fedge" data-routes="all esc n3" d="M700,250 H774" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#aRd)"/>
+              <path class="fedge" data-routes="all seg" d="M590,310 V430 H1070 V386" fill="none" stroke="#1f8f6b" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#aTe)"/>
+              <path class="fedge" data-routes="all cli" d="M1300,380 V500 H125 V306" fill="none" stroke="#e08a1e" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#aAm)"/>
+            </svg>
+
+            <button class="fnode n-gray" type="button" data-node="usuario" data-routes="all esc cli" style="--x:40;--y:200;--w:170;--h:100">
+              <em>Cliente</em><b>Usuario Core Andina</b><span>Registra el caso</span>
+            </button>
+
+            <button class="fnode n-plain" type="button" data-node="portal" data-routes="all esc" style="--x:260;--y:200;--w:170;--h:100">
+              <em>Canal</em><b>Portal</b><span>Único canal de registro</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="n1" data-routes="all esc seg" style="--x:480;--y:190;--w:220;--h:120">
+              <em>Nivel 1</em><b>N1 — Atención</b><span>Diligencia el caso y lo escala a N3</span>
+            </button>
+
+            <div class="fgroup g-red" data-routes="all esc n3 cli seg" style="--x:780;--y:120;--w:580;--h:260">
+              <span class="fgroup-tag">Nivel 3</span>
+              <p class="fgroup-title">Trabajan de la mano</p>
+              <div class="fgroup-body">
+                <button class="fnode n-red" type="button" data-node="dev" data-routes="all esc n3 cli seg"><em>N3</em><b>Desarrollo</b><span>Trabaja la solución del caso</span></button>
+                <button class="fnode n-red" type="button" data-node="qa" data-routes="all n3 cli seg"><em>N3</em><b>QA</b><span>Acompaña y verifica con Desarrollo</span></button>
+              </div>
+              <p class="fgroup-note">Alimentan el ticket con notas internas entre grupos.</p>
+            </div>
+
+            <p class="flabel" data-routes="all esc" style="--x:232;--y:166;--w:110">Registra</p>
+            <p class="flabel" data-routes="all esc" style="--x:452;--y:166;--w:110">Ingresa a N1</p>
+            <p class="flabel t-red" data-routes="all esc n3" style="--x:740;--y:206;--w:68">Escala</p>
+            <p class="flabel t-teal" data-routes="all seg" style="--x:830;--y:438;--w:300">N1 hace seguimiento para validar el estado del ticket</p>
+            <p class="flabel t-amber" data-routes="all cli" style="--x:700;--y:508;--w:320">N3 aclara directamente con el cliente</p>
+
+          </div>
+        </div>
+      </div>
+
+      <p class="scroll-hint">Deslice horizontalmente para ver el diagrama completo →</p>
+
+      <div class="flow-detail">
+        <div class="fdetail" data-detail="intro">
+          <span class="kicker">Cómo leer el diagrama</span>
+          <h3>Un caso que N1 recibe, N3 resuelve y N1 sigue</h3>
+          <p>El usuario de Core Andina registra el caso en el portal. N1 lo diligencia y lo escala a N3, donde Desarrollo y QA trabajan de la mano: dejan constancia de su avance en el ticket con notas internas entre grupos y, cuando hace falta, aclaran el caso directamente con el cliente. Mientras tanto, N1 hace seguimiento para validar en qué estado está el ticket.</p>
+          <div class="fdetail-cols">
+            <div><h4>Filtre por tramo</h4><p>Los botones aíslan el escalamiento, el trabajo en N3, las aclaraciones con el cliente y el seguimiento de N1.</p></div>
+            <div><h4>Explore cada bloque</h4><p>Haga clic en cualquier caja para ver su alcance, qué recibe y qué entrega.</p></div>
+            <div><h4>El ticket como registro</h4><p>Todo lo que pasa entre grupos queda escrito en el ticket: es lo que le permite a N1 seguirlo sin preguntar.</p></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="usuario" hidden>
+          <span class="kicker">Cliente</span>
+          <h3>Usuario Core Andina</h3>
+          <p>Registra su caso en el portal. Es también el interlocutor de N3 cuando el caso necesita aclaraciones durante la gestión.</p>
+          <div class="fdetail-cols">
+            <div><h4>Entrega</h4><ul><li>El caso registrado en el portal</li><li>Las aclaraciones que N3 le solicite</li></ul></div>
+            <div><h4>Recibe</h4><ul><li>Las preguntas de N3 para precisar el caso</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="portal" hidden>
+          <span class="kicker">Canal</span>
+          <h3>Portal — único canal de registro</h3>
+          <p>Todo caso de Core Andina entra por el portal. Ese registro es el ticket sobre el que trabajan después N1 y N3, y donde queda la historia del caso.</p>
+        </div>
+
+        <div class="fdetail" data-detail="n1" hidden>
+          <span class="kicker">Nivel 1</span>
+          <h3>N1 — Atención: diligencia, escala y hace seguimiento</h3>
+          <p>Recibe el caso desde el portal, lo diligencia y lo escala a N3. Su papel no termina con el escalamiento: hace seguimiento al ticket para validar en qué estado está.</p>
+          <div class="fdetail-cols">
+            <div><h4>Qué hace</h4><ul><li>Diligencia el caso</li><li>Lo escala a N3 Desarrollo</li><li>Hace seguimiento al estado del ticket</li></ul></div>
+            <div><h4>Por qué importa</h4><ul><li>El caso no queda sin dueño mientras está en N3</li><li>El estado se valida sobre el ticket, no de memoria</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="dev" hidden>
+          <span class="kicker">Nivel 3</span>
+          <h3>N3 — Desarrollo</h3>
+          <p>Recibe el caso escalado por N1 y lo trabaja de la mano con QA. Deja su avance en el ticket mediante notas internas entre grupos y, cuando lo necesita, aclara el caso directamente con el cliente.</p>
+          <div class="fdetail-cols">
+            <div><h4>Recibe</h4><ul><li>El caso diligenciado y escalado por N1</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>Notas internas en el ticket</li><li>Aclaraciones con el cliente</li><li>La solución, trabajada con QA</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="qa" hidden>
+          <span class="kicker">Nivel 3</span>
+          <h3>N3 — QA</h3>
+          <p>Trabaja de la mano con Desarrollo sobre el mismo caso. Comparte con Desarrollo la responsabilidad de alimentar el ticket con notas internas y de aclarar con el cliente lo que haga falta.</p>
+          <div class="fdetail-cols">
+            <div><h4>Con Desarrollo</h4><ul><li>Trabajan el caso en conjunto</li><li>Registran su avance en notas internas</li></ul></div>
+            <div><h4>Con el cliente</h4><ul><li>Aclaran el caso cuando se necesita</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="flegend">
+        <li><i style="background:#8a95a5"></i>Cliente y canal</li>
+        <li><i style="background:#3F8CF5"></i>Nivel 1 — Atención</li>
+        <li><i style="background:#b02525"></i>Nivel 3 — Desarrollo y QA</li>
+        <li><i style="background:#e08a1e"></i>Aclaraciones con el cliente</li>
+        <li><i style="background:#1f8f6b"></i>Seguimiento de N1</li>
+      </ul>
+      <p class="figcap">El ticket es el punto de encuentro: ahí escriben N3 Desarrollo y QA, y ahí valida N1 el estado del caso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · ROLES -->
+<section class="slide" id="roles" data-nav="Roles">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Quién hace qué</h2>
+      <p class="sub reveal">Tres grupos sobre un mismo ticket, cada uno con un papel claro.</p>
+    </div>
+    <ul class="rows">
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <div class="row-body">
+          <h3>N1 — Atención</h3>
+          <p>Recibe el caso del portal, lo diligencia y lo escala a N3 Desarrollo. Después del escalamiento hace seguimiento al ticket para validar su estado.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/><path d="M14 4l-4 16"/></svg></span>
+        <div class="row-body">
+          <h3>N3 — Desarrollo</h3>
+          <p>Trabaja el caso escalado, de la mano con QA. Registra su avance en el ticket con notas internas y aclara con el cliente cuando hace falta.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <div class="row-body">
+          <h3>N3 — QA</h3>
+          <p>Trabaja junto a Desarrollo sobre el mismo caso y comparte con él la responsabilidad de las notas internas y de las aclaraciones con el cliente.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
+        <div class="row-body">
+          <h3>La nota interna entre grupos</h3>
+          <p>Es la forma en que Desarrollo y QA dejan constancia de su avance en el ticket. Gracias a ella N1 puede validar el estado del caso sin depender de preguntar a cada grupo.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · POR DEFINIR -->
+<section class="slide" id="pendientes" data-nav="Por definir">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Puntos por definir</h2>
+      <p class="sub reveal">El flujo describe cómo se atiende el caso; estas decisiones completan el modelo.</p>
+    </div>
+    <div class="grid">
+      <article class="card reveal tone-teal">
+        <span class="kicker">Cierre</span>
+        <h3>Quién valida y cierra el caso</h3>
+        <p>El flujo llega hasta el trabajo de N3 y el seguimiento de N1. Falta definir quién confirma la solución con el cliente y quién cierra el ticket.</p>
+      </article>
+      <article class="card reveal tone-blue">
+        <span class="kicker">Seguimiento</span>
+        <h3>Cada cuánto hace seguimiento N1</h3>
+        <p>Una frecuencia acordada —por ejemplo, diaria para casos abiertos en N3— hace que el seguimiento sea predecible para el cliente y para los grupos.</p>
+      </article>
+      <article class="card reveal tone-amber">
+        <span class="kicker">Comunicación</span>
+        <h3>Cómo se registran las aclaraciones con el cliente</h3>
+        <p>Si N3 aclara directamente con el cliente, conviene que esa conversación también quede en el ticket, para que N1 la vea en su seguimiento.</p>
+      </article>
+      <article class="card reveal tone-steel">
+        <span class="kicker">Niveles de servicio</span>
+        <h3>ANS del modelo</h3>
+        <p>Los tiempos de atención y solución por tipo de caso aún no están definidos para Core Andina.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · CIERRE -->
+<section class="slide" id="cierre" data-nav="Cierre">
+  <div class="inner">
+    <span class="eyebrow reveal">Cierre</span>
+    <h2 class="reveal">Un caso que nunca queda sin dueño</h2>
+    <p class="lede reveal">N1 recibe y escala, N3 trabaja en equipo y deja todo escrito, y N1 vuelve sobre el ticket hasta conocer su estado.</p>
+    <div class="close-grid">
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Un solo canal</b><br/>todo caso entra por el portal</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Desarrollo y QA juntos</b><br/>sobre el mismo caso</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Todo queda en el ticket</b><br/>notas internas entre grupos</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Seguimiento de N1</b><br/>para validar el estado del ticket</span></div>
+    </div>
+    <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Core Andina</span></div>
+  </div>
+</section>
+
+</div>
+<script src="../assets/decks.js"></script>
+<script src="../assets/core.js"></script>
+</body>
+</html>

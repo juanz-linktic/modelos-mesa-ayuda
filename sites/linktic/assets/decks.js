@@ -34,5 +34,15 @@ window.CORE_DECKS = [
     tag: 'Cliente',
     tone: 'blue',
     updated: '2026-09'
+  },
+  {
+    id: 'core-andina',
+    file: 'p/core-andina.html',
+    title: 'Modelo de atención — Core Andina',
+    client: 'Core Andina',
+    summary: 'Registro por portal, N1 que diligencia y escala a N3, Desarrollo y QA trabajando de la mano con notas internas en el ticket, y seguimiento del estado desde N1.',
+    tag: 'Cliente',
+    tone: 'violet',
+    updated: '2026-10'
   }
 ];

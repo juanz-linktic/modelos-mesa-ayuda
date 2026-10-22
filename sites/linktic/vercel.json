@@ -14,6 +14,10 @@
     {
       "source": "/equidad",
       "destination": "/p/equidad"
+    },
+    {
+      "source": "/core-andina",
+      "destination": "/p/core-andina"
     }
   ],
   "headers": [
