@@ -34,7 +34,7 @@
     <h1 class="reveal">Modelo de atención<br/><span class="accent">Core Andina</span></h1>
     <p class="lede reveal">Registro por portal, atención y escalamiento desde N1, Desarrollo y QA trabajando juntos en N3, y un N1 que sigue el ticket hasta conocer su estado.</p>
     <div class="rule reveal"></div>
-    <p class="sub reveal">Un solo canal de ingreso · notas internas entre grupos · seguimiento continuo desde N1</p>
+    <p class="sub reveal">Un solo canal de ingreso · tres ANS encadenados: diagnóstico, plan de trabajo y solución</p>
     <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Core Andina</span></div>
   </div>
 </section>
@@ -182,7 +182,218 @@
   </div>
 </section>
 
-<!-- 3 · ROLES -->
+<!-- 3 · ANS DINÁMICOS -->
+<section class="slide slide--wide" id="ans" data-nav="ANS dinámicos">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Tres ANS encadenados</h2>
+      <p class="sub reveal">Los ANS de Core Andina no corren en paralelo: cada uno se abre cuando el cliente aprueba el anterior, y si no lo aprueba se retoma el ANS anterior con el tiempo que llevaba. Los dos primeros se miden según la prioridad del caso; el tercero es la fecha de entrega que se asigna al aprobar el plan.</p>
+    </div>
+
+    <div class="flow reveal">
+      <div class="flow-controls">
+        <span class="ctl-label">ANS</span>
+        <button class="fchip" type="button" data-route="all" aria-pressed="true"><i></i>Los tres</button>
+        <button class="fchip t-blue" type="button" data-route="a1" aria-pressed="false"><i></i>1 · Diagnóstico</button>
+        <button class="fchip t-violet" type="button" data-route="a2" aria-pressed="false"><i></i>2 · Plan de trabajo</button>
+        <button class="fchip t-teal" type="button" data-route="a3" aria-pressed="false"><i></i>3 · Solución</button>
+      </div>
+
+      <div class="flow-stage">
+        <div class="diagram-scroll">
+          <div class="flowbox" style="aspect-ratio:1400/580" role="group" aria-label="Los tres ANS encadenados de Core Andina">
+
+            <svg class="flow-edges" viewBox="0 0 1400 580" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <marker id="sDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
+                <marker id="sBl" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
+                <marker id="sGr" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2e7a26"/></marker>
+                <marker id="sVi" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2709CD"/></marker>
+                <marker id="sTe" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f8f6b"/></marker>
+                <marker id="sRd" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b02525"/></marker>
+              </defs>
+
+              <!-- carriles -->
+              <rect x="150" y="110" width="1220" height="190" rx="12" fill="#eef3fa"/>
+              <rect x="150" y="330" width="1220" height="200" rx="12" fill="#f6f4ec"/>
+              <!-- divisiones entre ANS -->
+              <path d="M540,104 V536" stroke="#c9d2df" stroke-width="1.5" stroke-dasharray="4,5"/>
+              <path d="M940,104 V536" stroke="#c9d2df" stroke-width="1.5" stroke-dasharray="4,5"/>
+
+              <path class="fedge" data-routes="all a1" d="M310,205 H334" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#sDk)"/>
+              <path class="fedge" data-routes="all a1" d="M425,260 V374" fill="none" stroke="#1f5fa8" stroke-width="2.2" marker-end="url(#sBl)"/>
+              <path class="fedge" data-routes="all a1 a2" d="M510,435 H548 V205 H584" fill="none" stroke="#2e7a26" stroke-width="2.4" marker-end="url(#sGr)"/>
+              <path class="fedge" data-routes="all a2" d="M740,260 V374" fill="none" stroke="#2709CD" stroke-width="2.2" marker-end="url(#sVi)"/>
+              <path class="fedge" data-routes="all a2 a3" d="M890,435 H948 V205 H984" fill="none" stroke="#2e7a26" stroke-width="2.4" marker-end="url(#sGr)"/>
+              <!-- sin aprobación: se retoma el ANS anterior -->
+              <path class="fedge" data-routes="all a1" d="M490,380 V266" fill="none" stroke="#b02525" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#sRd)"/>
+              <path class="fedge" data-routes="all a2" d="M860,380 V266" fill="none" stroke="#b02525" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#sRd)"/>
+              <path class="fedge" data-routes="all a3" d="M1120,260 V374" fill="none" stroke="#1f8f6b" stroke-width="2.2" marker-end="url(#sTe)"/>
+              <path class="fedge" data-routes="all a3" d="M1200,380 V266" fill="none" stroke="#1f8f6b" stroke-width="2.2" marker-end="url(#sTe)"/>
+            </svg>
+
+            <!-- encabezados de los tres ANS -->
+            <button class="fnode n-blue is-center" type="button" data-node="ans1" data-routes="all a1" style="--x:160;--y:18;--w:360;--h:76">
+              <em>ANS 1 · según prioridad</em><b>Diagnóstico</b>
+            </button>
+            <button class="fnode n-indigo is-center" type="button" data-node="ans2" data-routes="all a2" style="--x:560;--y:18;--w:360;--h:76">
+              <em>ANS 2 · según prioridad</em><b>Plan de trabajo</b>
+            </button>
+            <button class="fnode n-teal is-center" type="button" data-node="ans3" data-routes="all a3" style="--x:960;--y:18;--w:400;--h:76">
+              <em>ANS 3 · fecha que fija el plan</em><b>Solución</b>
+            </button>
+
+            <!-- carriles -->
+            <div class="fbox n-plain is-center" data-routes="all a1 a2 a3" style="--x:20;--y:110;--w:120;--h:190">
+              <em>Carril</em><b style="font-size:calc(13 * var(--u))">Mesa de Ayuda</b><span>N1 + N3</span>
+            </div>
+            <div class="fbox n-plain is-center" data-routes="all a1 a2 a3" style="--x:20;--y:330;--w:120;--h:200">
+              <em>Carril</em><b style="font-size:calc(13 * var(--u))">Core Andina</b><span>Cliente</span>
+            </div>
+
+            <!-- Mesa -->
+            <button class="fnode n-gray" type="button" data-node="m-ingreso" data-routes="all a1" style="--x:170;--y:150;--w:140;--h:110">
+              <b style="font-size:calc(13 * var(--u))">Ticket ingresa a N1</b><span>Arranca el ANS 1</span>
+            </button>
+            <button class="fnode n-blue" type="button" data-node="m-hora" data-routes="all a1" style="--x:340;--y:150;--w:170;--h:110">
+              <em>Hora interna</em><b style="font-size:calc(13 * var(--u))">N1 + N3 diagnostican</b><span>Requerimiento o bug</span>
+            </button>
+            <button class="fnode n-indigo" type="button" data-node="m-plan" data-routes="all a2" style="--x:590;--y:150;--w:300;--h:110">
+              <em>Solo N3</em><b>N3 arma el plan de trabajo</b><span>Para llevar a cabo la solución vista en el diagnóstico</span>
+            </button>
+            <button class="fnode n-teal" type="button" data-node="m-ejec" data-routes="all a3" style="--x:990;--y:150;--w:340;--h:110">
+              <b>Ejecuta la solución</b><span>Bajo el plan de trabajo, hasta la fecha límite acordada</span>
+            </button>
+
+            <!-- Core Andina -->
+            <button class="fnode n-green" type="button" data-node="c-aprueba" data-routes="all a1" style="--x:340;--y:380;--w:170;--h:110">
+              <em>Puerta</em><b style="font-size:calc(13 * var(--u))">Aprueba el diagnóstico</b><span>Si no aprueba, se retoma el ANS 1</span>
+            </button>
+            <button class="fnode n-green" type="button" data-node="c-plan" data-routes="all a2" style="--x:590;--y:380;--w:300;--h:110">
+              <em>Puerta</em><b>Aprueba el plan de trabajo</b><span>Si aprueba, se asigna la fecha de entrega; si no, se retoma el ANS 2</span>
+            </button>
+            <button class="fnode n-plain" type="button" data-node="c-com" data-routes="all a3" style="--x:990;--y:380;--w:340;--h:110">
+              <b>Comunicación bidireccional</b><span>Avances, validaciones y aclaraciones con la mesa durante la solución</span>
+            </button>
+
+            <!-- etiquetas -->
+            <p class="flabel t-blue" data-routes="all a1" style="--x:252;--y:334;--w:150">Diagnóstico general: “entendemos la petición y así se soluciona”</p>
+            <p class="flabel t-green" data-routes="all a1 a2" style="--x:622;--y:302;--w:124">Aprobado → abre el ANS 2</p>
+            <p class="flabel t-violet" data-routes="all a2" style="--x:800;--y:340;--w:100">Plan entregado</p>
+            <p class="flabel t-red" data-routes="all a1" style="--x:425;--y:496;--w:190">Sin aprobación ↺ se retoma el ANS 1, con el tiempo que llevaba</p>
+            <p class="flabel t-red" data-routes="all a2" style="--x:740;--y:496;--w:300">Sin aprobación ↺ se retoma el ANS 2, con el tiempo que llevaba</p>
+                        <p class="flabel t-green" data-routes="all a2 a3" style="--x:1028;--y:296;--w:150">Aprobado → la fecha de entrega es el ANS 3</p>
+            <p class="flabel t-teal" data-routes="all a3" style="--x:1290;--y:300;--w:130">Ida y vuelta mesa ⇄ Core Andina</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="scroll-hint">Deslice horizontalmente para ver el diagrama completo →</p>
+
+      <div class="flow-detail">
+        <div class="fdetail" data-detail="intro">
+          <span class="kicker">Cómo leer el diagrama</span>
+          <h3>Un ANS abre el siguiente</h3>
+          <p>Cada columna es un ANS y cada carril es un lado de la relación: arriba la Mesa (N1 + N3), abajo Core Andina. El diagnóstico abre el camino y su aprobación da paso al plan de trabajo, que arma N3. Cuando Core Andina aprueba el plan, la fecha de entrega queda asignada como ANS de solución. Por eso son dinámicos: el tercer ANS no es un número fijo, lo define cada caso.</p>
+          <div class="fdetail-cols">
+            <div><h4>ANS 1 y 2</h4><p>Se miden según la prioridad del caso.</p></div>
+            <div><h4>ANS 3</h4><p>Es la fecha de entrega que se asigna al aprobar el plan de trabajo.</p></div>
+            <div><h4>Dos puertas</h4><p>Core Andina aprueba el diagnóstico y después el plan. Si no aprueba, el caso no avanza: se retoma el ANS anterior y su tiempo sigue corriendo desde donde iba, no se reinicia.</p></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="ans1" hidden>
+          <span class="kicker">ANS 1 · según prioridad</span>
+          <h3>Diagnóstico</h3>
+          <p>Arranca cuando el ticket entra a N1. En una hora interna, N1 y N3 dan el diagnóstico del requerimiento o del bug. El objetivo es decirle a Core Andina, a modo general, que se entiende la petición y de qué manera se va a solucionar.</p>
+          <div class="fdetail-cols">
+            <div><h4>Arranca</h4><ul><li>Cuando el ticket entra a N1</li></ul></div>
+            <div><h4>Se cumple</h4><ul><li>Cuando el diagnóstico general se entrega a Core Andina</li></ul></div>
+            <div><h4>Abre el siguiente</h4><ul><li>La aprobación del diagnóstico por parte del cliente</li><li>Si no lo aprueba, se retoma el ANS 1 para un nuevo diagnóstico, con el tiempo que llevaba: no se reinicia</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="ans2" hidden>
+          <span class="kicker">ANS 2 · según prioridad</span>
+          <h3>Plan de trabajo</h3>
+          <p>Con el diagnóstico aprobado, N3 tiene un tiempo específico según la prioridad para entregar el plan de trabajo que lleva a cabo la solución vista en el diagnóstico. Core Andina lo aprueba, y con esa aprobación se asigna la fecha de entrega: el ANS de solución.</p>
+          <div class="fdetail-cols">
+            <div><h4>Arranca</h4><ul><li>Cuando Core Andina aprueba el diagnóstico</li></ul></div>
+            <div><h4>Se cumple</h4><ul><li>Cuando N3 entrega el plan de trabajo</li></ul></div>
+            <div><h4>Abre el siguiente</h4><ul><li>La aprobación del plan por Core Andina, que asigna la fecha de entrega</li><li>Si no lo aprueba, se retoma el ANS 2 para un nuevo plan, con el tiempo que llevaba: no se reinicia</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="ans3" hidden>
+          <span class="kicker">ANS 3 · fecha que fija el plan</span>
+          <h3>Solución</h3>
+          <p>Es la fecha de entrega asignada al aprobar el plan de trabajo. Durante este tramo la comunicación entre la Mesa y Core Andina es bidireccional: los dos lados informan, validan y aclaran hasta la entrega.</p>
+          <div class="fdetail-cols">
+            <div><h4>Arranca</h4><ul><li>Cuando Core Andina aprueba el plan y se asigna la fecha de entrega</li></ul></div>
+            <div><h4>Se cumple</h4><ul><li>Cuando la solución se entrega dentro de la fecha límite</li></ul></div>
+            <div><h4>Por qué es dinámico</h4><ul><li>No es un tiempo fijo por prioridad: es la fecha acordada en el plan de cada caso</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="m-ingreso" hidden>
+          <span class="kicker">Mesa · ANS 1</span>
+          <h3>El ticket ingresa a N1</h3>
+          <p>Es el momento en que empieza a correr el ANS de diagnóstico, cuyo tiempo depende de la prioridad del caso.</p>
+        </div>
+
+        <div class="fdetail" data-detail="m-hora" hidden>
+          <span class="kicker">Mesa · ANS 1</span>
+          <h3>Hora interna: N1 y N3 diagnostican</h3>
+          <p>N1 y N3 trabajan juntos en una hora interna para dar el diagnóstico del requerimiento o del bug. No es todavía la solución: es la lectura general del caso que se le comparte al cliente.</p>
+          <div class="fdetail-cols">
+            <div><h4>Entrega</h4><ul><li>Qué se entendió de la petición</li><li>Cómo se solucionaría, a modo general</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="c-aprueba" hidden>
+          <span class="kicker">Core Andina · puerta entre ANS</span>
+          <h3>Aprueba el diagnóstico</h3>
+          <p>Es la primera de las dos puertas del modelo. Si Core Andina aprueba el diagnóstico, se abre el ANS de plan de trabajo. Si no lo aprueba, el caso no avanza: se retoma el ANS 1 y N1 y N3 vuelven a diagnosticar. El tiempo del ANS 1 sigue corriendo desde donde iba; el rechazo no lo reinicia.</p>
+        </div>
+
+        <div class="fdetail" data-detail="m-plan" hidden>
+          <span class="kicker">Mesa · ANS 2 · solo N3</span>
+          <h3>N3 arma el plan de trabajo</h3>
+          <p>El plan lo arma únicamente N3: traduce la solución vista en el diagnóstico en un plan para llevarla a cabo, dentro del tiempo que le da la prioridad. Propone la fecha de entrega, que queda en firme cuando Core Andina aprueba el plan.</p>
+        </div>
+
+        <div class="fdetail" data-detail="c-plan" hidden>
+          <span class="kicker">Core Andina · segunda puerta</span>
+          <h3>Aprueba el plan de trabajo</h3>
+          <p>Core Andina revisa el plan que armó N3. Si lo aprueba, se asigna la fecha de entrega, que pasa a ser el ANS de solución. Si no lo aprueba, el caso no entra al tramo de solución: se retoma el ANS 2 y N3 vuelve a armar el plan. El tiempo del ANS 2 sigue corriendo desde donde iba; el rechazo no lo reinicia.</p>
+        </div>
+
+        <div class="fdetail" data-detail="m-ejec" hidden>
+          <span class="kicker">Mesa · ANS 3</span>
+          <h3>Ejecuta la solución</h3>
+          <p>La Mesa trabaja la solución bajo el plan aprobado, con la fecha de entrega asignada como compromiso.</p>
+        </div>
+
+        <div class="fdetail" data-detail="c-com" hidden>
+          <span class="kicker">Core Andina · ANS 3</span>
+          <h3>Comunicación bidireccional</h3>
+          <p>En la etapa de solución la comunicación va en los dos sentidos: la Mesa informa avances y pide validaciones, y Core Andina aclara, valida y pregunta. Es el tramo donde más se habla con el cliente.</p>
+        </div>
+      </div>
+
+      <ul class="flegend">
+        <li><i style="background:#1f5fa8"></i>ANS 1 · Diagnóstico</li>
+        <li><i style="background:#2e7a26"></i>Aprobación del cliente</li>
+        <li><i style="background:#2709CD"></i>ANS 2 · Plan de trabajo</li>
+        <li><i style="background:#1f8f6b"></i>ANS 3 · Solución</li>
+        <li><i style="background:#b02525"></i>Sin aprobación: se retoma el ANS anterior, sin reiniciar su tiempo</li>
+      </ul>
+      <p class="figcap">Los tiempos de los ANS 1 y 2 dependen de la prioridad del caso; la fecha del ANS 3 se asigna cuando Core Andina aprueba el plan de trabajo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · ROLES -->
 <section class="slide" id="roles" data-nav="Roles">
   <div class="inner">
     <div class="section-head">
@@ -222,7 +433,7 @@
   </div>
 </section>
 
-<!-- 4 · POR DEFINIR -->
+<!-- 5 · POR DEFINIR -->
 <section class="slide" id="pendientes" data-nav="Por definir">
   <div class="inner">
     <div class="section-head">
@@ -247,14 +458,14 @@
       </article>
       <article class="card reveal tone-steel">
         <span class="kicker">Niveles de servicio</span>
-        <h3>ANS del modelo</h3>
-        <p>Los tiempos de atención y solución por tipo de caso aún no están definidos para Core Andina.</p>
+        <h3>Tiempos por prioridad de los ANS 1 y 2</h3>
+        <p>La estructura de los tres ANS ya está definida. Falta la tabla de tiempos de diagnóstico y de plan de trabajo para cada prioridad.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 5 · CIERRE -->
+<!-- 6 · CIERRE -->
 <section class="slide" id="cierre" data-nav="Cierre">
   <div class="inner">
     <span class="eyebrow reveal">Cierre</span>
@@ -264,7 +475,7 @@
       <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Un solo canal</b><br/>todo caso entra por el portal</span></div>
       <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Desarrollo y QA juntos</b><br/>sobre el mismo caso</span></div>
       <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Todo queda en el ticket</b><br/>notas internas entre grupos</span></div>
-      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Seguimiento de N1</b><br/>para validar el estado del ticket</span></div>
+      <div class="chip reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span><b>Tres ANS encadenados</b><br/>diagnóstico, plan de trabajo y solución</span></div>
     </div>
     <div class="signoff reveal"><span>LinkTIC — Mesa de Ayuda</span><i></i><span>Core Andina</span></div>
   </div>

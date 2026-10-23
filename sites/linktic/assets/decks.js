@@ -40,7 +40,7 @@ window.CORE_DECKS = [
     file: 'p/core-andina.html',
     title: 'Modelo de atención — Core Andina',
     client: 'Core Andina',
-    summary: 'Registro por portal, N1 que diligencia y escala a N3, Desarrollo y QA trabajando de la mano con notas internas en el ticket, y seguimiento del estado desde N1.',
+    summary: 'Registro por portal, N1 que escala a N3 Desarrollo y QA, y tres ANS encadenados: diagnóstico, plan de trabajo y solución con fecha fijada por el plan.',
     tag: 'Cliente',
     tone: 'violet',
     updated: '2026-10'

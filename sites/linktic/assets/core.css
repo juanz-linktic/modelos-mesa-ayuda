@@ -276,6 +276,9 @@ h2{
 .n-violet{background:#f7f2fe; border-color:#7b3fbf; border-style:dashed}
 .n-violet em{color:#7b3fbf}
 .n-teal{background:#e9f6f1; border-color:var(--teal)}
+.n-indigo{background:#f1efff; border-color:#2709CD}
+.n-indigo b{color:#1d1166}
+.n-indigo em{color:#2709CD}
 .n-teal b{color:#14513e}
 .n-gray{background:#fbfcfe; border-color:#c9d2df}
 .n-plain{background:#fff; border-color:#c9d2df}
