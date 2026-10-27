@@ -8,6 +8,10 @@
       "destination": "/p/mesa"
     },
     {
+      "source": "/balu",
+      "destination": "/p/balu"
+    },
+    {
       "source": "/cpe",
       "destination": "/p/cpe"
     },

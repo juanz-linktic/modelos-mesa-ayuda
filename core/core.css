@@ -368,6 +368,56 @@ h2{
 .flabel.t-violet{color:#6b32ad; font-weight:700}
 .flabel.t-green{color:#2e7a26; font-weight:700}
 .flabel.t-teal{color:var(--teal); font-weight:700}
+.flabel.t-indigo{color:#2709CD; font-weight:700}
+.fchip.t-indigo[aria-pressed="true"]{background:#2709CD; border-color:#2709CD}
+.n-cyan{background:#e6fbff; border-color:#0096FF}
+.n-cyan b{color:#004f87}
+.n-cyan em{color:#0077cc}
+
+/* ---------- gráficas ---------- */
+.vchart{margin:0; position:relative}
+.vchart svg{display:block; width:100%; height:auto; overflow:visible}
+.vchart .vc-grid{stroke:var(--border-soft); stroke-width:1}
+.vchart .vc-base{stroke:var(--dim); stroke-width:1}
+.vchart .vc-tick{fill:var(--muted); font-size:12px}
+.vchart .vc-val{fill:var(--text); font-size:12.5px; font-weight:700}
+.vchart .vc-name{fill:var(--text); font-size:14px; font-weight:700}
+.vchart .vc-bar{fill:var(--violet); transition:opacity .2s var(--ease)}
+.vchart .vc-bar.is-approx{fill-opacity:.5}
+.vchart .vc-bar.is-hover{opacity:.82}
+.vchart .vc-line{fill:none; stroke:var(--blue); stroke-width:2.4; stroke-linejoin:round}
+.vchart .vc-dot{fill:var(--blue); stroke:var(--bg); stroke-width:2}
+.vchart .vc-dot.is-hover{r:7}
+.vchart .vc-cross{stroke:var(--dim); stroke-width:1; stroke-dasharray:3,3; opacity:0}
+.vchart .vc-cross.on{opacity:1}
+.vchart .vc-hit{fill:transparent; cursor:crosshair}
+.vchart-tip{
+  position:absolute; pointer-events:none; transform:translate(-50%,-100%);
+  background:var(--bg); border:1px solid var(--border); border-radius:8px;
+  box-shadow:0 6px 18px rgba(19,31,51,.12); padding:7px 11px; font-size:12.5px;
+  white-space:nowrap; opacity:0; transition:opacity .15s var(--ease);
+  display:flex; flex-direction:column; gap:1px;
+}
+.vchart-tip b{font-size:12px; color:var(--muted); font-weight:600}
+.vchart-tip span{color:var(--text); font-weight:700}
+.vchart-tip small{color:var(--muted); font-weight:500; font-size:11.5px}
+.vchart-tip.on{opacity:1}
+.vchart .vc-axis{fill:var(--muted); font-size:13px; font-weight:600}
+.vchart.is-dual .vc-line{stroke:#00C8F0; stroke-width:3.4}
+.vchart.is-dual .vc-dot{fill:#00C8F0; stroke:var(--bg); stroke-width:2; r:6.5}
+.vchart.is-dual .vc-dot.is-hover{r:8.5}
+.vchart.is-dual .vc-val{font-size:12px; font-weight:600}
+.vchart-legend{display:flex; justify-content:center; flex-wrap:wrap; gap:22px; font-size:13px; color:var(--text); margin:4px 0 2px}
+.vchart-legend span{display:inline-flex; align-items:center; gap:8px}
+.vchart-legend .lg-bar i{width:26px; height:11px; border-radius:2px; background:var(--violet)}
+.vchart-legend .lg-line i{width:30px; height:3px; border-radius:2px; background:#00C8F0; position:relative}
+.vchart-legend .lg-line i::after{content:""; position:absolute; left:50%; top:50%; width:11px; height:11px; border-radius:50%; background:#00C8F0; transform:translate(-50%,-50%)}
+.vchart-data{margin-top:10px; font-size:13px}
+.vchart-data summary{cursor:pointer; color:var(--muted); font-weight:600}
+.vchart-data .tbl-wrap{margin-top:10px; max-height:260px; overflow:auto}
+.chart-card{border:1px solid var(--border); border-radius:14px; padding:20px 22px 16px; background:var(--bg); margin-bottom:18px}
+.chart-card h3{margin:0 0 2px; font-size:17px}
+.chart-card > p{margin:0 0 12px; color:var(--muted); font-size:13.5px}
 
 /* ---------- aristas ---------- */
 .fedge{transition:opacity .3s var(--ease), stroke-width .2s var(--ease)}
