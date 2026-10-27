@@ -44,7 +44,7 @@
   <div class="inner">
     <div class="section-head">
       <h2 class="reveal">El flujo completo, de extremo a extremo</h2>
-      <p class="sub reveal">Filtre por ruta de resolución y haga clic en cualquier bloque para ver qué hace, qué recibe y qué entrega.</p>
+      <p class="sub reveal">Filtre por la ruta de resolución y haga clic en cualquier bloque para ver qué hace, qué recibe y qué entrega.</p>
     </div>
 
     <div class="flow reveal">
@@ -52,7 +52,8 @@
       <div class="flow-controls">
         <span class="ctl-label">Ruta</span>
         <button class="fchip" type="button" data-route="all" aria-pressed="true"><i></i>Flujo completo</button>
-        <button class="fchip t-blue" type="button" data-route="n1" aria-pressed="false"><i></i>Cierre en N1</button>
+        <button class="fchip t-teal" type="button" data-route="fc" aria-pressed="false"><i></i>Primer contacto · Atención</button>
+        <button class="fchip t-blue" type="button" data-route="g1" aria-pressed="false"><i></i>Cierre en N1 Gestión</button>
         <button class="fchip t-blue" type="button" data-route="n2" aria-pressed="false"><i></i>Cierre en N2</button>
         <button class="fchip t-red" type="button" data-route="n3" aria-pressed="false"><i></i>Solución desde N3</button>
         <span class="ctl-sep"></span>
@@ -61,87 +62,91 @@
 
       <div class="flow-stage">
         <div class="diagram-scroll">
-          <div class="flowbox" style="aspect-ratio:1400/620" role="group" aria-label="Diagrama del modelo de atención DOCUM">
+          <div class="flowbox" style="aspect-ratio:1400/690" role="group" aria-label="Diagrama del modelo de atención DOCUM">
 
-            <svg class="flow-edges" viewBox="0 0 1400 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <svg class="flow-edges" viewBox="0 0 1400 690" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
               <defs>
                 <marker id="mDk" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f3a5f"/></marker>
                 <marker id="mBl" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f5fa8"/></marker>
                 <marker id="mRd" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#b02525"/></marker>
-                <marker id="mAm" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#e08a1e"/></marker>
+                <marker id="mGr" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2e7a26"/></marker>
+                <marker id="mVi" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7b3fbf"/></marker>
               </defs>
 
-              <path class="fedge" data-routes="all n1 n2 n3" d="M180,350 H244" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
-              <path class="fedge" data-routes="all n2 n3" d="M410,350 H474" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
-              <path class="fedge" data-routes="all n3" d="M640,350 H704" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
-              <path class="fedge" data-routes="all n3" d="M880,350 H944" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
-              <path class="fedge" data-routes="all n1 n2 n3" d="M1110,350 H1174" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <!-- ingreso y primer contacto -->
+              <path class="fedge" data-routes="all fc g1 n2 n3" d="M170,315 H204" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all fc" d="M400,315 H444" fill="none" stroke="#2e7a26" stroke-width="2.4" marker-end="url(#mGr)"/>
+              <path class="fedge" data-routes="all g1 n2 n3" d="M305,360 V394" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
 
-              <path class="fedge" data-layer="azure" data-routes="all n3" d="M850,300 V182" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
-              <path class="fedge" data-layer="azure" data-routes="all n2 n3" d="M616,176 V254 H560 V294" fill="none" stroke="#b02525" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#mRd)"/>
+              <!-- escalamiento -->
+              <path class="fedge" data-routes="all n2 n3" d="M400,445 H444" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-routes="all n3" d="M630,445 H674" fill="none" stroke="#1f3a5f" stroke-width="2.2" marker-end="url(#mDk)"/>
+              <path class="fedge" data-layer="azure" data-routes="all n3" d="M860,390 V172" fill="none" stroke="#b02525" stroke-width="2.2" marker-end="url(#mRd)"/>
+              <path class="fedge" data-routes="all n2 n3" d="M740,510 V545 H560 V496" fill="none" stroke="#b02525" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#mRd)"/>
 
-              <path class="fedge" data-routes="all n1" d="M330,400 V480 H1006 V404" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#mBl)"/>
-              <path class="fedge" data-routes="all n2" d="M560,400 V440 H1050 V404" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#mBl)"/>
-
-              <path class="fedge" data-routes="all n1 n2" d="M1090,400 V560 H886" fill="none" stroke="#e08a1e" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#mAm)"/>
-              <path class="fedge" data-routes="all n1" d="M474,570 H270 V404" fill="none" stroke="#e08a1e" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#mAm)"/>
-
+              <!-- lo resuelto por Gestión, N2 o N3 va a Calidad y a la IA a la vez -->
+              <path class="fedge" data-routes="all g1" d="M305,490 V640 H500" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+              <path class="fedge" data-routes="all n2" d="M500,490 V640" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+              <path class="fedge" data-routes="all g1 n2" d="M500,640 H960" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+              <path class="fedge" data-routes="all n3" d="M960,510 V640" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+              <path class="fedge" data-routes="all g1 n2 n3" d="M960,640 H1065 V441 H1084" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#mBl)"/>
+              <path class="fedge" data-routes="all g1 n2 n3" d="M1065,555 H1084" fill="none" stroke="#7b3fbf" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#mVi)"/>
+              <path class="fedge" data-routes="all g1 n2 n3" d="M1240,435 H1264" fill="none" stroke="#2e7a26" stroke-width="2.2" marker-end="url(#mGr)"/>
             </svg>
 
-            <!-- Azure DevOps -->
-            <div class="fgroup g-red" data-layer="azure" data-routes="all n2 n3" style="--x:520;--y:14;--w:550;--h:162">
+            <!-- Azure DevOps: la parte interna -->
+            <div class="fgroup g-red" data-layer="azure" data-routes="all n3" style="--x:700;--y:16;--w:320;--h:150">
               <span class="fgroup-tag">Azure DevOps — N3 interno</span>
+              <div class="fgroup-body">
+                <button class="fnode n-red is-center" type="button" data-node="n3f" data-routes="all n3"><b>N3 Funcional</b></button>
+                <button class="fnode n-red is-center" type="button" data-node="n3qa" data-routes="all n3"><b>N3 QA</b></button>
+              </div>
+              <p class="fgroup-note">Cola interna — no visible para el usuario final.</p>
+            </div>
+
+            <div class="fband" data-routes="all fc g1 n2 n3" style="--x:30;--y:192;--w:1340;--h:28">Zendesk — plataforma única de registro, trazabilidad, categorización y control de ANS</div>
+
+            <button class="fnode n-gray" type="button" data-node="canales" data-routes="all fc g1 n2 n3" style="--x:30;--y:260;--w:140;--h:110">
+              <b>Canales</b><span>Widget<br/>Portal de autogestión</span>
+            </button>
+
+            <button class="fnode n-teal" type="button" data-node="n1a" data-routes="all fc g1 n2 n3" style="--x:210;--y:270;--w:190;--h:90">
+              <em>Nivel 1</em><b>N1 Atención</b><span>Primer contacto</span>
+            </button>
+            <button class="fnode n-green" type="button" data-node="cierre1c" data-routes="all fc" style="--x:450;--y:270;--w:240;--h:90">
+              <b style="font-size:calc(13.5 * var(--u))">Resuelto en primer contacto</b><span>Se comprueba directo con el usuario</span>
+            </button>
+
+            <button class="fnode n-blue" type="button" data-node="n1g" data-routes="all g1 n2 n3" style="--x:210;--y:400;--w:190;--h:90">
+              <em>Nivel 1</em><b>N1 Gestión</b><span>Gestiona y escala con control de rol N2</span>
+            </button>
+            <button class="fnode n-blue" type="button" data-node="n2" data-routes="all n2 n3" style="--x:450;--y:400;--w:180;--h:90">
+              <em>Nivel 2</em><b>N2 Soporte</b><span>Diagnóstico y ajustes en BD</span>
+            </button>
+
+            <div class="fgroup g-red" data-routes="all n2 n3" style="--x:680;--y:390;--w:360;--h:120">
+              <span class="fgroup-tag">Nivel 3 · en Zendesk</span>
               <div class="fgroup-body">
                 <button class="fnode n-red is-center" type="button" data-node="n3data" data-routes="all n2 n3"><b>N3 DATA</b></button>
                 <button class="fnode n-red is-center" type="button" data-node="n3dev" data-routes="all n3"><b>N3 Desarrollo</b></button>
-                <button class="fnode n-red is-center" type="button" data-node="n3qa" data-routes="all n3"><b>N3 QA</b></button>
               </div>
-              <p class="fgroup-note">Cola interna de trabajo — no visible para el usuario final. La trazabilidad ante el cliente permanece en Zendesk.</p>
             </div>
 
-            <div class="fband" data-routes="all n1 n2 n3" style="--x:30;--y:200;--w:1340;--h:28">Zendesk — plataforma única de registro, trazabilidad, categorización y control de ANS</div>
-
-            <button class="fnode n-gray" type="button" data-node="canales" data-routes="all n1 n2 n3" style="--x:30;--y:300;--w:150;--h:100">
-              <b>Canales</b><span>Widget<br/>Portal de autoservicio</span>
+            <button class="fnode n-amber" type="button" data-node="calidad" data-routes="all g1 n2 n3" style="--x:1090;--y:390;--w:150;--h:90">
+              <b style="font-size:calc(13.5 * var(--u))">Equipo Calidad</b><span>Valida el cierre</span>
+            </button>
+            <button class="fnode n-violet" type="button" data-node="ia" data-routes="all g1 n2 n3" style="--x:1090;--y:510;--w:150;--h:90">
+              <em>IA · a la vez</em><b style="font-size:calc(13 * var(--u))">Califica la gestión</b><span>del grupo que resolvió</span>
+            </button>
+            <button class="fnode n-green n-pill is-center" type="button" data-node="notif" data-routes="all g1 n2 n3" style="--x:1270;--y:380;--w:120;--h:110">
+              <b style="font-size:calc(12.5 * var(--u))">Notificación al usuario final</b>
             </button>
 
-            <button class="fnode n-blue" type="button" data-node="n1" data-routes="all n1 n2 n3" style="--x:250;--y:300;--w:160;--h:100">
-              <b>N1 DOCUM</b><span>Recepción, tipificación y atención en primer contacto</span>
-            </button>
-
-            <button class="fnode n-blue" type="button" data-node="n2" data-routes="all n2 n3" style="--x:480;--y:300;--w:160;--h:100">
-              <b>N2 Soporte</b><span>Diagnóstico, base de datos y ajustes en BD</span>
-            </button>
-
-            <button class="fnode n-blue" type="button" data-node="n3f" data-routes="all n3" style="--x:710;--y:300;--w:170;--h:100">
-              <b>N3 Funcional</b><span>Interfaz Zendesk ↔ Azure. Único rol que traduce el caso al equipo interno</span>
-            </button>
-
-            <button class="fnode n-amber" type="button" data-node="calidad" data-routes="all n1 n2 n3" style="--x:950;--y:300;--w:160;--h:100">
-              <b>Equipo Calidad</b><span>Punto único de validación de cierre para todos los niveles</span>
-            </button>
-
-            <button class="fnode n-green n-pill is-center" type="button" data-node="notif" data-routes="all n1 n2 n3" style="--x:1180;--y:300;--w:168;--h:100">
-              <b>Notificación al usuario final</b>
-            </button>
-
-            <button class="fnode n-amber is-center" type="button" data-node="kb" data-routes="all n1 n2" style="--x:480;--y:540;--w:400;--h:62">
-              <b style="font-size:calc(12.5 * var(--u))">Base de conocimiento interna y gestión de problemas</b>
-              <span>Hallazgos de Calidad · causas raíz · refuerzo a los niveles</span>
-            </button>
-
-            <p class="flabel" data-routes="all n1 n2 n3" style="--x:212;--y:258;--w:110">Ingreso del caso</p>
-            <p class="flabel" data-routes="all n2 n3" style="--x:442;--y:250;--w:130">Escalamiento con control de rol N2</p>
-            <p class="flabel" data-routes="all n3" style="--x:672;--y:258;--w:120">Escalamiento a N3</p>
-            <p class="flabel" data-routes="all n3" style="--x:912;--y:258;--w:110">Solución de N3</p>
-            <p class="flabel t-red" data-layer="azure" data-routes="all n2 n3" style="--x:720;--y:232;--w:180">Data construye el rol de N2 en BD y explica las casuísticas</p>
-            <p class="flabel t-red" data-layer="azure" data-routes="all n3" style="--x:955;--y:232;--w:160">Gestión y seguimiento en Azure DevOps</p>
-            <p class="flabel t-blue" data-routes="all n1" style="--x:660;--y:484;--w:300">Resuelto en primer contacto (N1) — cierre en línea</p>
-            <p class="flabel t-blue" data-routes="all n2" style="--x:800;--y:444;--w:260">Resuelto en N2 — sin escalamiento a N3</p>
-            <p class="flabel t-amber" data-routes="all n1" style="--x:170;--y:566;--w:200">Habilita resolución en primer contacto</p>
-            <p class="flabel" data-routes="all n1 n2 n3" style="--x:1142;--y:406;--w:120">Cierre validado</p>
-
-            <p class="flabel t-amber" data-routes="all n1 n2" style="--x:985;--y:520;--w:180">Hallazgos y reprocesos de Calidad</p>
+            <p class="flabel" data-routes="all g1 n2 n3" style="--x:372;--y:363;--w:130">Si no se resuelve en primer contacto</p>
+            <p class="flabel t-red" data-layer="azure" data-routes="all n3" style="--x:950;--y:236;--w:160">Gestión interna y pruebas en Azure DevOps</p>
+            <p class="flabel t-red" data-routes="all n2 n3" style="--x:650;--y:551;--w:180">Data construye el rol de N2 en BD y explica las casuísticas</p>
+            <p class="flabel t-blue" data-routes="all g1 n2 n3" style="--x:680;--y:646;--w:320">Resuelto por N1 Gestión, N2 o N3</p>
+            <p class="flabel t-violet" data-routes="all g1 n2 n3" style="--x:1025;--y:518;--w:70">a la vez</p>
 
           </div>
         </div>
@@ -152,113 +157,128 @@
       <div class="flow-detail">
         <div class="fdetail" data-detail="intro">
           <span class="kicker">Cómo leer el diagrama</span>
-          <h3>Un caso, tres salidas posibles</h3>
-          <p>Todo caso entra por widget o portal y se cierra en el nivel donde se resuelve —N1, N2 o N3—, pero siempre pasa por Calidad antes de notificar al usuario final. La base de conocimiento cierra el circuito: recoge los hallazgos de Calidad y devuelve capacidad de resolución a N1. Lo que ocurre dentro de ella va en la sección Conocimiento.</p>
+          <h3>Dos maneras de cerrar un caso</h3>
+          <p>Todo caso entra por el widget o el portal y llega a N1 Atención. Si se resuelve en primer contacto, se comprueba directamente con el usuario y ahí termina. Si no, pasa a N1 Gestión y, si hace falta, escala a N2 y a N3. Lo que resuelven N1 Gestión, N2 o N3 lo valida el Equipo Calidad y, a la vez, la IA califica la gestión del grupo que lo resolvió; después se notifica al usuario.</p>
           <div class="fdetail-cols">
-            <div><h4>Filtre por ruta</h4><p>Los botones de arriba aíslan cada camino de resolución y encienden las conexiones que lo componen.</p></div>
-            <div><h4>Conocimiento</h4><p>El ciclo completo de la base de conocimiento y la gestión de problemas va en su propia sección.</p></div>
-            <div><h4>Vista cliente</h4><p>Apague «Cola interna Azure» para ver el modelo tal como lo percibe el usuario final: todo ocurre en Zendesk.</p></div>
+            <div><h4>Filtre por ruta</h4><p>Los botones aíslan cada camino de resolución y encienden las conexiones que lo componen.</p></div>
+            <div><h4>Zendesk y Azure</h4><p>N3 DATA y N3 Desarrollo trabajan en Zendesk; la parte interna en Azure DevOps la hacen N3 Funcional y N3 QA.</p></div>
+            <div><h4>Vista cliente</h4><p>Apague «Cola interna Azure» para ver el modelo tal como lo percibe el usuario final.</p></div>
           </div>
         </div>
 
         <div class="fdetail" data-detail="canales" hidden>
           <span class="kicker">Entrada</span>
           <h3>Canales de ingreso</h3>
-          <p>Solo dos canales: el widget embebido y el portal de autoservicio. <b>No hay canal de correo</b>, de modo que ningún caso entra sin tipificación ni por fuera de Zendesk.</p>
+          <p>El widget de Zendesk y el portal de autogestión. Todo caso queda registrado y categorizado en Zendesk desde el ingreso.</p>
           <div class="fdetail-cols">
-            <div><h4>Canales habilitados</h4><ul><li>Widget</li><li>Portal de autoservicio</li></ul></div>
-            <div><h4>Por qué importa</h4><ul><li>Todo caso nace registrado y categorizado</li><li>El ANS se cuenta desde el ingreso real</li><li>Sin bandejas paralelas ni casos «de palabra»</li></ul></div>
+            <div><h4>Canales</h4><ul><li>Widget de Zendesk</li><li>Portal de autogestión</li></ul></div>
+            <div><h4>Primera respuesta</h4><ul><li>10 minutos desde la apertura del ticket (MOS)</li></ul></div>
           </div>
         </div>
 
-        <div class="fdetail" data-detail="n1" hidden>
-          <span class="kicker">Nivel 1</span>
-          <h3>N1 DOCUM — recepción, tipificación y primer contacto</h3>
-          <p>Recibe el caso, lo tipifica, lo categoriza y atiende en primer contacto todo lo que la base de conocimiento habilita. Cuando cierra aquí, el caso pasa directo a validación de Calidad.</p>
+        <div class="fdetail" data-detail="n1a" hidden>
+          <span class="kicker">Nivel 1 · Atención</span>
+          <h3>N1 Atención — primer contacto</h3>
+          <p>Recibe el caso, lo tipifica y lo atiende en el primer contacto. Lo que resuelve aquí no pasa por Calidad ni por la calificación de la IA: la solución se comprueba directamente con el usuario.</p>
           <div class="fdetail-cols">
-            <div><h4>Recibe</h4><ul><li>Casos ingresados por widget y portal</li><li>Artículos y procedimientos de la base de conocimiento</li></ul></div>
-            <div><h4>Entrega</h4><ul><li>Cierre en línea validado por Calidad</li><li>Escalamiento tipificado a N2</li></ul></div>
+            <div><h4>Recibe</h4><ul><li>Casos del widget y del portal</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>Cierre en primer contacto, comprobado con el usuario</li><li>Lo que no resuelve, hacia N1 Gestión</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="cierre1c" hidden>
+          <span class="kicker">Cierre · primer contacto</span>
+          <h3>Se comprueba directo con el usuario</h3>
+          <p>Cuando N1 Atención resuelve en el primer contacto, la confirmación ocurre en la misma interacción con el usuario. Por eso este cierre no se notifica por medio de Calidad ni lo califica la IA.</p>
+        </div>
+
+        <div class="fdetail" data-detail="n1g" hidden>
+          <span class="kicker">Nivel 1 · Gestión</span>
+          <h3>N1 Gestión — lo que no se resolvió en primer contacto</h3>
+          <p>Toma los casos que N1 Atención no pudo cerrar en el primer contacto. Los gestiona y, cuando el caso lo exige, los escala a N2 con control de rol N2. Lo que resuelve pasa por Calidad y por la calificación de la IA.</p>
+          <div class="fdetail-cols">
+            <div><h4>Entrega</h4><ul><li>Cierre en N1 Gestión, validado por Calidad</li><li>Escalamiento a N2</li></ul></div>
+            <div><h4>OLA interna (MOS)</h4><ul><li>Alta: 1 h · Media: 1 h · Baja: 1 h</li></ul></div>
           </div>
         </div>
 
         <div class="fdetail" data-detail="n2" hidden>
           <span class="kicker">Nivel 2</span>
           <h3>N2 Soporte — diagnóstico, base de datos y ajustes en BD</h3>
-          <p>Recibe el escalamiento bajo control del rol N2. Diagnostica, consulta y <b>realiza ajustes directamente en base de datos</b>. Quien le entrega el conocimiento para hacerlo es <b>N3 DATA</b>: construye el rol de N2 en la base de datos y explica cómo resolver cada casuística.</p>
+          <p>Recibe el escalamiento con control de rol N2. Diagnostica, consulta y <b>realiza ajustes directamente en base de datos</b>. El conocimiento para hacerlo se lo entrega <b>N3 DATA</b>: construye el rol de N2 en la base de datos y explica cómo resolver cada casuística.</p>
           <div class="fdetail-cols">
-            <div><h4>Recibe</h4><ul><li>Escalamiento de N1 con control de rol N2</li><li>De N3 DATA: el rol en BD y la explicación de las casuísticas</li></ul></div>
-            <div><h4>Entrega</h4><ul><li>Cierre en N2 sin escalar a N3</li><li>Casos que requieren al equipo interno, hacia N3 Funcional</li></ul></div>
-          </div>
-        </div>
-
-        <div class="fdetail" data-detail="n3f" hidden>
-          <span class="kicker">Nivel 3 · Zendesk</span>
-          <h3>N3 Funcional — único puente entre Zendesk y Azure DevOps</h3>
-          <p>Traduce el caso al equipo interno y gestiona su seguimiento en Azure DevOps. Un solo rol concentra la interfaz: el cliente nunca ve la cola interna y la trazabilidad permanece en Zendesk.</p>
-          <div class="fdetail-cols">
-            <div><h4>Qué escala a Azure</h4><ul><li>Requerimientos</li><li>Incidencias que exigen al equipo interno</li><li>Casos de data</li><li>Fuerza mayor</li></ul></div>
-            <div><h4>Entrega</h4><ul><li>Solución del equipo interno traducida al caso</li><li>Estado y seguimiento visibles en Zendesk</li></ul></div>
+            <div><h4>Entrega</h4><ul><li>Cierre en N2 sin escalar a N3</li><li>Casos que exigen a N3 DATA o N3 Desarrollo</li></ul></div>
+            <div><h4>OLA interna (MOS)</h4><ul><li>Alta: 2 h · Media: 2 h · Baja: 2 h</li></ul></div>
           </div>
         </div>
 
         <div class="fdetail" data-detail="n3data" hidden>
-          <span class="kicker">Azure DevOps · interno</span>
-          <h3>N3 DATA — origen del conocimiento de N2</h3>
-          <p>Además de atender los casos de data, <b>construye el rol de N2 en la base de datos y le explica cómo resolver las casuísticas</b>. Es el traspaso de conocimiento que le permite a N2 hacer ajustes en BD sin escalar a N3.</p>
+          <span class="kicker">Nivel 3 · Zendesk</span>
+          <h3>N3 DATA — datos y conocimiento de N2</h3>
+          <p>Trabaja en Zendesk. Atiende los casos de datos y, además, <b>construye el rol de N2 en la base de datos y le explica cómo resolver las casuísticas</b>, para que N2 pueda hacer ajustes en BD sin escalar.</p>
           <div class="fdetail-cols">
-            <div><h4>Entrega a N2</h4><ul><li>Rol y permisos de N2 en base de datos</li><li>Procedimientos por casuística</li><li>Acompañamiento hasta que N2 resuelve solo</li></ul></div>
-            <div><h4>Efecto en el flujo</h4><ul><li>Menos escalamientos a N3</li><li>Casos que antes eran de Data se cierran en N2</li></ul></div>
+            <div><h4>Entrega a N2</h4><ul><li>Rol y permisos en base de datos</li><li>Procedimientos por casuística</li></ul></div>
+            <div><h4>OLA interna (MOS)</h4><ul><li>Alta: 3 h · Media: 6 h · Baja: 6 h</li></ul></div>
           </div>
         </div>
 
         <div class="fdetail" data-detail="n3dev" hidden>
-          <span class="kicker">Azure DevOps · interno</span>
+          <span class="kicker">Nivel 3 · Zendesk</span>
           <h3>N3 Desarrollo</h3>
-          <p>Atiende lo que exige cambio en el producto. Trabaja en la cola interna de Azure DevOps; el usuario final no la ve y el estado del caso se refleja en Zendesk a través de N3 Funcional.</p>
+          <p>Trabaja en Zendesk los casos que exigen cambio en el producto. Lo que requiere gestión interna o pruebas pasa a Azure DevOps, donde lo trabajan N3 Funcional y N3 QA.</p>
+          <div class="fdetail-cols">
+            <div><h4>OLA interna (MOS)</h4><ul><li>Alta: 3 h · Media: 6 h · Baja: 6 h</li></ul></div>
+          </div>
+        </div>
+
+        <div class="fdetail" data-detail="n3f" hidden>
+          <span class="kicker">Azure DevOps · interno</span>
+          <h3>N3 Funcional</h3>
+          <p>Junto con N3 QA, realiza la parte interna del caso en Azure DevOps. Es una cola de trabajo que el usuario final no ve: la trazabilidad ante el cliente sigue en Zendesk.</p>
         </div>
 
         <div class="fdetail" data-detail="n3qa" hidden>
           <span class="kicker">Azure DevOps · interno</span>
           <h3>N3 QA</h3>
-          <p>Verifica la solución del equipo interno antes de devolverla al flujo. Es control técnico dentro de la cola interna, distinto de la validación de cierre que hace el Equipo Calidad sobre el caso del cliente.</p>
+          <p>Junto con N3 Funcional, realiza la parte interna en Azure DevOps: verifica la solución antes de devolverla al flujo. Es control técnico interno, distinto de la validación de cierre del Equipo Calidad.</p>
         </div>
 
         <div class="fdetail" data-detail="calidad" hidden>
           <span class="kicker">Control</span>
-          <h3>Equipo Calidad — punto único de validación de cierre</h3>
-          <p>Todo cierre pasa por Calidad, venga de N1, N2 o N3. Verifica solución, tipificación y ANS antes de notificar; si no cumple, el caso vuelve al nivel que lo trabajó. Sus hallazgos alimentan la base de conocimiento y el refuerzo a los analistas.</p>
+          <h3>Equipo Calidad — valida el cierre</h3>
+          <p>Valida los cierres de N1 Gestión, N2 y N3 antes de notificar al usuario. Verifica solución, tipificación y ANS; si algo no cumple, el caso vuelve al nivel que lo trabajó. Los cierres de N1 Atención en primer contacto no pasan por aquí.</p>
           <div class="fdetail-cols">
-            <div><h4>Valida</h4><ul><li>Que la solución responda a lo solicitado</li><li>Tipificación y categorización</li><li>Cumplimiento de ANS</li><li>Tono y completitud de la respuesta</li></ul></div>
+            <div><h4>Valida</h4><ul><li>Que la solución responda a lo solicitado</li><li>Tipificación y categorización</li><li>Cumplimiento de ANS</li></ul></div>
             <div><h4>Produce</h4><ul><li>Autorización para notificar</li><li>Reproceso cuando algo falla</li><li>Hallazgos de malas prácticas por nivel</li></ul></div>
           </div>
         </div>
 
-        <div class="fdetail" data-detail="kb" hidden>
-          <span class="kicker">Mejora continua</span>
-          <h3>Base de conocimiento interna y gestión de problemas</h3>
-          <p>Se alimenta de los hallazgos de Calidad y de las causas raíz que se resuelven en las sesiones de gestión de problemas. Cada artículo publicado empuja la resolución un nivel hacia arriba: lo que hoy resuelve N2, mañana lo resuelve N1.</p>
+        <div class="fdetail" data-detail="ia" hidden>
+          <span class="kicker">IA · en paralelo a Calidad</span>
+          <h3>La IA califica la gestión del grupo que resolvió</h3>
+          <p>Al mismo tiempo que Calidad valida el cierre, la IA califica la gestión del grupo que resolvió el caso: N1 Gestión, N2 o N3. No aplica a N1 Atención, porque lo resuelto en primer contacto se comprueba directamente con el usuario.</p>
           <div class="fdetail-cols">
-            <div><h4>Se alimenta de</h4><ul><li>Hallazgos y reprocesos de Calidad</li><li>Causas raíz resueltas en sesión</li><li>Casuísticas explicadas por N3 DATA</li></ul></div>
-            <div><h4>Habilita</h4><ul><li>Resolución en primer contacto en N1</li><li>Refuerzo dirigido a los analistas</li></ul></div>
+            <div><h4>Califica</h4><ul><li>N1 Gestión</li><li>N2 Soporte</li><li>N3</li></ul></div>
+            <div><h4>No califica</h4><ul><li>N1 Atención en primer contacto</li></ul></div>
           </div>
         </div>
 
         <div class="fdetail" data-detail="notif" hidden>
           <span class="kicker">Salida</span>
           <h3>Notificación al usuario final</h3>
-          <p>Última etapa del flujo y la única que el usuario percibe además del canal de ingreso. Solo ocurre después de que Calidad validó el cierre, sin importar en qué nivel se resolvió el caso.</p>
+          <p>Para los casos resueltos por N1 Gestión, N2 o N3, el usuario se notifica cuando Calidad valida el cierre. Los resueltos en primer contacto ya quedaron confirmados con el usuario en la misma atención.</p>
         </div>
-
       </div>
 
       <ul class="flegend">
         <li><i style="background:#5b8c22"></i>Zendesk — registro y trazabilidad</li>
-        <li><i style="background:#1f5fa8"></i>Cierre en el nivel de resolución</li>
-        <li><i style="background:#b02525"></i>Azure DevOps — N3 interno</li>
-        <li><i style="background:#e08a1e"></i>Calidad, conocimiento y mejora continua</li>
-        <li><i style="background:#4a8f3c"></i>Salida al usuario final</li>
+        <li><i style="background:#2e7a26"></i>Cierre y confirmación con el usuario</li>
+        <li><i style="background:#1f5fa8"></i>Resuelto por N1 Gestión, N2 o N3</li>
+        <li><i style="background:#b02525"></i>Nivel 3 y Azure DevOps</li>
+        <li><i style="background:#e08a1e"></i>Equipo Calidad</li>
+        <li><i style="background:#7b3fbf"></i>Calificación de la IA</li>
       </ul>
-      <p class="figcap">Zendesk es la plataforma única de registro; Azure DevOps es una cola interna de trabajo que el usuario final no ve.</p>
+      <p class="figcap">Lo resuelto en primer contacto se confirma con el usuario; lo resuelto por N1 Gestión, N2 o N3 lo valida Calidad mientras la IA califica la gestión.</p>
     </div>
   </div>
 </section>
@@ -272,31 +292,52 @@
     </div>
     <ul class="rows">
       <li class="row reveal">
-        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <span class="row-ico tone-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
         <div class="row-body">
-          <h3>N1 DOCUM — recepción, tipificación y primer contacto</h3>
-          <p>Recibe por widget y portal de autoservicio. Tipifica, categoriza y resuelve en línea lo que la base de conocimiento habilita. Si cierra aquí, el caso pasa directo a validación de Calidad.</p>
+          <h3>N1 Atención — primer contacto</h3>
+          <p>Recibe por el widget y el portal, tipifica y atiende en el primer contacto. Lo que resuelve aquí se comprueba directamente con el usuario: no pasa por Calidad ni lo califica la IA.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span>
+        <div class="row-body">
+          <h3>N1 Gestión — lo que no se resolvió en primer contacto</h3>
+          <p>Gestiona los casos que N1 Atención no pudo cerrar y los escala a N2 con control de rol N2 cuando el caso lo exige.</p>
         </div>
       </li>
       <li class="row reveal">
         <span class="row-ico tone-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
         <div class="row-body">
           <h3>N2 Soporte — diagnóstico, base de datos y ajustes en BD</h3>
-          <p>Recibe el escalamiento bajo control del rol N2, diagnostica y ejecuta ajustes directamente en base de datos. El conocimiento para hacerlo se lo entrega N3 DATA, que construye el rol de N2 en BD y le explica cómo resolver cada casuística.</p>
+          <p>Diagnostica y ejecuta ajustes directamente en base de datos. El conocimiento para hacerlo se lo entrega N3 DATA, que construye el rol de N2 en BD y le explica cada casuística.</p>
         </div>
       </li>
       <li class="row reveal">
-        <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l-6-6 6-6"/><path d="M15 6l6 6-6 6"/></svg></span>
+        <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></span>
         <div class="row-body">
-          <h3>N3 Funcional — único puente entre Zendesk y Azure DevOps</h3>
-          <p>Traduce el caso al equipo interno (Desarrollo, QA, DATA) y gestiona su seguimiento en Azure DevOps. El cliente nunca ve la cola interna y la trazabilidad permanece en Zendesk.</p>
+          <h3>N3 DATA y N3 Desarrollo — en Zendesk</h3>
+          <p>Atienden en Zendesk los casos de datos y los que exigen cambio en el producto. Lo que requiere gestión interna o pruebas pasa a Azure DevOps.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></span>
+        <div class="row-body">
+          <h3>N3 Funcional y N3 QA — la parte interna en Azure DevOps</h3>
+          <p>Realizan el trabajo interno del caso en Azure DevOps. Es una cola que el usuario final no ve; la trazabilidad ante el cliente permanece en Zendesk.</p>
         </div>
       </li>
       <li class="row reveal">
         <span class="row-ico tone-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6z"/><path d="M9.2 12.2l2 2 3.6-4"/></svg></span>
         <div class="row-body">
-          <h3>Equipo Calidad — punto único de validación de cierre</h3>
-          <p>Todo cierre pasa por Calidad, venga de N1, N2 o N3. Verifica solución, tipificación y ANS antes de notificar; los hallazgos alimentan la base de conocimiento y el refuerzo a los analistas.</p>
+          <h3>Equipo Calidad — valida el cierre</h3>
+          <p>Valida los cierres de N1 Gestión, N2 y N3 antes de notificar al usuario. Sus hallazgos alimentan la base de conocimiento y el refuerzo a los analistas.</p>
+        </div>
+      </li>
+      <li class="row reveal">
+        <span class="row-ico tone-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 18l-5.9 3 1.2-6.5L2.5 9.9 9.1 9z"/></svg></span>
+        <div class="row-body">
+          <h3>IA — califica la gestión del grupo que resolvió</h3>
+          <p>A la vez que Calidad valida, la IA califica la gestión de N1 Gestión, N2 o N3. No aplica a N1 Atención, porque ese cierre se comprueba con el usuario.</p>
         </div>
       </li>
     </ul>
@@ -308,32 +349,89 @@
   <div class="inner">
     <div class="section-head">
       <h2 class="reveal">Cierre en el nivel de resolución</h2>
-      <p class="sub reveal">Tres rutas posibles, una sola validación. Ningún caso llega al usuario final sin pasar por Calidad.</p>
+      <p class="sub reveal">Cuatro rutas posibles y dos formas de confirmar la solución: en el primer contacto, con el usuario; en los demás niveles, con Calidad y la calificación de la IA.</p>
     </div>
     <div class="grid">
-      <article class="card reveal tone-blue">
+      <article class="card reveal tone-teal">
         <span class="kicker">Ruta 1</span>
-        <h3>Cierre en línea (N1)</h3>
-        <p>Se resuelve en el primer contacto con apoyo de la base de conocimiento y pasa directo a Calidad.</p>
-        <ul><li>Sin escalamiento</li><li>Menor tiempo de respuesta</li><li>Alimenta la base de conocimiento</li></ul>
+        <h3>Primer contacto · N1 Atención</h3>
+        <p>Se resuelve en la primera interacción y se comprueba directamente con el usuario.</p>
+        <ul><li>Sin escalamiento</li><li>Sin Calidad ni calificación de la IA</li><li>Confirmación en la misma atención</li></ul>
       </article>
       <article class="card reveal tone-blue">
         <span class="kicker">Ruta 2</span>
+        <h3>Cierre en N1 Gestión</h3>
+        <p>Lo que no se resolvió en primer contacto y N1 Gestión resuelve sin escalar.</p>
+        <ul><li>Valida Calidad</li><li>La IA califica la gestión</li><li>Se notifica al usuario</li></ul>
+      </article>
+      <article class="card reveal tone-blue">
+        <span class="kicker">Ruta 3</span>
         <h3>Cierre en N2</h3>
-        <p>Diagnóstico y ajuste en base de datos, sin escalamiento a N3, gracias al rol y las casuísticas que entregó Data.</p>
-        <ul><li>Control de rol N2</li><li>Ajustes directos en BD</li><li>Conocimiento provisto por N3 DATA</li></ul>
+        <p>Diagnóstico y ajuste en base de datos, gracias al rol y las casuísticas que entregó N3 DATA.</p>
+        <ul><li>Valida Calidad</li><li>La IA califica la gestión</li><li>Se notifica al usuario</li></ul>
       </article>
       <article class="card reveal tone-red">
-        <span class="kicker">Ruta 3</span>
+        <span class="kicker">Ruta 4</span>
         <h3>Solución desde N3</h3>
-        <p>Requerimientos, incidencias, data o fuerza mayor que exigen al equipo interno vía Azure DevOps.</p>
-        <ul><li>Desarrollo · QA · DATA</li><li>Cola interna, no visible</li><li>Seguimiento desde N3 Funcional</li></ul>
+        <p>N3 DATA o N3 Desarrollo en Zendesk; la parte interna, con N3 Funcional y N3 QA en Azure DevOps.</p>
+        <ul><li>Valida Calidad</li><li>La IA califica la gestión</li><li>Se notifica al usuario</li></ul>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 5 · CONOCIMIENTO Y PROBLEMAS -->
+<!-- 5 · FICHA DEL SERVICIO -->
+<section class="slide" id="servicio" data-nav="Ficha del servicio">
+  <div class="inner">
+    <div class="section-head">
+      <h2 class="reveal">Ficha del servicio</h2>
+      <p class="sub reveal">Condiciones del servicio DOCUM según el Manual Operativo del Servicio (MOS).</p>
+    </div>
+
+    <div class="tbl-wrap reveal">
+      <table class="tbl">
+        <tbody>
+          <tr><td>Servicio</td><td>Soporte funcional y técnico del SGDEA (Sistema de Gestión Documental Empresarial y de Archivo) para Positiva Compañía de Seguros S.A.</td></tr>
+          <tr><td>Alcance</td><td>N1 (atención y gestión), N2 (soporte especializado) y N3 (desarrollo y data) sobre el SGDEA.</td></tr>
+          <tr><td>Flujos soportados</td><td>PQRD · Correspondencia · Medicina Laboral · Tutelas · Entes de Control · Facturación</td></tr>
+          <tr><td>Herramienta</td><td>Zendesk</td></tr>
+          <tr><td>Horario</td><td>Lunes a viernes, 7:00 a. m. a 5:00 p. m., para N1, N2, N3 e incidentes críticos.</td></tr>
+          <tr><td>Inicio del servicio</td><td>1 de julio de 2025</td></tr>
+          <tr><td>Gestión de problemas</td><td>Comité cada 15 días.</td></tr>
+          <tr><td>Seguimiento con el cliente</td><td>Sesiones mensuales.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ans-block reveal">
+      <h3><i style="background:var(--red)"></i>ANS de resolución — por prioridad</h3>
+      <p>Primera respuesta: 10 minutos desde la apertura del ticket. Escala de 0 a 12 horas.</p>
+      <div class="ans-cols"><span>Prioridad</span><span>Tiempo de resolución</span><span></span></div>
+      <ul class="ans">
+        <li class="ans-row t-red"><div class="ans-head"><b>Alta</b></div><div class="ans-metric"><span class="ans-bar"><i style="--p:33.3%"></i></span><b class="ans-val">4 h</b></div><span></span></li>
+        <li class="ans-row t-amber"><div class="ans-head"><b>Media</b></div><div class="ans-metric"><span class="ans-bar"><i style="--p:66.7%"></i></span><b class="ans-val">8 h</b></div><span></span></li>
+        <li class="ans-row t-steel"><div class="ans-head"><b>Baja</b></div><div class="ans-metric"><span class="ans-bar"><i style="--p:100%"></i></span><b class="ans-val">12 h</b></div><span></span></li>
+      </ul>
+    </div>
+
+    <div class="ans-block reveal">
+      <h3><i style="background:var(--blue)"></i>OLA interna — tiempo de resolución por nivel</h3>
+      <p>Tiempo de atención interno: 15 minutos. Los tiempos de cada nivel se suman dentro del ANS del cliente.</p>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th>Prioridad</th><th>N1</th><th>N2</th><th>N3</th></tr></thead>
+          <tbody>
+            <tr><td>Alta</td><td>1 h</td><td>2 h</td><td>3 h</td></tr>
+            <tr><td>Media</td><td>1 h</td><td>2 h</td><td>6 h</td></tr>
+            <tr><td>Baja</td><td>1 h</td><td>2 h</td><td>6 h</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · CONOCIMIENTO Y PROBLEMAS -->
 <section class="slide slide--wide" id="conocimiento" data-nav="Conocimiento">
   <div class="inner">
     <div class="section-head">
@@ -534,7 +632,7 @@
   </div>
 </section>
 
-<!-- 6 · CIERRE -->
+<!-- 7 · CIERRE -->
 <section class="slide" id="cierre" data-nav="Cierre">
   <div class="inner">
     <span class="eyebrow reveal">Cierre</span>
