@@ -392,7 +392,7 @@
       tagged.filter(function (v, j, a) { return a.indexOf(v) === j; }).forEach(function (i) {
         var dy = dual ? -14 : p.type === 'bar' ? -8 : (i === lo && i !== hi ? 22 : -12);
         svgEl('text', { x: cx(i), y: p.y(p.values[i]) + dy, 'class': 'vc-val', 'text-anchor': 'middle' }, svg)
-          .textContent = (p.approx[i] ? '≈ ' : '') + p.fmt(p.values[i]);
+          .textContent = (p.approx[i] ? '≈ ' : '') + (dual ? p.fmt(p.values[i]).replace(' %', '') : p.fmt(p.values[i]));
       });
     });
 

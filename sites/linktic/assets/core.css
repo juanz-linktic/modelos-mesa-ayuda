@@ -185,6 +185,11 @@ h2{
 .card p{margin:0; color:var(--muted); font-size:13.6px}
 .card ul{margin:10px 0 0; padding-left:17px; color:var(--muted); font-size:13.2px}
 .card ul li{margin:4px 0}
+.card ol.rank{list-style:none; counter-reset:rk; margin:12px 0 0; padding:0}
+.card ol.rank li{counter-increment:rk; display:flex; align-items:center; gap:12px; padding:9px 0; border-top:1px solid var(--border-soft); font-size:14.5px; font-weight:600; color:var(--text)}
+.card ol.rank li:first-child{border-top:0}
+.card ol.rank li::before{content:counter(rk); flex:none; width:26px; height:26px; border-radius:50%; display:grid; place-items:center; font-size:12.5px; font-weight:700; color:#fff; background:var(--violet)}
+.card.tone-teal ol.rank li::before{background:var(--teal)}
 .card .kicker{
   display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.12em;
   text-transform:uppercase; color:var(--dim); margin-bottom:9px;
@@ -368,6 +373,7 @@ h2{
 .flabel.t-teal{color:var(--teal); font-weight:700}
 .flabel.t-indigo{color:#2709CD; font-weight:700}
 .fchip.t-indigo[aria-pressed="true"]{background:#2709CD; border-color:#2709CD}
+.fchip.t-cyan[aria-pressed="true"]{background:#0096FF; border-color:#0096FF}
 .n-cyan{background:#e6fbff; border-color:#0096FF}
 .n-cyan b{color:#004f87}
 .n-cyan em{color:#0077cc}

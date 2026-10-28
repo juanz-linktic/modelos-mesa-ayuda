@@ -20,7 +20,7 @@ window.CORE_DECKS = [
     file: 'p/balu.html',
     title: 'Modelo de atención — Balú',
     client: 'Balú · ARL Positiva',
-    summary: 'Canales VIP con su propio grupo de Nivel 1, chat general con IA Balú, prioridad VIP en N2, línea de tiempo del servicio y evolución de tickets y cumplimiento de ANS.',
+    summary: 'Correo VIP y líneas especializadas con su propio grupo de Nivel 1, chat general con IA Balú, prioridad VIP en N2, línea de tiempo del servicio y evolución de tickets y cumplimiento de ANS.',
     tag: 'Cliente',
     tone: 'violet',
     updated: '2026-10'
