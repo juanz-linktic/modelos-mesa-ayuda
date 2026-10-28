@@ -391,6 +391,9 @@ h2{
 .vchart .vc-name{fill:var(--text); font-size:14px; font-weight:700}
 .vchart .vc-bar{fill:var(--violet); transition:opacity .2s var(--ease)}
 .vchart .vc-bar.is-approx{fill-opacity:.5}
+/* con grupos (p. ej. años): el primero en tono claro, el último en el color base */
+.vchart.has-groups .vc-bar.vc-g0{fill:#a99cf4}
+.vchart.has-groups .vchart-legend .lg-g0 i{background:#a99cf4}
 .vchart .vc-bar.is-hover{opacity:.82}
 .vchart .vc-line{fill:none; stroke:var(--blue); stroke-width:2.4; stroke-linejoin:round}
 .vchart .vc-dot{fill:var(--blue); stroke:var(--bg); stroke-width:2}

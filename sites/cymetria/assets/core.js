@@ -317,6 +317,7 @@
         name: attr('name', sfx, ''),
         values: attr('values', sfx, '').split(',').map(function (v) { return v === '' ? null : parseFloat(v); }),
         approx: attr('approx', sfx, '').split(',').map(function (v) { return v === '1'; }),
+        groups: attr('groups', sfx, '') ? attr('groups', sfx, '').split(',') : [],
         min: parseFloat(attr('min', sfx, '0')),
         max: parseFloat(attr('max', sfx, '100')),
         step: parseFloat(attr('step', sfx, '25')),
@@ -346,6 +347,7 @@
     });
     var last = panels[panels.length - 1];
     if (dual) fig.classList.add('is-dual');
+    if (panels.some(function (p) { return p.groups.filter(function (v, j, a) { return a.indexOf(v) === j; }).length > 1; })) fig.classList.add('has-groups');
     var H = last.top + last.h + B;
     function cx(i) { return L + col * i + col / 2; }
 
@@ -380,7 +382,8 @@
           var x = cx(i) - bw / 2, top = p.y(p.values[i]), base = p.y(p.min), rr = Math.min(r, base - top);
           var d = 'M' + x + ',' + base + ' V' + (top + rr) + ' Q' + x + ',' + top + ' ' + (x + rr) + ',' + top +
                   ' H' + (x + bw - rr) + ' Q' + (x + bw) + ',' + top + ' ' + (x + bw) + ',' + (top + rr) + ' V' + base + ' Z';
-          p.marks[i] = svgEl('path', { d: d, 'class': 'vc-bar' + (p.approx[i] ? ' is-approx' : '') }, svg);
+          var gi = p.groups.length ? p.groups.filter(function (v, j, a) { return a.indexOf(v) === j; }).indexOf(p.groups[i]) : 0;
+          p.marks[i] = svgEl('path', { d: d, 'class': 'vc-bar vc-g' + gi + (p.approx[i] ? ' is-approx' : '') }, svg);
         });
       } else {
         svgEl('polyline', { points: idx.map(function (i) { return cx(i) + ',' + p.y(p.values[i]); }).join(' '), 'class': 'vc-line' }, svg);
@@ -401,7 +404,13 @@
     if (dual) {
       var leg = document.createElement('div');
       leg.className = 'vchart-legend';
-      leg.innerHTML = panels.map(function (p) { return '<span class="lg-' + p.type + '"><i></i>' + p.name + '</span>'; }).join('');
+      leg.innerHTML = panels.map(function (p) {
+        var gs = p.groups.filter(function (v, j, a) { return a.indexOf(v) === j; });
+        if (p.type === 'bar' && gs.length > 1) {
+          return gs.map(function (g, j) { return '<span class="lg-bar lg-g' + j + '"><i></i>' + p.name + ' ' + g + '</span>'; }).join('');
+        }
+        return '<span class="lg-' + p.type + '"><i></i>' + p.name + '</span>';
+      }).join('');
       fig.appendChild(leg);
     }
     fig.appendChild(svg);
