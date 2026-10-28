@@ -372,6 +372,7 @@ h2{
 .flabel.t-green{color:#2e7a26; font-weight:700}
 .flabel.t-teal{color:var(--teal); font-weight:700}
 .flabel.t-indigo{color:#2709CD; font-weight:700}
+.flabel.t-cyan{color:#0077cc; font-weight:700}
 .fchip.t-indigo[aria-pressed="true"]{background:#2709CD; border-color:#2709CD}
 .fchip.t-cyan[aria-pressed="true"]{background:#0096FF; border-color:#0096FF}
 .n-cyan{background:#e6fbff; border-color:#0096FF}
